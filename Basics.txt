@@ -1,0 +1,129 @@
+Operating System : A software that controls the computers hardware and software resources
+
+Roles of an OS : a) Processor Management 
+                 b) User Interface
+                 c) Input/Output, Interrupts management
+                 d) File Management
+                 e) Device driver Management
+                 f) Security
+                 g) Memory Management
+
+
+CPU : Central processing Unit :
+        Single-Core Processors
+        Dual Core
+        Quad Core
+        Multi Core 
+
+Various Types of Languages :
+
+1. Assembly Lang : Low level lang, intended to communicate with the hardware directly
+  Assembler : is a program that translates commands into machine code. Assemblers gather instructions from the assembly lang and translate each action into a series of electrical signals
+   
+Components of an assembly Lang :
+   1. Syntax : forms the basic structure
+   2. Label : is a word, number, symbol etc. which is used as a reference point to locate the instruction
+   3. Command : an order/instruction to perform
+   4. Operand : Helps in Data Manipulation
+   5. Directive : Instructions to the assembler to change settings or perform action
+   6. Macro : Are statements that work as a short representations of some sequence of instructions
+   7. Mnemonics : Represents abbreviation of a an action being performed
+
+Example : 
+
+MOV a, 10  -- register 10 in a
+MOV b, 5 -- register 5 into b
+ADD a,b,c -- add a with b and store into c
+
+
+Machine Lang :
+ASCII : Every character in the keyboard has an ascii number and it occupies 1 byte
+
+1 byte : 8 bits ( 1 bit is either a '0' or '1')
+
+00000000  -  stop the program
+00000001  -  switch on
+
+Programming Languages :
+
+a) Procedural Lang : A sequence of instructions in an order to achieve some output 
+   C,C++
+   Java
+   Pascal
+   Basic
+
+b) Function Programming Lang : More focus is on the output of a mathematical calculation/evaluations
+  Scala
+  Erlang
+  Python
+  Elixir
+  F#
+
+c) OOP Language : Treats  a program as a group of objects composed of data and program elements (attribute and methods)
+
+  C++,
+  Java
+  C#
+  Python
+  Ruby
+
+d) Scripting Language : automates repetitive tasks, manages dynamic content
+
+  PHP
+  JavaScript
+  Perl
+  Python
+  Node.js
+  Bash
+
+e) Logic Programming Lang : Instead of instructions as to what to do, we express a series of facts and rules that will be interpreted by the system and gives out decisions
+
+  Prolog
+  Absys
+  Datalog
+  Alma
+
+f) Front End lang : mostly with the user interface and experience UI/UX (Images,colors,text, navigations)
+
+ Html / css
+ JavaScript
+ React Js
+ Angular
+
+g) Back End Lang : Deals with storage and manipulation of data (server side software). No direct interaction with the user
+
+ JavaScript
+ PHP
+ Java
+ C#
+ 
+Application Development Models :
+
+1. Desktop Application/windows application
+2. Client Server Application ( 2 tier, 3 tier, n tier)
+3. Web Model
+
+DNS : Domain Naming System 
+
+DHCP : Dynamic Host Control Protocol
+
+Quadret : 0-255.0-255-0-255.0-255   (IP v4)
+
+172.34.5.6   -  amazon server (www.amazon.in  Domain)
+172.34.12.78 - 
+172.34.14.1
+
+-------------------------------------------------------
+
+for Git :
+
+ create 2 folders in any drive (c:, d:, e:)
+
+1st folder to keep all assignments/ code challenges / hands on exercises ( shared with me thru git)
+
+2 nd folder for your learning/practices etc
+
+
+
+
+ 
