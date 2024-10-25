@@ -7,7 +7,7 @@ provides Platform Independence and language Independence
 CLS - Common Language Specification + CTS - Common Type Specification
 FCL - Framework Class Library  (is a collection of more than 7000 classes and types for read/write, access database, GUI, Drawing, Web services)
 CLR - Common Language Runtime 
-.NetTools 
+.NetTools  ( VS IDE)
 
 
 Dot net Applications on compilation creates an assembly file
@@ -15,7 +15,7 @@ Dot net Applications on compilation creates an assembly file
 
 DotNet applications on execution contains 2 steps
    compilation - source code to IL
-   Exceution of JIT compilation - to convert IL to native code
+   Execution of JIT compilation - to convert IL to native code
 
 The native code is not stored anywhere. Once the program execution is over, it is discarded.
 
@@ -27,4 +27,25 @@ In conclusion Dotnet is Microsofts web services strategy to connect information,
    - Web Applications ( Asp.net, Silverlight)
    - Network communication (WCF, WWF)
 
-Assemblies : 
+Assemblies : Are fundamental units of deployment, version control, reusable, provides security for dotnet application
+
+- Contains PE header(portable executable), CLE Header, Manifest File and IL
+- Manifest files contain Metadata (data about data)
+- Can be private or shared
+- Shared assemblies are placed in GAC (Global Assembly Cache)
+
+GAC : machine wide central repository of assemblies
+  - Assemblies in GAC should be strongly named
+  - Strong Name consists of Simple Text name, version number, a public key and a digital signature
+  - gacutil/i for installing an assembly into gac, and gacutil/u for uninstalling
+
+Note : Some information in the assembly manifest can be modified using attributes
+- use ILDASM to peek into the assembly 
+- Use ILASM to reconstruct an assembly 
+- We need to operate the above utilities from developer command prompt
+
+CSharp : is a modern, general purpose, oo programming language developed by Microsft
+- was developed Anders Hejlsberg and his team during Dotnet framework development
+
+Namespace : 
+
