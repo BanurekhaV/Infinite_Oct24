@@ -1,0 +1,18 @@
+Git : is an open source version control system tool created by the developers working on the Linux Operating System in the year 2005
+
+Git Hub : is a company founded in 2008, that makes tools which integrate with the git (Platform for integration)
+
+A cloud based platform where you can store, share, and work together with others
+
+ alternates to Git Hub are : GitLab, BitBucket, host-your-own (gogs,gittea)
+
+
+Initialize a git
+ create files
+ add files to the staging environment
+ commit the files
+ push the files
+
+
+Steps for git :
+

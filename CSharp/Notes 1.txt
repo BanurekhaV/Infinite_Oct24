@@ -1,0 +1,30 @@
+DotNet  Framework
+
+provides Platform Independence and language Independence
+
+4 major components
+
+CLS - Common Language Specification + CTS - Common Type Specification
+FCL - Framework Class Library  (is a collection of more than 7000 classes and types for read/write, access database, GUI, Drawing, Web services)
+CLR - Common Language Runtime 
+.NetTools 
+
+
+Dot net Applications on compilation creates an assembly file
+- assembly files are either .exe or .dll
+
+DotNet applications on execution contains 2 steps
+   compilation - source code to IL
+   Exceution of JIT compilation - to convert IL to native code
+
+The native code is not stored anywhere. Once the program execution is over, it is discarded.
+
+In conclusion Dotnet is Microsofts web services strategy to connect information, people, systems, devices thru software
+
+- It is a platform that provides a standard set of services
+   - Data Access (ADO.Net)
+   - User Interface(WPF, Winforms)
+   - Web Applications ( Asp.net, Silverlight)
+   - Network communication (WCF, WWF)
+
+Assemblies : 
