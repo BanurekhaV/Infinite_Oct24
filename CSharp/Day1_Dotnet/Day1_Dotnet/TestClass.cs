@@ -2,12 +2,13 @@
 
 namespace Day1_Dotnet
 {
-    class MethodsnParameters
+    class TestClass
     {
-        public static void testfunc()
+        public static void testFunc()
         {
-            Console.WriteLine("static function of Methods class");
+             Console.WriteLine("static function of Methods class");           
         }
+              
     }
 
     class Instance_Static
@@ -22,16 +23,18 @@ namespace Day1_Dotnet
             Console.WriteLine("hi");
             return x * y;           
         }
-        static void Main()  //static functions
+        static void Main()  //static functions or class function
         {
             Instance_Static instanceobj = new Instance_Static();
             Instance_Static instanceobj2 = new Instance_Static();
             Instance_Static.Evennos(5);
             Evennos(6);  //calling static function of the same class
-            MethodsnParameters.testfunc(); //calling static function of a different class, we need 
+            TestClass.testFunc(); //calling static function of a different class, we need 
                                            // refer it with the classname
             
             Console.WriteLine(instanceobj.multiply(5, 6));
+            Console.WriteLine("++++++++++++++++++++++=");
+
             Console.Read();
         }
     }
