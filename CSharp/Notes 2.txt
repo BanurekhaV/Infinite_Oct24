@@ -59,6 +59,18 @@ Operators : Assignment, Arithmetic, Relational, Logical, Bitwise, Misc. (sizeof,
  Binary : a + b 
  Ternary : bool b = num == 10 ? true : false
 
-Nullables :
+Nullables : Generally are unknown information which cannot be assigned to value types. 
+But if the application has to assign null values to value types, then c# supports nullable concept
 
-25
+Null Coalescing 
+
+Instance members and static members:
+  members that are available as a copy to each and every object created are known as instance members. They are always accessed only with the object reference
+
+  members that are not available per each object, but only one copy exists for the entire class is static members. These are managed and maintained by the CLR. They are accessed with the class name.
+
+
+Programming Constructs :
+   a) control/selection statements : that controls the path of execution [if else.., switch]
+   b) iteration statements : while do, do while, for, foreach
+   c) jump statements : break, continue, goto, return, throw
