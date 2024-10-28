@@ -1,0 +1,46 @@
+CSharp : is a modern, general purpose, oo programming language developed by Microsoft
+- was developed Anders Hejlsberg and his team during Dotnet framework development
+
+Object Oriented programming : is an architecture for developing an application
+  - Encapsulation
+  - Abstraction
+  - Inheritance
+  - Polymorphism
+ 
+All programming constructs are grouped as class and objects
+
+Namespace : Is a logical way of organizing our program
+            Is a collection of Classes, Interfaces, Structures, Enumerators, Events, Delegates and also other namespace
+            Provides assistance in avoiding name clashes
+
+Data Types : Those that determine the kind of data we want to use
+ - are basically either Value Types and Reference Types
+Value Types : All integral/fundamental/primitive/systemic data types Eg :(int,char,float,double,long,byte etc..)
+- Are those types that can hold the value/data directly
+- Are stored in Stack memory
+
+Reference Types : All objects of classes, interfaces, events and delegates 
+- Are those types that holds the reference/address of the memory where data/value is stored
+- Stored in Heap memory
+
+Literals in C# :
+          string
+          integer
+          real
+          null
+          character
+          Boolean 
+
+Data Conversions and TypeCasts : Converting one data type to another data type
+Implicit conversions : when the compiler can convert from a lower type to a higher type
+Explicit conversions : when we as programmers are allowed to convert a higher type to a lower type with a possibility of data loss
+
+
+int,long,char,byte,sbyte,short etc
+
+float,double,decimal
+
+Operators
+Nullables
+
+25

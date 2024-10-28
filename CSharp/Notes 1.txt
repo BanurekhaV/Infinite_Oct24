@@ -11,7 +11,7 @@ CLR - Common Language Runtime
 
 
 Dot net Applications on compilation creates an assembly file
-- assembly files are either .exe or .dll
+- assembly files are either .exe or .dll ( 2 types)
 
 DotNet applications on execution contains 2 steps
    compilation - source code to IL
@@ -44,8 +44,4 @@ Note : Some information in the assembly manifest can be modified using attribute
 - Use ILASM to reconstruct an assembly 
 - We need to operate the above utilities from developer command prompt
 
-CSharp : is a modern, general purpose, oo programming language developed by Microsft
-- was developed Anders Hejlsberg and his team during Dotnet framework development
-
-Namespace : 
 
