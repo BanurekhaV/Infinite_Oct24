@@ -32,15 +32,33 @@ Literals in C# :
           Boolean 
 
 Data Conversions and TypeCasts : Converting one data type to another data type
+
 Implicit conversions : when the compiler can convert from a lower type to a higher type
 Explicit conversions : when we as programmers are allowed to convert a higher type to a lower type with a possibility of data loss
+                       - can use typecast operators or type conversion functions
 
-
-int,long,char,byte,sbyte,short etc
+sbyte, byte, int, long etc
 
 float,double,decimal
 
-Operators
-Nullables
+Boxing : When a value type is converted to an reference type
+
+Eg : 
+ object o; int n=10;
+ o = n;   
+
+UnBoxing : When a reference type is converted to a value type
+
+ Eg : object obj; int n;
+   n = (int)obj;
+
+BreakPoints : running a program in debug mode
+
+Operators : Assignment, Arithmetic, Relational, Logical, Bitwise, Misc. (sizeof, typeof etc..)
+ Unary : a++ ( a= a + 1) , ++a, --a, a--, **a, a**, //a, a//
+ Binary : a + b 
+ Ternary : bool b = num == 10 ? true : false
+
+Nullables :
 
 25
