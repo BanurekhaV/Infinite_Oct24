@@ -27,6 +27,13 @@ namespace Day2_Dotnet
             s1.mathsmarks = 100;
             Console.WriteLine(s1.mathsmarks + s1.sciencemarks);
             Console.WriteLine(s2.mathsmarks + s2.sciencemarks);
+
+            Console.WriteLine("-------Enums Example output-------");
+            EnumerationsEg.EnumOps();
+
+            Console.WriteLine("Anonymous type printing");
+            ImplicitlyTyped it = new ImplicitlyTyped();
+            it.Implicit_types();
             Console.Read();
         }
     }

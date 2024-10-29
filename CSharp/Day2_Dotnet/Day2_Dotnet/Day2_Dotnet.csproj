@@ -48,6 +48,7 @@
   <ItemGroup>
     <Compile Include="ArraysEg.cs" />
     <Compile Include="Decisionmaking.cs" />
+    <Compile Include="EnumerationsEg.cs" />
     <Compile Include="ImplicitlyTyped.cs" />
     <Compile Include="Loops.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

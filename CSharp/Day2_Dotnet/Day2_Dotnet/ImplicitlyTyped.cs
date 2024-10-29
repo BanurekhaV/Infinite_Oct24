@@ -23,6 +23,12 @@ namespace Day2_Dotnet
             d = 'u';
             d = "hello";
             d = true;
+
+            var myanonymoustype = new {data1="CSharp",
+                                       data2= 5,
+                                       data3 = true};
+
+            Console.WriteLine(myanonymoustype.data1 + " "+ myanonymoustype.data2);
         }
     }
 }
