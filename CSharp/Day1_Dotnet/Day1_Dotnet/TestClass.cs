@@ -33,6 +33,8 @@ namespace Day1_Dotnet
                                            // refer it with the classname
             
             Console.WriteLine(instanceobj.multiply(5, 6));
+            int result = instanceobj.multiply(10, 10);
+            Console.WriteLine(result);
             Console.WriteLine("++++++++++++++++++++++=");
 
             Console.Read();

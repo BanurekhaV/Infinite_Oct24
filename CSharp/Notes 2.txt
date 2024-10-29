@@ -29,13 +29,14 @@ Literals in C# :
           real
           null
           character
-          Boolean 
+          boolean 
 
 Data Conversions and TypeCasts : Converting one data type to another data type
 
-Implicit conversions : when the compiler can convert from a lower type to a higher type
+Implicit conversions : when the compiler can convert from a lower type to a higher type in a type safe manner and also conversions from derived class to base classes
+
 Explicit conversions : when we as programmers are allowed to convert a higher type to a lower type with a possibility of data loss
-                       - can use typecast operators or type conversion functions
+                       - can use typecast operators or type conversion functions (ToInt32, ToBoolean, ToDateTime etc..)
 
 sbyte, byte, int, long etc
 
@@ -58,37 +59,26 @@ Operators : Assignment, Arithmetic, Relational, Logical, Bitwise, Misc. (sizeof,
  Unary : a++ ( a= a + 1) , ++a, --a, a--, **a, a**, //a, a//
  Binary : a + b 
  Ternary : bool b = num == 10 ? true : false
+Nullables : Generally are unknown information. We can assign normal range of values as well as null values using nullable concept
 
-Nullables : Generally are unknown information which cannot be assigned to value types. 
-But if the application has to assign null values to value types, then c# supports nullable concept
+-Nullable types bridge the differences between C# types and the database types.
 
-Null Coalescing 
+-Transformation of nulls and non nulls
+
+Null Coalescing (??) operator can minimize the code and is used to check for null or non null values of any type
 
 Instance members and static members:
   members that are available as a copy to each and every object created are known as instance members. They are always accessed only with the object reference
 
-  members that are not available per each object, but only one copy exists for the entire class is static members. These are managed and maintained by the CLR. They are accessed with the class name.
-
-
-Programming Constructs :
-   a) control/selection statements : that controls the path of execution [if else.., switch]
-   b) iteration statements : while do, do while, for, foreach
-   c) jump statements : break, continue, goto, return, throw
-
-Arrays : is a collection of values of the same datatype
-memory for arrays are allocated in the heap
-Instantiation of an array is 
-   Datatype [] Arrayname = new Datatype[size]  ( int[] arr = new int[5], int[]data= new int[]={3,5,7,8,9})
-arr[0] = 7;
-
-There are 3 types of arrays in c#
-  Single Dimensional
-  Two Dimensional/Multi
-  Jagged Array
+  members that are not available for each object, but only one copy exists for the entire class are static members. These are managed and maintained by the CLR. They are accessed with the class name. They do not need any objects for calling
 
 
 Methods and Parameters : methods in c# have parameters of the following type
   - Value  
   - Reference
-  - out
-  - Parameter Array
+  - out : every function must return a type. Every function can return only one type. When we expect more than one data from any function, we can make use of output parameter
+
+  - Parameter Array : Supports in providing varying number of arguments to a method separated by a comma
+  - params is the keyword that helps in providing a parameter array of values to a method which can be 0,1,or more
+  - params keyword should be the last in the method declaration
+  - only one params is allowed / method
