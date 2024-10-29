@@ -33,7 +33,7 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <PropertyGroup>
-    <StartupObject>Day2_Dotnet.TestArrays</StartupObject>
+    <StartupObject>Day2_Dotnet.StructVsClass</StartupObject>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
@@ -48,8 +48,10 @@
   <ItemGroup>
     <Compile Include="ArraysEg.cs" />
     <Compile Include="Decisionmaking.cs" />
+    <Compile Include="ImplicitlyTyped.cs" />
     <Compile Include="Loops.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="StructVsClass.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

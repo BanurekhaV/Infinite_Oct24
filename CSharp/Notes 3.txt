@@ -37,3 +37,24 @@ There are 3 types of arrays in c#
   Single Dimensional : will have a set of elements
   Two Dimensional/Multi: will have rows and columns
   Jagged Array: smart array (array of arrays)
+
+Datatypes :
+Implicit typed variables (var)   : are types that can take up any data type
+- we need to assign a value at the time of declaration itself
+- Once assigned with a specific data, we cannot change the type
+
+dynamic types : are reference types that remains unchanged 
+- need not be initialized at the time of declaration
+- can take up any data
+- undergoes boxing/unboxing during runtime (an overhead that might cause performance issues)
+- advised to minimize usage of dynamic type in applications
+
+
+Structures : are user defined value types
+- used to store multiple data of different types as a single unit.
+
+Enumerations : are a set/collection if named constants
+- is a user defined value type
+- Enum is the keyword to declare an enumeration
+- The default type of any enumeration list is int
+- is used when we want to store a list of values that generally correspond to a particular type
