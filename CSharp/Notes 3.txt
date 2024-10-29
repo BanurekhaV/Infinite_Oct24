@@ -1,17 +1,39 @@
 Programming Constructs :
    a) control/selection statements : that controls the path of execution [if else.., switch]
+
+//multiple switch
+
+int d1; string s1; bool b1;
+switch((d1,s1,b1))
+{
+   case(10,"C#",false):
+    type out statements
+    break;
+   case(20,"SQL",true):
+
+}
+
+// switch with return
+string result = (d1,s1,b1) switch
+{
+  (10,"C#",false) => "Best Combo",
+  (20,"SQL",true) => "Ultimate",
+=> "Default"
+
+};
+
    b) iteration statements : while do, do while, for, foreach
    c) jump statements : break, continue, goto, return, throw
 
 Iterations : Initial value, Condition, Change of the initial value
 
-Arrays : is a collection of values of the same datatype
-memory for arrays are allocated in the heap
+Arrays : is a collection of values of the same datatype. It has a fixed size.
+Memory for arrays are allocated in the heap
 Instantiation of an array is 
    Datatype [] Arrayname = new Datatype[size]  ( int[] arr = new int[5], int[]data= new int[]={3,5,7,8,9})
 arr[0] = 7;
 
 There are 3 types of arrays in c#
-  Single Dimensional
-  Two Dimensional/Multi
-  Jagged Array
+  Single Dimensional : will have a set of elements
+  Two Dimensional/Multi: will have rows and columns
+  Jagged Array: smart array (array of arrays)
