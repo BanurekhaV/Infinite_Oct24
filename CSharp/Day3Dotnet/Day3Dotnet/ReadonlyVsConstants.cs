@@ -3,7 +3,7 @@
 
 namespace Day3Dotnet
 {
-    class ReadonlyVsConstants
+    class ReadonlyVsConstants : AccessSpecifiersEg
     {
         //readonly fields
        public readonly int myvar1 = 5;
@@ -53,6 +53,10 @@ namespace Day3Dotnet
             aeg.showdata();
             aeg.internalmember = 2000;
             aeg.showdata();
+            //protected members of the base class are accesible from the derived class objects only
+            ReadonlyVsConstants rc = new ReadonlyVsConstants(1, 2);
+            rc.protectedmember = 10001;
+            rc.showdata();
             Console.Read();
         }
     }

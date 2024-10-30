@@ -79,9 +79,15 @@ Access Specifiers : define the scope and visibility of a class member. c# suppor
 
 - An object of the class where the public members are declared is required 
 
- - Protected : 
+ - Protected : Accessible to the class and all its derived classes. The derived classes can be in the same assembly or in other assemblies.
+ - They are accessed using the derived/sub/child class objects 
+
  - Internal  : Allows access only within the assembly, and not other assemblies
 
- - Protected Internal or Internal Protected
+ - Protected Internal or Internal Protected : Internal to all the derived and non derived classes of the current assembly
+ - Protected to all derived classes irrespective of the assembly
 
+Polymorphism : 
+     Static Polymorphism / Early Binding / Static Binding
+     Dynamic Polymorphism / Late Binding / Dynamic Binding
 

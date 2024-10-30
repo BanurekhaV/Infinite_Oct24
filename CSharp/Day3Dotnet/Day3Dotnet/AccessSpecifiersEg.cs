@@ -14,6 +14,9 @@ namespace Day3Dotnet
 
         internal int internalmember = 1000;
 
+        protected int protectedmember = 10000;
+
+         internal protected int pimember = 15;
         public void acceptdata()
         {
             Console.WriteLine("Enter value for private member");
@@ -22,7 +25,8 @@ namespace Day3Dotnet
 
         public void showdata()
         {
-            Console.WriteLine(privatemember + " " + publicmember + " " + internalmember);
+            Console.WriteLine(privatemember + " " + publicmember + " " + 
+                internalmember + " " + protectedmember + " "+ pimember);
         }
     }
 }
