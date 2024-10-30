@@ -53,10 +53,12 @@ namespace Day3Dotnet
             aeg.showdata();
             aeg.internalmember = 2000;
             aeg.showdata();
+            aeg.pimember = 9;
             //protected members of the base class are accesible from the derived class objects only
             ReadonlyVsConstants rc = new ReadonlyVsConstants(1, 2);
             rc.protectedmember = 10001;
             rc.showdata();
+            rc.pimember = 19;
             Console.Read();
         }
     }

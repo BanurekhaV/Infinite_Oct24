@@ -30,6 +30,7 @@ namespace Day3Dotnet
             AccessSpecifiersEg accessspecifiereg = new AccessSpecifiersEg();
             accessspecifiereg.publicmember = 80;
             accessspecifiereg.internalmember = 888;
+            accessspecifiereg.pimember = 25;
         }
 
         //destructor
