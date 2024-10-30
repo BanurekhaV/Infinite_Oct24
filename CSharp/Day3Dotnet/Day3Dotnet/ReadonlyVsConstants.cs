@@ -7,9 +7,17 @@ namespace Day3Dotnet
     {
         //readonly fields
        public readonly int myvar1 = 5;
-        readonly int myvar2;
-        float f;
+        public readonly int myvar2;
 
+        //instance or non static field
+       public float f = 10.5f;
+
+        //static member  - available as one copy only for the entire class. Values can be changed
+        static public int st = 99;
+
+        //constant field
+
+        const float Pi = 3.14f;  //values to be assigned to const field at the time of decl. itself
         //create constructor
        // public ReadonlyVsConstants() {  } // empty constructor
         public ReadonlyVsConstants(int a, int b) //parameterized constructor
@@ -17,14 +25,25 @@ namespace Day3Dotnet
             Console.WriteLine(myvar1 + " " + myvar2);
             myvar1 = a;
             myvar2 = b;
-            Console.WriteLine(myvar1 + " " + myvar2);
+            Console.WriteLine(myvar1 + " " + myvar2 + " " + f);
         }
 
         static void Main()
         {
-            ReadonlyVsConstants rc = new ReadonlyVsConstants(10,20);
-            rc.myvar1 = 100;
-            rc.myvar2 = 200;
+            //ReadonlyVsConstants rc = new ReadonlyVsConstants(10,20);
+            ////Console.WriteLine(rc);
+            //Console.WriteLine(rc.myvar1 + " " + rc.myvar2 + " " + rc.f + " " + st + " " + Pi);
+            //rc.f = 45.5f;
+            //ReadonlyVsConstants rc2 = new ReadonlyVsConstants(50, 100);
+            //rc2.f = 125.6f;
+            //st = 199;
+           
+            //Console.WriteLine(rc2.myvar1 +  " " +rc2.myvar2  + " " + rc2.f + " " + st + " " + Pi);
+            Console.WriteLine("----------OO concepts--------");
+            Employee employee1 = new Employee();  // calling an empty constructor
+            //employee1 = null;  // setting an object to null calls a destructor if available
+           // GC.Collect();  // forcing the garbage collector to release memory immediately
+            Employee employee2 = new Employee(100, "Hari"); //calling a 2 parameter constructor
             Console.Read();
         }
     }

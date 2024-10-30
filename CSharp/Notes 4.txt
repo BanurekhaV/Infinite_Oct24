@@ -9,7 +9,42 @@ string str="abc";
 StringBuilder : mutable strings
 
 
-Read only and Constants :
+Read only : variables that are declared using readonly keyword
+ - They cannot be modified after they are initialized
+ - We can initialize readonly variables either at the time of declaration or thru a constructor only
+- Constructor initialization has a precedence
+ - They are similar to a non-static variable (meaning, it is maintained as a separate copy for each object like a non static member)
+ - The normal non static members can be modified, but read only cannot be
+
+Constants : are like readonly (meaning once initialized cannot be modified)
+- Unlike read only we have to initialize constant members at the time of declaration itself
+- Constant members like static members are available for the entire class and not for each object
+
+
+
+OO programming :
+
+Class : is a representation of an user defined type to store data and functionalities to work on the data
+Objects : is a real workable instance of the class
+This - is a pointer that points to the current object/instance
+
+Constructors :
+ -Are special functions of a class
+ -They share the same name as that of the class
+ -They cannot have any return types
+ -They can be overloaded (can have many per class)
+ -They are meant to initialize the fields of the class
+ -They have to be either public, protected or internal, but cannot be private
+ -They are called explicitly at the time of object creation
+
+Destructors : 
+ - is a special function of the class
+ - it shares the same name as that of the class prefixed with a tilde '~'
+ - they cannot be overloaded (only one per class)
+ - they cannot be called explicitly
+ - they are meant for deallocation of allotted memory
+
+Pillars of OO
 
 
 
