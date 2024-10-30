@@ -37,13 +37,22 @@ namespace Day3Dotnet
             //ReadonlyVsConstants rc2 = new ReadonlyVsConstants(50, 100);
             //rc2.f = 125.6f;
             //st = 199;
-           
+
             //Console.WriteLine(rc2.myvar1 +  " " +rc2.myvar2  + " " + rc2.f + " " + st + " " + Pi);
-            Console.WriteLine("----------OO concepts--------");
-            Employee employee1 = new Employee();  // calling an empty constructor
+            // Console.WriteLine("----------OO concepts--------");
+            //Employee employee1 = new Employee();  // calling an empty constructor
             //employee1 = null;  // setting an object to null calls a destructor if available
-           // GC.Collect();  // forcing the garbage collector to release memory immediately
-            Employee employee2 = new Employee(100, "Hari"); //calling a 2 parameter constructor
+            // GC.Collect();  // forcing the garbage collector to release memory immediately
+            //Employee employee2 = new Employee(100, "Hari"); //calling a 2 parameter constructor
+            Console.WriteLine("---------AccessSpecifiers Example----------");
+
+            AccessSpecifiersEg aeg = new AccessSpecifiersEg();
+            aeg.acceptdata();
+            aeg.showdata();
+            aeg.publicmember = 200;
+            aeg.showdata();
+            aeg.internalmember = 2000;
+            aeg.showdata();
             Console.Read();
         }
     }

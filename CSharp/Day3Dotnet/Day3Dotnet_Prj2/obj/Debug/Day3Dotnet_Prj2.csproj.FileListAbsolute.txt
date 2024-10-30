@@ -1,0 +1,11 @@
+C:\Banu\Infinite_1\CSharp\Day3Dotnet\Day3Dotnet_Prj2\bin\Debug\Day3Dotnet_Prj2.exe.config
+C:\Banu\Infinite_1\CSharp\Day3Dotnet\Day3Dotnet_Prj2\bin\Debug\Day3Dotnet_Prj2.exe
+C:\Banu\Infinite_1\CSharp\Day3Dotnet\Day3Dotnet_Prj2\bin\Debug\Day3Dotnet_Prj2.pdb
+C:\Banu\Infinite_1\CSharp\Day3Dotnet\Day3Dotnet_Prj2\bin\Debug\Day3Dotnet.exe
+C:\Banu\Infinite_1\CSharp\Day3Dotnet\Day3Dotnet_Prj2\bin\Debug\Day3Dotnet.pdb
+C:\Banu\Infinite_1\CSharp\Day3Dotnet\Day3Dotnet_Prj2\bin\Debug\Day3Dotnet.exe.config
+C:\Banu\Infinite_1\CSharp\Day3Dotnet\Day3Dotnet_Prj2\obj\Debug\Day3Dotnet_Prj2.csproj.AssemblyReference.cache
+C:\Banu\Infinite_1\CSharp\Day3Dotnet\Day3Dotnet_Prj2\obj\Debug\Day3Dotnet_Prj2.csproj.CoreCompileInputs.cache
+C:\Banu\Infinite_1\CSharp\Day3Dotnet\Day3Dotnet_Prj2\obj\Debug\Day3Dotnet_Prj2.csproj.CopyComplete
+C:\Banu\Infinite_1\CSharp\Day3Dotnet\Day3Dotnet_Prj2\obj\Debug\Day3Dotnet_Prj2.exe
+C:\Banu\Infinite_1\CSharp\Day3Dotnet\Day3Dotnet_Prj2\obj\Debug\Day3Dotnet_Prj2.pdb

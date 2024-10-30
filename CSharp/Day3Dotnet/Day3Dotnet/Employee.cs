@@ -27,6 +27,9 @@ namespace Day3Dotnet
             this.EmpId = EmpId;
             EmpName = ename;
             Console.WriteLine($"Reached 2 parameter Constructor {EmpId}, {EmpName}, {Salary}, {Dob}");
+            AccessSpecifiersEg accessspecifiereg = new AccessSpecifiersEg();
+            accessspecifiereg.publicmember = 80;
+            accessspecifiereg.internalmember = 888;
         }
 
         //destructor

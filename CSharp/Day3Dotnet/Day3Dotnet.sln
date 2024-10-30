@@ -5,6 +5,8 @@ VisualStudioVersion = 16.0.34931.43
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Day3Dotnet", "Day3Dotnet\Day3Dotnet.csproj", "{C310D7A2-FF62-4B43-9A4E-A576D6B76482}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Day3Dotnet_Prj2", "Day3Dotnet_Prj2\Day3Dotnet_Prj2.csproj", "{2A580CB7-B769-4A87-B01C-6871EF55B5ED}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{C310D7A2-FF62-4B43-9A4E-A576D6B76482}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C310D7A2-FF62-4B43-9A4E-A576D6B76482}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C310D7A2-FF62-4B43-9A4E-A576D6B76482}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2A580CB7-B769-4A87-B01C-6871EF55B5ED}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2A580CB7-B769-4A87-B01C-6871EF55B5ED}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2A580CB7-B769-4A87-B01C-6871EF55B5ED}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2A580CB7-B769-4A87-B01C-6871EF55B5ED}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

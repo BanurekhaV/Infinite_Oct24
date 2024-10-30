@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{C310D7A2-FF62-4B43-9A4E-A576D6B76482}</ProjectGuid>
+    <ProjectGuid>{2A580CB7-B769-4A87-B01C-6871EF55B5ED}</ProjectGuid>
     <OutputType>Exe</OutputType>
-    <RootNamespace>Day3Dotnet</RootNamespace>
-    <AssemblyName>Day3Dotnet</AssemblyName>
+    <RootNamespace>Day3Dotnet_Prj2</RootNamespace>
+    <AssemblyName>Day3Dotnet_Prj2</AssemblyName>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -32,9 +32,6 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
-  <PropertyGroup>
-    <StartupObject>Day3Dotnet.ReadonlyVsConstants</StartupObject>
-  </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Core" />
@@ -46,14 +43,17 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="AccessSpecifiersEg.cs" />
-    <Compile Include="Employee.cs" />
-    <Compile Include="Program.cs" />
+    <Compile Include="P2.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="ReadonlyVsConstants.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Day3Dotnet\Day3Dotnet.csproj">
+      <Project>{c310d7a2-ff62-4b43-9a4e-a576d6b76482}</Project>
+      <Name>Day3Dotnet</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

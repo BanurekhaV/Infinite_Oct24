@@ -25,7 +25,9 @@ Constants : are like readonly (meaning once initialized cannot be modified)
 OO programming :
 
 Class : is a representation of an user defined type to store data and functionalities to work on the data
-Objects : is a real workable instance of the class
+
+Objects : is a real workable instance of the class (Data, behaviour, and state)
+
 This - is a pointer that points to the current object/instance
 
 Constructors :
@@ -44,7 +46,42 @@ Destructors :
  - they cannot be called explicitly
  - they are meant for deallocation of allotted memory
 
-Pillars of OO
+Note : Since the Framework supports Garbage Collection automatically and disposes the unutilized memory, there is no need to explicitly write a destructor
 
+Pillars of OO :
+WYSIWYG : 
+
+Encapsulation :  unit of Info. that consists of fields and functions. 
+
+- Is a process of enclosing one or more items within a physical or a logical package. It prevents access to implementation details
+
+-We achieve encapsulation using access specifiers
+
+Abstraction : Giving away only required data, and hiding not required data
+
+Polymorphism : 1. method overloading, operator overloading
+               2. overriding
+
+Inheritance : derivation
+
+Note :
+
+ 1. Classes are internal by default
+ 2. All members of the class / structure are private by default
+
+
+Access Specifiers : define the scope and visibility of a class member. c# supports
+
+ - Private : Accessible only in the class where it is declared
+             No access anywhere else
+
+ - Public :  All classes within the assembly or outside the assembly with or without derivation can access public members
+
+- An object of the class where the public members are declared is required 
+
+ - Protected : 
+ - Internal  : Allows access only within the assembly, and not other assemblies
+
+ - Protected Internal or Internal Protected
 
 
