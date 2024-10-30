@@ -1,0 +1,15 @@
+Strings : is a collection of characters
+          Memory is allotted on the heap
+          Are predefined reference types
+          Strings are Immutable
+          Strings have fixed size
+          String memory cannot be changed
+string str="abc";
+
+StringBuilder : mutable strings
+
+
+Read only and Constants :
+
+
+
