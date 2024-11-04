@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{2A580CB7-B769-4A87-B01C-6871EF55B5ED}</ProjectGuid>
+    <ProjectGuid>{A12D72BA-DA83-481D-8E10-195A15B31917}</ProjectGuid>
     <OutputType>Exe</OutputType>
-    <RootNamespace>Day3Dotnet_Prj2</RootNamespace>
-    <AssemblyName>Day3Dotnet_Prj2</AssemblyName>
+    <RootNamespace>Day4_Dotnet</RootNamespace>
+    <AssemblyName>Day4_Dotnet</AssemblyName>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -32,9 +32,6 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
-  <PropertyGroup>
-    <StartupObject>Day3Dotnet_Prj2.Test</StartupObject>
-  </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Core" />
@@ -46,18 +43,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="OverloadEg.cs" />
-    <Compile Include="P2.cs" />
+    <Compile Include="InheritanceEg.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\Day3Dotnet\Day3Dotnet.csproj">
-      <Project>{c310d7a2-ff62-4b43-9a4e-a576d6b76482}</Project>
-      <Name>Day3Dotnet</Name>
-    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

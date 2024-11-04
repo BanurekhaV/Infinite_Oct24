@@ -1,0 +1,30 @@
+Inheritance : extensions of existing object capabilities
+
+single
+multilevel inheritance
+
+2 types of relations are seen in C# 1. is a relationship, 2. has a relationship(composition/aggregation)
+
+1.)'is a ' relationship
+
+class Vehicle{double cost, string make.... } 
+
+class Car : Vehicle 
+{
+string cartype
+string carcolor;
+}
+
+2.) 'has a' relationship
+
+class Engine{ } car has an engine(engine type, power, manufacturer)
+
+
+class Car{
+   Engine engine;  //object of another class contained as a member in this class
+   Accessories accessories;
+ }
+
+Polymorphism : 
+     Static Polymorphism / Early Binding / Static Binding
+     Dynamic Polymorphism / Late Binding / Dynamic Binding

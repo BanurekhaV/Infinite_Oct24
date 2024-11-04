@@ -87,7 +87,4 @@ Access Specifiers : define the scope and visibility of a class member. c# suppor
  - Protected Internal or Internal Protected : Internal to all the derived and non derived classes of the current assembly
  - Protected to all derived classes irrespective of the assembly
 
-Polymorphism : 
-     Static Polymorphism / Early Binding / Static Binding
-     Dynamic Polymorphism / Late Binding / Dynamic Binding
 
