@@ -42,7 +42,7 @@ namespace Day4_Dotnet
             return L * B;
         }
 
-        public new float Circumference() // method hiding
+        public new float Circumference() // method hiding using new keyword
         {
             return 2 * (L + B);
         }
@@ -61,7 +61,7 @@ namespace Day4_Dotnet
         static void Main()
         {
             Shape shape = new Shape();
-            Console.WriteLine("Shapes Area {0}", shape.Area());
+            Console.WriteLine("Shapes Area {0}", shape.Area()); // goto line no.15
 
             Rectangle rectangle = new Rectangle();
             rectangle.GetLB();
@@ -69,7 +69,7 @@ namespace Day4_Dotnet
             Console.WriteLine("Rectangles Perimeter {0}", rectangle.Circumference()); 
             Circle circle = new Circle();
             circle.GetRadius();
-            Console.WriteLine("Circles Area {0}" , circle.Area());
+            Console.WriteLine("Circles Area {0}" , circle.Area()); // goto line no.15
             Console.Read();
         }
     }
