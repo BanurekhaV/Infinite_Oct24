@@ -48,6 +48,23 @@ case 4) base has only parameterized constructor
  when we create an object of the derived, it throws error saying it expects parameter value for the parent. 
   To handle the above situation, we write constructor in the derived that matches the parent constructor
 
+Constructor Types : 
+
+Private constructors  : that does not allow any direct objects to be instantiated
+Protected constructors : that allow object creation by self and by all the derived types
+
+internal constructors : allow object creation by any class within the assembly
+public constructors : allow object creation by any class within the assembly
+and also other assemblies
+static constructors : 1. Is executed before any instance of the class is created
+                      2. Is executed before any of the static members are referenced
+                      3. Is executed after static fields/members are initialized if any
+                      4. Does not take any access modifiers
+                      5. Cannot take Parameters, and hence only one can exist/class
+                      6. Is executed once during the program instantiation
+                      7. cannot be called directly, but is called automatically 
+ 
+  
 
 Polymorphism : 
      Static Polymorphism / Early Binding / Static Binding

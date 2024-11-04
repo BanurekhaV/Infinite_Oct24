@@ -33,7 +33,7 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <PropertyGroup>
-    <StartupObject>Day4_Dotnet.Base_Derived_Constructor_Call</StartupObject>
+    <StartupObject>Day4_Dotnet.Static_ConstructorEg</StartupObject>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
@@ -47,8 +47,10 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Base_Derived_Constructor_Call.cs" />
+    <Compile Include="Constructor_Types.cs" />
     <Compile Include="InheritanceEg.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Static_ConstructorEg.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
