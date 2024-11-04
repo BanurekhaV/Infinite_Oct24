@@ -3,7 +3,7 @@
 
 namespace Day4_Dotnet
 {
-    class Student
+    class Student 
     {
         //3 private fields
         private string RollNo;

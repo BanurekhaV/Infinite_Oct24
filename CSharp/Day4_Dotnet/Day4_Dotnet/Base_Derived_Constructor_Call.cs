@@ -8,7 +8,7 @@ namespace Day4_Dotnet
 {
     class Parent
     {
-        int p;
+        public int p;
         //empty constructor
         internal Parent()
         {
@@ -29,12 +29,22 @@ namespace Day4_Dotnet
 
         public Child()
         {
-            Console.WriteLine("This is msg from child");
+            Console.WriteLine("Empty Child..");
         }
 
-        public Child(int a)
+         // instantiating the base type thru the derived type constructor
+        
+        public Child(int a):base(a)
         {
             c = a;
+            Console.WriteLine("Parents Data " + base.p);
+            Console.WriteLine("Childs Data " + c);
+        }
+
+        public Child(int a, int b):base(b)
+        {
+            c = a;
+            Console.WriteLine("Parents Data " + base.p);
             Console.WriteLine("Childs Data " + c);
         }
     }
@@ -42,7 +52,13 @@ namespace Day4_Dotnet
     {
        static void Main()
         {
+            Parent p1 = new Parent(); //calls directlty the empty constructor of the Parent
+            Child c1 = new Child(); //calls the empty const. of the Parent and then Child
+            Parent parent = new Parent(5); // calls the one parameter const. of the Parent
+            Child child = new Child(10); // calls one parameter const. of the Parent and then one parameter const. of the child 
 
+            Child child2 = new Child(25, 55); // calls the one parameter const. of the Parent and then the 2 parameter const. of the Child
+            Console.Read();
         }
     }
 }

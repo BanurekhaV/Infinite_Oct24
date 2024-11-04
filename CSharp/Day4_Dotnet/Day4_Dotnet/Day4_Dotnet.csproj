@@ -32,6 +32,9 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject>Day4_Dotnet.Base_Derived_Constructor_Call</StartupObject>
+  </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Core" />
@@ -43,6 +46,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Base_Derived_Constructor_Call.cs" />
     <Compile Include="InheritanceEg.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

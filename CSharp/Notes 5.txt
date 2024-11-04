@@ -25,6 +25,30 @@ class Car{
    Accessories accessories;
  }
 
+ case 1)both base type and derived do not have any constructors defined
+
+1. If our class/classes does not have any constructor written the framework provides one i.e. default constructor (which is public by default)
+  - When we create base object or derived, only the default constructor will be called
+
+ case 2)both base and derived have defined empty constructors
+
+2. When we create object of the base, then base types empty constructor will be invoked
+   When we create object of the derived, then also the empty constructor of the base will be called, followed by the empty constructor of the derived
+
+ case 3) when the Base class has overloaded constructors, with one empty constructor, and other as parameterized
+
+  when we create an object of the base type without or with parameters, it matches  the signatures and calls accordingly.
+
+  when we create an object of the derived type, then also it invokes the empty constructor of the base followed by the derived
+
+case 4) base has only parameterized constructor
+
+ when we create an object of the base type, it expects parameters to match the constructor, and then invokes
+
+ when we create an object of the derived, it throws error saying it expects parameter value for the parent. 
+  To handle the above situation, we write constructor in the derived that matches the parent constructor
+
+
 Polymorphism : 
      Static Polymorphism / Early Binding / Static Binding
      Dynamic Polymorphism / Late Binding / Dynamic Binding
