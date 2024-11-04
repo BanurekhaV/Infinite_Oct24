@@ -65,6 +65,13 @@ static constructors : 1. Is executed before any instance of the class is created
                       7. cannot be called directly, but is called automatically 
  
   
+Overriding and Hiding : Overriding is when the base class marks the method as virtual, allowing the derived type to redefine the functionality
+
+The derived type will use the 'override' modifier and redefine the code
+
+Method Hiding is when the Base type has methods that are not marked virtual, but the derived type wants to redefine the method, then the derived can use the same signature of the method with a 'new' keyword.
+
+We can also implement hiding the fields by marking them with new keyword. This is name hiding
 
 Polymorphism : 
      Static Polymorphism / Early Binding / Static Binding
