@@ -1,0 +1,50 @@
+Polymorphism : 
+     Static Polymorphism / Early Binding / Static Binding
+     Dynamic Polymorphism / Late Binding / Dynamic Binding
+
+Binding : is a concept of resolving function calls at the compile time/runtime
+
+Polymorphism is achieved as below :
+ 1. Method Overloading, Operator overloading
+     - is seen within the class
+     - Same named methods but with different number of arguments or different data types
+     - This always gives static polymorphism
+ 
+ 1.1. : Operator Overloading : 
+int a =5,b=5,c;
+c= a + b;  // gives 10
+
+rectangle r1,r2,r3;
+r3 = r1 + r2;
+  
+ 2. Method Overriding :is a way of achieving dynamic polymorphism, where a base type can be made to point to any of its derived type (covariance) which results in dynamic binding.(Base type marks the members as 'Virtual', and the derived type redefines by marking 'override')
+- is seen across 2 or more related classes
+- Does not allow any signature changes by the derived type
+
+
+GoTo Labels : are used to transfer control within the function
+              they are used with valid identifiers followed by ':'
+              they are unstructured control of flow of statements
+
+
+Types of Classes : 
+  1. internal class : normal default classes that can be instantiated and inherited 
+  2. static class : all members of the class are static. Cannot inherit a static class. Cannot create objects of a static class. We can use the static class by its name and access all its static members
+  3. Abstract class : is a class that has at least one abstract method. Can have non abstract methods. Cannot be instantiated. Can be inherited. The inherited class will have to provide implementation/definition/function body to the abstract method/s
+    Abstract method : is a method that does not have the implementation code, but only function signature
+  4. Sealed class : can be instantiated but cannot be inherited
+  5. Partial class : that can be defined in multiple files. Multiple developers can work simultaneously on the same class
+  
+Interface:
+
+Properties: are extensions of fields(which are member variables of a class/structure).
+- are named members of the class that underlyingly refer to the field/s
+- are accessed using accessors (get, set)
+- do not name the storage locations
+
+properties are always public
+properties have the same datatype as that of the field which is being extended
+properties may have one or both the accessors defined
+
+
+

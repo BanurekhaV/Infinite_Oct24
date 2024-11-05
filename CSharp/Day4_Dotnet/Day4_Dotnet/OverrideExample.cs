@@ -39,6 +39,7 @@ namespace Day4_Dotnet
         //      parameters return type (signature)that is mentioned in the base class
         public override float Area()
         {
+            GetLB();
             return L * B;
         }
 
@@ -50,6 +51,11 @@ namespace Day4_Dotnet
 
     class Circle : Shape
     {
+        public override float Area()
+        {
+            GetRadius();
+            return base.Area();
+        }
         public void GetRadius()
         {
             Console.WriteLine("Enter Radius :");
@@ -63,13 +69,22 @@ namespace Day4_Dotnet
             Shape shape = new Shape();
             Console.WriteLine("Shapes Area {0}", shape.Area()); // goto line no.15
 
-            Rectangle rectangle = new Rectangle();
-            rectangle.GetLB();
-            Console.WriteLine("Rectangles Area {0}", rectangle.Area());
-            Console.WriteLine("Rectangles Perimeter {0}", rectangle.Circumference()); 
-            Circle circle = new Circle();
-            circle.GetRadius();
-            Console.WriteLine("Circles Area {0}" , circle.Area()); // goto line no.15
+            //Rectangle rectangle = new Rectangle();
+            //rectangle.GetLB();
+            //Console.WriteLine("Rectangles Area {0}", rectangle.Area());
+            //Console.WriteLine("Rectangles Perimeter {0}", rectangle.Circumference()); 
+            //Circle circle = new Circle();
+            //circle.GetRadius();
+            //Console.WriteLine("Circles Area {0}" , circle.Area()); // goto line no.15
+
+            //actual dynamic polymorphism can be achieved using co-variance
+            shape = new Rectangle();  // Co variance
+           
+            Console.WriteLine("Rectangles Area {0}", shape.Area());
+
+            shape = new Circle();
+            Console.WriteLine("Circles Area {0} ", shape.Area());
+            
             Console.Read();
         }
     }

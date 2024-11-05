@@ -73,8 +73,3 @@ Method Hiding is when the Base type has methods that are not marked virtual, but
 
 We can also implement hiding the fields by marking them with new keyword. This is name hiding
 
-Polymorphism : 
-     Static Polymorphism / Early Binding / Static Binding
-     Dynamic Polymorphism / Late Binding / Dynamic Binding
-
-Binding : is a concept of resolving function calls at the compile time/runtime
