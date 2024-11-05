@@ -35,7 +35,16 @@ Types of Classes :
   4. Sealed class : can be instantiated but cannot be inherited
   5. Partial class : that can be defined in multiple files. Multiple developers can work simultaneously on the same class
   
-Interface:
+Interface
+------------
+ are like classes, which can have properties, methods, events, delegates, but only declarations and no implementations
+- interface members are public by default 
+- interface do not allow explicit access modifiers
+- the class that implements the interface will have to provide implementation to all the members
+- a class can implement from multiple interfaces
+- an interface can implement other interface/s
+- we cannot instantiate an interface, but a reference object can be used
+
 
 Properties: are extensions of fields(which are member variables of a class/structure).
 - are named members of the class that underlyingly refer to the field/s
