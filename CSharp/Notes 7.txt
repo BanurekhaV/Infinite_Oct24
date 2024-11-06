@@ -21,7 +21,30 @@ Structures in C#:
 - All Data items of the struct have to be initialized before leaving the constructor
 
 
-Equals vs RefEquals vs ==
+Equals vs RefEquals vs == :
+
+Exceptions : are unwanted/unexpected events that stop the regular flow of program.
+They indicate the problems in  our application. SystemExceptions are classes that are inbuilt, while Application Exceptions are user defined. Exception is the base class for all exceptions.
+
+Handling Exceptions : is a process to ensure that the program does not terminate, does not expose the code and gives simple meaningful error messages to the user and exits.
+
+try{} - a block of code to identify exceptions. This block is followed by one or more catch blocks
+
+catch{} - a block of code that handles the desired exception
+
+finally{} - is a block of code that executes irrespective of whether there is an exception or not. Hence statements that have to be executed are placed here. (eg. database closing, file closing, object freeing etc..)
+
+throw - a keyword that helps to raise an exception
+
+User Defined Exceptions
+
+1. Create exception class/es
+2. Expect exception to occur (in the code)
+3. Throw relevant exception object
+4. handle the exception
+
+
+
 
 
 
