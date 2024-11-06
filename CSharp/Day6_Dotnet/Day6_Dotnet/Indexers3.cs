@@ -47,7 +47,54 @@ namespace Day6_Dotnet
             infinite[2.0f] = "of cSharp";
 
             Console.WriteLine(infinite[0.0f] + " " + infinite[1.0f] + " " + infinite[2.0f]);
+
+            Console.WriteLine("-----------More on Indexers-----------");
+
+            FlowerVase fv = new FlowerVase();
+            fv[0] = new Flower("Roses", "Red");
+            fv[1] = new Flower("Violets", "Blue");
+            fv[2] = new Flower("Lillies", "White");
+            fv[3] = new Flower("Hibiscus", "Pink");
+            fv[4] = new Flower("Marigold", "Yellow");
+
+            for (int i = 0; i < 5; i++)
+            {
+                fv[i].Display();
+            }
+
             Console.Read();
         }
+    }
+
+    class Flower
+    {
+        string name;
+        string color;
+
+        public Flower(string name, string color)
+        {
+            this.name = name;
+            this.color = color;
+        }
+
+        public void Display()
+        {
+            Console.WriteLine(name + " " + " are in " + color + " color");
+        }
+    }
+
+    class FlowerVase
+    {
+        Flower[] fobj = new Flower[5];  // composition/aggregation 
+
+        public Flower this[int pos]
+        {
+            get
+            {
+                return fobj[pos];
+            }
+            set { fobj[pos] = value; }
+        }
+
     }
 }

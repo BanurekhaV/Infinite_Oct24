@@ -6,5 +6,23 @@ Indexers : An indexer allows an object to be indexed as an array. The class with
 - Indexers can be overloaded by providing different index types
 
 
+Structures in C#:
+
+-is a user defined value type that allows to create a single variable and store multiple related data items.
+- are similar to classes but differ in behaviour and usage
+- are light weight variables to hold small amounts of data
+- they offer better performance as they are allocated in stack memory, hence there is no garbage collection overheads
+- are preferred as an alternative to primitive-types
+
+- They cannot be inherited (i.e we cannot derive one struct from another)
+- can implement interface methods
+- compiler supplies a default constructor to the struct
+- structures cannot have empty constructors, only parameterized constructors
+- All Data items of the struct have to be initialized before leaving the constructor
+
+
+Equals vs RefEquals vs ==
+
+
 
 
