@@ -22,7 +22,7 @@ W->Withdrawal
 
   Debit(int amt) function 
 
--Pass the other information like Acount no, customer name, acc type through constructor
+-Pass the other information like Account no, customer name, acc type through constructor
 
 -write and call the show data method to display the values.
 

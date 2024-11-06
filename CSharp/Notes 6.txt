@@ -15,7 +15,7 @@ int a =5,b=5,c;
 c= a + b;  // gives 10
 
 rectangle r1,r2,r3;
-r3 = r1 + r2;
+r3 = r1 + r2; //throws error
   
  2. Method Overriding :is a way of achieving dynamic polymorphism, where a base type can be made to point to any of its derived type (covariance) which results in dynamic binding.(Base type marks the members as 'Virtual', and the derived type redefines by marking 'override')
 - is seen across 2 or more related classes
@@ -44,6 +44,12 @@ Interface
 - a class can implement from multiple interfaces
 - an interface can implement other interface/s
 - we cannot instantiate an interface, but a reference object can be used
+
+Explicit Interface Implementation
+----------------------------------
+- When a class implements from more than 1 interface, and if these interfaces have same method with signature, then, we go for explicit implementation
+- Access modifiers are not allowed on explicit implementation
+- When we have explicit implementation of an interface member in a class, then the member cannot be accessed thru class reference object/variable, but only thru interface reference variable
 
 
 Properties: are extensions of fields(which are member variables of a class/structure).

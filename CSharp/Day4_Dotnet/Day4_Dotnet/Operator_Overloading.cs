@@ -40,8 +40,8 @@ namespace Day4_Dotnet
             Console.WriteLine(c);
 
             Console.WriteLine("---------------");
-            Distance d1, d2, d3;
-            d1 = new Distance();
+            Distance d1, d2, d3;  // declaring objects
+            d1 = new Distance(); // instantiating an object
             d1.dist = 10;
             d2 = new Distance();
             d2.dist = 20;

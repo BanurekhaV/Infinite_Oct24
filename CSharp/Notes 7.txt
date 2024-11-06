@@ -1,0 +1,10 @@
+Indexers : An indexer allows an object to be indexed as an array. The class with an indexer behaves similar to a virtual array. Then we can access the instance of such a class using the array access operator '[]'
+
+- Are similar to properties to some extent. 
+- Using get and set accessors, we can get or set values for a particular instance of the object
+- Unlike properties, they do not have any names, instead are used with the 'this' keyword
+- Indexers can be overloaded by providing different index types
+
+
+
+
