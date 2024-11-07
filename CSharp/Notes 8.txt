@@ -30,3 +30,13 @@ SortedList
 Stacks
 Queues
 
+IComparable vs IComparer
+
+IComparable is used to sort user defined datatypes. Is used when we have the complete implementation control.
+
+IComparer :Also used to sort userd defined types. Is used when we do not have direct control on implementation (eg. when we access some class/es from a DLL, or other sources)
+
+IEnumerable<> vs IEnumerator<>
+
+Both the interfaces help to loop thru the collections. But syntactically IEnumerable is short and simple when compared to IEnumerator. Also IEnumerable makes use of IEnumerator only
+

@@ -33,7 +33,7 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <PropertyGroup>
-    <StartupObject>Day7_Dotnet.Program</StartupObject>
+    <StartupObject>Day7_Dotnet.IEnumerable_IEnumeratorEg</StartupObject>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
@@ -48,6 +48,7 @@
   <ItemGroup>
     <Compile Include="ComparisionEg.cs" />
     <Compile Include="GenericsEg.cs" />
+    <Compile Include="IEnumerable_IEnumeratorEg.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
