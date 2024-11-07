@@ -11,7 +11,8 @@ namespace Day7_Dotnet
             // ArrayListEg();
             // HashTableEg();
             // StacksEg();
-            GenericsEg.ListEg();
+            // GenericsEg.ListEg();
+            Marks.JustLikeThat();
             Console.ReadLine();
         }
 

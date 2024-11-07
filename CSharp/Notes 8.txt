@@ -14,8 +14,19 @@ Common collection classes
                - values can be null or duplicates and any datatype
                - the data in hash table is sorted using a hashing technique, and hence
                    the data will not be either in the inserted order or in a sorted order
-3. Sorted List
-4. Stacks
-5. Queues
+3. Sorted List : is similar to that of the Hashtable, except that the collection is in the sorted order of the key.
+ 
+4. Stacks : LIFO
+5. Queues : FIFO
 
+
+Generics : is a way of programming that lets us define type safe classes, methods, properties etc. decoupled with datatypes.
+Hence they can provide increased performance and productivity.
+
+Generic Collections :
+List
+Dictionary
+SortedList
+Stacks
+Queues
 

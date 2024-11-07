@@ -48,8 +48,9 @@ namespace Day7_Dotnet
             emplist.Add(new Employee(200, "Nikhil", 50000, "Infinite"));
             emplist.Add(new Employee(130, "Navya", 52000, "Infinite"));
             emplist.Add(new Employee(250, "Sahana", 48000, "Infinite"));
+            emplist.Add(new Employee(150, "Rajesh", 50000, "Infinite"));
 
-            foreach(Employee e in emplist)
+            foreach (Employee e in emplist)
             {
                 Console.WriteLine(e.ToString());                
             }
@@ -64,7 +65,7 @@ namespace Day7_Dotnet
                 Employee item = (Employee)en.Current;
                 Console.WriteLine("The Salary is : " + item.Salary);
             }
-
+            
         }
     }
 
@@ -94,7 +95,8 @@ namespace Day7_Dotnet
             {
                 return this.Salary.CompareTo(anotherobj.Salary);
             }
-            return anotherobj.Salary.CompareTo(this.Salary);
+            // return anotherobj.Salary.CompareTo(this.Salary); desc sort
+            return this.Salary.CompareTo(anotherobj.Salary); //asc sort
         }
     }
 }
