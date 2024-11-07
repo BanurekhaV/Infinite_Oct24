@@ -25,7 +25,7 @@ namespace Day6_Dotnet
             
             catch (FormatException fe)
             {
-                Console.WriteLine(fe.Source + " "+ fe.Message);
+                Console.WriteLine(fe.Source + " " + fe.Message);
                 Console.WriteLine("Please enter only numbers");
             }
 

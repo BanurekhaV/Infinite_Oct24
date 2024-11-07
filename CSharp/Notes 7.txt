@@ -41,7 +41,21 @@ User Defined Exceptions
 1. Create exception class/es
 2. Expect exception to occur (in the code)
 3. Throw relevant exception object
-4. handle the exception
+4. Handle the exception
+
+Exceptions provide a consistent mechanism for identifying and responding to error situations.
+They help answer
+1. What went wrong : is answered by the type of exception
+2. Where did it go wrong : is answered by the stack trace
+3. Why did it go wrong : is answered thru exception class messages
+
+Some do's and don'ts of exceptions
+
+-Do not throw exceptions for simple statements where an if can be used to check the errors
+-Use try/finally blocks around the code where exceptions can potentially exists.
+-Do not throw the Exception() base class, as it is too broad and does not give the correct error info.
+-Do not write empty catches.
+
 
 
 

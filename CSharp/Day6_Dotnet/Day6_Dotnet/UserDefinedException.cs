@@ -37,13 +37,17 @@ namespace Day6_Dotnet
             Vote vote = new Vote();
             try
             {
-                vote.getAge();
+                vote.getAge();  
             }
 
             catch(VotingException ve)
             {
-                Console.WriteLine(ve.Message);
+                Console.WriteLine(ve.Message + " " + "18 years and above are only allowed to vote");
             }
+
+            Console.WriteLine("*********Checked and Unchecked*******");
+            // Checked_Unchecked_Exceptions.CheckOverFlow();
+            Console.WriteLine(Checked_Unchecked_Exceptions.UnCheckOverFlow()); 
             Console.Read();
 
         }

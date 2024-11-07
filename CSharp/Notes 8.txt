@@ -1,0 +1,21 @@
+Collections :are specialized classes for data storage and retrieval. 
+They can store heterogenous types of data
+They are not fixed in size. 
+Memory allocations are dynamic
+Provide various functionalities for storing, retrieving, manipulating, searching etc..
+
+Common collection classes
+
+1. ArrayList: are collections that can store any data types
+2. HashTables: are collections that stores data as a key and value pairs
+               - keys cannot be null
+               - keys cannot be duplicated
+               - keys can be of any data type
+               - values can be null or duplicates and any datatype
+               - the data in hash table is sorted using a hashing technique, and hence
+                   the data will not be either in the inserted order or in a sorted order
+3. Sorted List
+4. Stacks
+5. Queues
+
+
