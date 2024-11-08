@@ -1,0 +1,29 @@
+Exception Handling :  
+1.
+•	You have a class which has methods for transaction for a banking system. (created earlier)
+•	Define your own methods for deposit money, withdraw money and balance in the account.
+•	Write your own new application Exception class called InsuffientBalanceException. 
+•	This new Exception will be thrown in case of withdrawal of money from the account where customer doesn’t have sufficient balance.
+•	Identify and categorize all possible checked and unchecked exception.
+
+2. Create a class called Scholarship which has a function Public void Merit() that takes marks and fees as an input. 
+If the given mark is >= 70 and <=80, then calculate scholarship amount as 20% of the fees
+If the given mark is > 80 and <=90, then calculate scholarship amount as 30% of the fees
+If the given mark is >90, then calculate scholarship amount as 50% of the fees.
+In all the cases return the Scholarship amount
+
+Properties :
+
+ 3. Create a Class called Doctor with RegnNo, Name, Feescharged as Private members. Create properties to give values and also to display the same.
+
+Create a class called Books with BookName and AuthorName as members. Instantiate the class through constructor and also write a method Display() to display the details. 
+
+Create an Indexer of Books Object to store 5 books in a class called BookShelf. Using the indexer method assign values to the books and display the same.
+
+Hint(use Aggregation/composition)
+
+ 4. Create an Employee class with Empid int, Empname string, Salary float. Pass values to the members through Constructor.
+
+Create a derived class called ParttimeEmployee with Wages as a data member. Instantiate the base class through the derived class constructor 
+
+5. Create an Interface IStudent with StudentId and Name as Properties, void ShowDetails() as its method. Create 2 classes Dayscholar and Resident that implements the interface Properties and Methods.

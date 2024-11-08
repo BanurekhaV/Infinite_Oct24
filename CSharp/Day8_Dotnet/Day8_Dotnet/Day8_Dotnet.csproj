@@ -33,7 +33,7 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <PropertyGroup>
-    <StartupObject>Day8_Dotnet.DelegatesAsParameter</StartupObject>
+    <StartupObject>Day8_Dotnet.Driver</StartupObject>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
@@ -49,6 +49,7 @@
     <Compile Include="AllGenerics.cs" />
     <Compile Include="Delegates1.cs" />
     <Compile Include="DelegatesAsParameter.cs" />
+    <Compile Include="GenericDelegates.cs" />
     <Compile Include="GenericIndexers.cs" />
     <Compile Include="Multicast.cs" />
     <Compile Include="Program.cs" />
