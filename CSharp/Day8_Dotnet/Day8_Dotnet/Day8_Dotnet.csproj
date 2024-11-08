@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{720E7A22-1B4F-4D09-9BD2-DAF2ED14C032}</ProjectGuid>
+    <ProjectGuid>{73934EFC-5F3D-4DCE-8E4A-075432BF7563}</ProjectGuid>
     <OutputType>Exe</OutputType>
-    <RootNamespace>Day7_Dotnet</RootNamespace>
-    <AssemblyName>Day7_Dotnet</AssemblyName>
+    <RootNamespace>Day8_Dotnet</RootNamespace>
+    <AssemblyName>Day8_Dotnet</AssemblyName>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -33,7 +33,7 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <PropertyGroup>
-    <StartupObject>Day7_Dotnet.DictionaryEg</StartupObject>
+    <StartupObject>Day8_Dotnet.Tester</StartupObject>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
@@ -46,10 +46,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="ComparisionEg.cs" />
-    <Compile Include="DictionaryEg.cs" />
-    <Compile Include="GenericsEg.cs" />
-    <Compile Include="IEnumerable_IEnumeratorEg.cs" />
+    <Compile Include="AllGenerics.cs" />
+    <Compile Include="GenericIndexers.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

@@ -23,10 +23,14 @@ Common collection classes
 Generics : is a way of programming that lets us define type safe classes, methods, properties etc. decoupled with datatypes.
 Hence they can provide increased performance and productivity.
 
+We can have class, method, structs, property, indexers, field, constructors etc, as generic.
+
+We can have constraint on generics
+
 Generic Collections :
-List
-Dictionary
-SortedList
+List : can take both value as well as reference types
+Dictionary : is a key value pair based collection, where we need to specify the key and values data types while declaring. It is same as HashTable, except the data is in the inserted order
+SortedList :is same as Dictionary, but the data is in a sorted manner
 Stacks
 Queues
 
