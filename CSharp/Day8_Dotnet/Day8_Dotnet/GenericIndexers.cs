@@ -37,8 +37,8 @@ namespace Day8_Dotnet
         //3.  optional
         public T this[string index]
         {
-            get { return data[1]; }
-            set { data[1] = value; }
+            get { return data[Convert.ToInt32(index)]; }
+            set { data[Convert.ToInt32(index)] = value; }
         }
 
     }
@@ -50,7 +50,7 @@ namespace Day8_Dotnet
             GenericIndexers<float> gfloat = new GenericIndexers<float>();
             gfloat[0] = 5.5f;
             gfloat[1.0f] = 10.5f;
-            gfloat[2] = 15.5f;
+            gfloat["2"] = 15.5f;
 
             gfloat.Var = 1.5f;
             gfloat.Name = "I am not a Generic member";

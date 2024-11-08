@@ -1,0 +1,10 @@
+Delegates : are like function pointers that can point to a function/Method
+-These are type-safe pointers to a method
+-provides a good way to encapsulate methods
+-are mainly used to implement callbacks and event programming
+-can also be used in anonymous methods invocation
+-are reference types
+
+Note : A delegate will point/call a function which matches/agrees with its signature. The class may have static or instance methods
+
+Multicast delegates : 
