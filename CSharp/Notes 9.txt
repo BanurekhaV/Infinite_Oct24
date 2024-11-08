@@ -7,4 +7,10 @@ Delegates : are like function pointers that can point to a function/Method
 
 Note : A delegate will point/call a function which matches/agrees with its signature. The class may have static or instance methods
 
-Multicast delegates : 
+Multicast delegates : is an extension of the normal delegates, where we can make one delegate object point to multiple methods.
+-All methods are called in FIFO order.
+-we use + or += to add methods to delegate, and - or -= to remove methods
+-if the methods that are  multi casted have valid return types, then the delegate would return only value of the last method
+-preferred to multicast void return type methods
+
+Delegates as Parameters: 
