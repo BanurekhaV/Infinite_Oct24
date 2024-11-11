@@ -33,7 +33,7 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <PropertyGroup>
-    <StartupObject>Day10_Dotnet.EventsEg</StartupObject>
+    <StartupObject>Day10_Dotnet.DisposableEg</StartupObject>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
@@ -46,8 +46,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DisposableEg.cs" />
     <Compile Include="EventsEg2.cs" />
     <Compile Include="Event_Subscriber.cs" />
+    <Compile Include="GarbageProgram.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

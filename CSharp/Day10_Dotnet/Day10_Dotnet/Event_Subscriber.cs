@@ -55,6 +55,7 @@ namespace Day10_Dotnet
 
             string secondresult = eventobj.secondEvent("Infinite Accociates.");
             Console.WriteLine(secondresult);
+            
             Console.Read();
         }
     }

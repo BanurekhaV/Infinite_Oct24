@@ -36,3 +36,36 @@ Points to Note :
 2. The class containing the events is used to publish the event
 3. Publisher is an object that contains the definition of the event and the delegate. The event-delegate association is also defined in this object.
 4. Publisher class object invoked the event and notifies to other class/objects
+
+Garbage Collection : It works on the managed heap memory 
+It has an engine called as Optimization Engine
+Garbage collection occurs if at least one of the below condition is met
+ 1. If the systems physical memory is low
+ 2. If the memory allocated to various objects in the heap exceed the pre defined threshold 
+ 3. If the GC.Collect() is called
+
+Has 3 distinct phases:
+  1. Marking Phase : A list of live objects are created in this phase
+  2. Relocating Phase : all the objects that are not in the marking phase, are moved here
+  3. Compacting Phase : all not required dead objects (orphaned) are released
+
+Generations : Heap memory is organized into 3 generations
+ Generation 0: all short lived objects
+ Generation 1 : from 0 to here
+ Generation 2 : from 1 to here  
+
+Important Methods of GC : GetGeneration(), Collect(), GetTotalmemory()
+
+Dispose() and Finalize() methods aid in Garbage Collection
+
+Dispose() is called by the application either with the object or using a 'using block'
+ The class has to implement IDisposable interface
+Finalize() is called by the GC(runtime), before the object is eligible for collection
+
+
+the keyword 'using' in C# has 3 usage
+ 1. to include the namespace
+ 2. to include static classes
+ 3. in the program block (automatically calls the Dispose method and deallocates the objects memory)
+
+
