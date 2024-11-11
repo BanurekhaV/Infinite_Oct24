@@ -11,6 +11,28 @@ Delegate Types :
 
 1. Predicate Delegates : is a delegate type that takes one input and returns a Boolean type. Can be with anonymous methods as well as lambda expression
 
-2. Action Delegates : are delegate types may or may not take any input, but does not return any type
+2. Action Delegates : are delegate types that may or may not take any input, but does not return any type. Can be with anonymous methods as well as lambda expression
 
-3. Function Delegates : are delegate types that are inbuilt. Can take 0 to 16 inputs. Has to return a value. Does not allow 'ref' and 'out' parameters
+
+3. Function Delegates : are delegate types that can take 0 to 16 inputs. Has to return a value. Does not allow 'ref' and 'out' parameters. Can be with anonymous methods as well as lambda expression
+
+
+
+Events : are hardware related interactions with the application, that in turn handles and responds to the event
+
+User -> Events -> Delegates -> Method/s
+This works on Publisher-subscriber models
+Events enable a class/object to notify other classes when something occurs/happens
+
+- The class that raises the event is Publisher
+- The class that handles the event is subscriber
+- Publishers determine when an event is raised
+- Events can have multiple subscribers
+- Subscribers can handle events from multiple publishers
+
+Points to Note : 
+1. The events are declared, raised in a class and associated with the event handlers using delegates that can be either in the same class or in other classes
+
+2. The class containing the events is used to publish the event
+3. Publisher is an object that contains the definition of the event and the delegate. The event-delegate association is also defined in this object.
+4. Publisher class object invoked the event and notifies to other class/objects

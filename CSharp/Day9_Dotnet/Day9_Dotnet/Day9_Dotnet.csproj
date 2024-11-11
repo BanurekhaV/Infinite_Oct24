@@ -33,7 +33,7 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <PropertyGroup>
-    <StartupObject>Day9_Dotnet.AnonymousDelegatesEg1</StartupObject>
+    <StartupObject>Day9_Dotnet.TestDelegate</StartupObject>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
@@ -48,6 +48,7 @@
   <ItemGroup>
     <Compile Include="AnonymousDelegatesEg1.cs" />
     <Compile Include="Co_ContravarianceEg.cs" />
+    <Compile Include="MultipleDelegateActions.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

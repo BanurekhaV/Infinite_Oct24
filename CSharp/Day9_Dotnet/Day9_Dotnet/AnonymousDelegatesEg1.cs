@@ -49,6 +49,39 @@ namespace Day9_Dotnet
 
             Console.WriteLine(res);
             Console.WriteLine(chkupper("HELLO WORLD"));
+
+            Console.WriteLine("----Predicate delegate with Lambda expr -------");
+
+            Predicate<string> isupper = s => s.Equals(s.ToUpper());
+
+            Console.WriteLine(isupper("Hello World")); 
+            Console.WriteLine("------Function Delegate------");
+
+            Func<int> getRnumber = delegate ()
+             {
+                 Random r = new Random();
+                 return r.Next(1, 100);
+             };
+
+            int rand = getRnumber();
+            Console.WriteLine(rand);
+
+            Console.WriteLine("--------Func delegate with lambda expression------");
+            Func<int> getRandomNo = () => new Random().Next(1, 100);
+
+            Console.WriteLine(getRandomNo()); 
+            Console.WriteLine("--------Action Delegate-------");
+
+            Action<int> actionDel = delegate (int n)
+             {
+                 Console.WriteLine("The passed values = {0}", n);
+             };
+
+            actionDel(100);
+            Console.WriteLine("--------Action Delegate with Lambda -------");
+            Action<string> adel = n => Console.WriteLine("The passed values = {0}", n);
+            adel.Invoke("Hello Action D");
+
             Console.Read();
         }
     }
