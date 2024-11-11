@@ -1,0 +1,16 @@
+Covariance : allowing an object of more derived type to be assigned to a lesser derived type
+
+  base class : has some common information
+  derived class : will be more derived (base class info + derived class info)
+
+Base b = new Derived(); eg : Shape class object made to point to Rectangle/circle class object
+
+Contravariance : is applied more during argument passing to a function, that creating objects or variables
+
+Delegate Types :
+
+1. Predicate Delegates : is a delegate type that takes one input and returns a Boolean type. Can be with anonymous methods as well as lambda expression
+
+2. Action Delegates : are delegate types may or may not take any input, but does not return any type
+
+3. Function Delegates : are delegate types that are inbuilt. Can take 0 to 16 inputs. Has to return a value. Does not allow 'ref' and 'out' parameters

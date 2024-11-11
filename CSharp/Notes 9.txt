@@ -4,6 +4,7 @@ Delegates : are like function pointers that can point to a function/Method
 -are mainly used to implement callbacks and event programming
 -can also be used in anonymous methods invocation
 -are reference types
+-delegate references can be changed at runtime(dynamic)
 
 Note : A delegate will point/call a function which matches/agrees with its signature. The class may have static or instance methods
 
@@ -13,4 +14,8 @@ Multicast delegates : is an extension of the normal delegates, where we can make
 -if the methods that are  multi casted have valid return types, then the delegate would return only value of the last method
 -preferred to multicast void return type methods
 
-Delegates as Parameters: 
+Delegates as Parameters: We can pass delegate objects as a parameter to any function
+
+Generic Delegates : are delegates that can be made to point to any functions that match the generic type
+
+
