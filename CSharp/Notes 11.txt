@@ -15,3 +15,5 @@ We can do the above in many formats :
 4. JSON   "" (JavaScript Object Notation) 
  {"Empid" : 100, "EmpName" : "Banurekha","Dept":"IT"}
  
+
+In C# programming, whenever we need to pass some additional info about the data (Meta Data), we pass it as an attribute/Annotation/Metadata

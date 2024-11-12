@@ -4,7 +4,7 @@ using System.IO;
 
 namespace Day11_Dotnet
 {
-    class Program
+    class ReadWriteFiles
     {
         //Binary Reader and Writer class example
         static void Main(string[] args)
@@ -12,7 +12,7 @@ namespace Day11_Dotnet
             // WriteBinary();
             // ReadBinary();
             StreamReaderWriter srw = new StreamReaderWriter();
-            srw.WriteData();
+          //  srw.WriteData();
             srw.ReadData();
             Console.ReadKey();
         }
@@ -44,7 +44,7 @@ namespace Day11_Dotnet
         {
             FileStream fs = new FileStream("MyFile.txt", FileMode.Append, FileAccess.Write);
             StreamWriter sw = new StreamWriter(fs);
-
+            
             //prompt the user to input data
             Console.WriteLine("Enter a String :");
             string str = Console.ReadLine();
@@ -63,7 +63,7 @@ namespace Day11_Dotnet
             StreamReader sr = new StreamReader(fs);
             //position the file pointer either at the beginning or at the end
 
-            sr.BaseStream.Seek(10, SeekOrigin.Begin);
+            sr.BaseStream.Seek(20, SeekOrigin.Current);
 
             //Read till the end of file is encountered
             string str2 = sr.ReadLine();
