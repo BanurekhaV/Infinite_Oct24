@@ -8,3 +8,4 @@ C:\Banu\Infinite_1\CSharp\FirstWinForm\FirstWinForm\obj\Debug\FirstWinForm.cspro
 C:\Banu\Infinite_1\CSharp\FirstWinForm\FirstWinForm\obj\Debug\FirstWinForm.exe
 C:\Banu\Infinite_1\CSharp\FirstWinForm\FirstWinForm\obj\Debug\FirstWinForm.pdb
 C:\Banu\Infinite_1\CSharp\FirstWinForm\FirstWinForm\obj\Debug\FirstWinForm.Form1.resources
+C:\Banu\Infinite_1\CSharp\FirstWinForm\FirstWinForm\obj\Debug\FirstWinForm.Form2.resources

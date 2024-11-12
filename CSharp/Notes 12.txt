@@ -1,0 +1,7 @@
+Threads : Threads are defined as the execution path of a program
+          They are lightweight processes
+          Each thread defines a unique flow of control
+          The Thread that executes first is the Main Thread
+          The Main Thread is automatically created when the program executes, and this in turn can create child threads to perform a particular job.
+          The CurrentThread Property of the Thread class is used to access a Thread.
+          

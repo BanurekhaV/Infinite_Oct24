@@ -3,16 +3,20 @@
   "WorkspaceRootPath": "C:\\Banu\\Infinite_1\\CSharp\\FirstWinForm\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{C9666587-BFCA-49DC-AA17-BE27F34D282A}|FirstWinForm\\FirstWinForm.csproj|c:\\banu\\infinite_1\\csharp\\firstwinform\\firstwinform\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{C9666587-BFCA-49DC-AA17-BE27F34D282A}|FirstWinForm\\FirstWinForm.csproj|solutionrelative:firstwinform\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{C9666587-BFCA-49DC-AA17-BE27F34D282A}|FirstWinForm\\FirstWinForm.csproj|c:\\banu\\infinite_1\\csharp\\firstwinform\\firstwinform\\form2.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C9666587-BFCA-49DC-AA17-BE27F34D282A}|FirstWinForm\\FirstWinForm.csproj|solutionrelative:firstwinform\\form2.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{C9666587-BFCA-49DC-AA17-BE27F34D282A}|FirstWinForm\\FirstWinForm.csproj|c:\\banu\\infinite_1\\csharp\\firstwinform\\firstwinform\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{C9666587-BFCA-49DC-AA17-BE27F34D282A}|FirstWinForm\\FirstWinForm.csproj|C:\\Banu\\Infinite_1\\CSharp\\FirstWinForm\\firstwinform\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{C9666587-BFCA-49DC-AA17-BE27F34D282A}|FirstWinForm\\FirstWinForm.csproj|solutionrelative:firstwinform\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{C9666587-BFCA-49DC-AA17-BE27F34D282A}|FirstWinForm\\FirstWinForm.csproj|c:\\banu\\infinite_1\\csharp\\firstwinform\\firstwinform\\form2.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "AbsoluteMoniker": "D:0:0:{C9666587-BFCA-49DC-AA17-BE27F34D282A}|FirstWinForm\\FirstWinForm.csproj|C:\\Banu\\Infinite_1\\CSharp\\FirstWinForm\\firstwinform\\form2.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{C9666587-BFCA-49DC-AA17-BE27F34D282A}|FirstWinForm\\FirstWinForm.csproj|solutionrelative:firstwinform\\form2.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C9666587-BFCA-49DC-AA17-BE27F34D282A}|FirstWinForm\\FirstWinForm.csproj|c:\\banu\\infinite_1\\csharp\\firstwinform\\firstwinform\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C9666587-BFCA-49DC-AA17-BE27F34D282A}|FirstWinForm\\FirstWinForm.csproj|solutionrelative:firstwinform\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -22,8 +26,21 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 0,
           "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Form2.cs",
+              "DocumentMoniker": "C:\\Banu\\Infinite_1\\CSharp\\FirstWinForm\\FirstWinForm\\Form2.cs",
+              "RelativeDocumentMoniker": "FirstWinForm\\Form2.cs",
+              "ToolTip": "C:\\Banu\\Infinite_1\\CSharp\\FirstWinForm\\FirstWinForm\\Form2.cs",
+              "RelativeToolTip": "FirstWinForm\\Form2.cs",
+              "ViewState": "AQIAABEAAAAAAAAAAAAAAB0AAAAMAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-12T12:21:52.257Z",
+              "EditorCaption": ""
+            },
             {
               "$type": "Document",
               "DocumentIndex": 2,
@@ -38,13 +55,13 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 3,
               "Title": "Form1.cs",
               "DocumentMoniker": "C:\\Banu\\Infinite_1\\CSharp\\FirstWinForm\\FirstWinForm\\Form1.cs",
               "RelativeDocumentMoniker": "FirstWinForm\\Form1.cs",
               "ToolTip": "C:\\Banu\\Infinite_1\\CSharp\\FirstWinForm\\FirstWinForm\\Form1.cs",
               "RelativeToolTip": "FirstWinForm\\Form1.cs",
-              "ViewState": "AQIAABYAAAAAAAAAAAAAACIAAAA7AAAA",
+              "ViewState": "AQIAABYAAAAAAAAAAAAAACQAAAALAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-11-12T11:26:25.609Z",
               "EditorCaption": ""
@@ -57,7 +74,7 @@
               "RelativeDocumentMoniker": "FirstWinForm\\Program.cs",
               "ToolTip": "C:\\Banu\\Infinite_1\\CSharp\\FirstWinForm\\FirstWinForm\\Program.cs",
               "RelativeToolTip": "FirstWinForm\\Program.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA0AAAATAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAwwBIAAAApAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-11-12T11:10:31.709Z",
               "EditorCaption": ""

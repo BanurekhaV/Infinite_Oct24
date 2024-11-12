@@ -16,5 +16,20 @@ namespace FirstWinForm
         {
             InitializeComponent();
         }
+
+        private void CommonButtonClickHandler(object sender, EventArgs e)
+        {
+            Button clickedButton = sender as Button;
+            if(clickedButton !=null)
+            {
+                MessageBox.Show($"Button {clickedButton.Name} clicked");
+            }
+        }
+        private void Form2_Load(object sender, EventArgs e)
+        {
+            button1.Click += new EventHandler(CommonButtonClickHandler);
+            button2.Click += new EventHandler(CommonButtonClickHandler);
+            button3.Click += new EventHandler(CommonButtonClickHandler);
+        }
     }
 }
