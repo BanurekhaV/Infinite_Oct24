@@ -23,8 +23,19 @@ namespace Day11_Dotnet
 
             Books b = new Books() { AuthorName = "Amish Tripathi", BookName = "The Immortals of Meluha", YearPublished = 2009 };
             XmlSerializer book_ser = new XmlSerializer(typeof(Books));
-            book_ser.Serialize(Console.Out, b);
-            
+            // book_ser.Serialize(Console.Out, b);
+            StreamWriter writer = new StreamWriter("Books.xml"); //target for serializing
+
+            book_ser.Serialize(writer, b);
+            writer.Close();
+
+            //deserialize
+
+            Books b1 = new Books();
+            StreamReader reader = new StreamReader("Books.xml");
+            b1 = (Books)book_ser.Deserialize(reader);
+            reader.Close();
+            Console.WriteLine($"Book Name = {b1.BookName} Author = {b1.AuthorName} and the yr Published ={b1.YearPublished}");
             Console.Read();
         }
     }

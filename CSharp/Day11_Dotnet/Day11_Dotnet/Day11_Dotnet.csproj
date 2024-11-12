@@ -33,11 +33,12 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <PropertyGroup>
-    <StartupObject>Day11_Dotnet.XmlSerializeEg</StartupObject>
+    <StartupObject>Day11_Dotnet.JsonSerializeEg</StartupObject>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Serialization" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -47,6 +48,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Directories_n_Files.cs" />
+    <Compile Include="JsonSerializeEg.cs" />
     <Compile Include="ReadWriteFiles.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="BinarySerializeEg.cs" />
