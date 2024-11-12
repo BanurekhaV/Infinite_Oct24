@@ -1,0 +1,10 @@
+C:\Banu\Infinite_1\CSharp\FirstWinForm\FirstWinForm\bin\Debug\FirstWinForm.exe.config
+C:\Banu\Infinite_1\CSharp\FirstWinForm\FirstWinForm\bin\Debug\FirstWinForm.exe
+C:\Banu\Infinite_1\CSharp\FirstWinForm\FirstWinForm\bin\Debug\FirstWinForm.pdb
+C:\Banu\Infinite_1\CSharp\FirstWinForm\FirstWinForm\obj\Debug\FirstWinForm.csproj.AssemblyReference.cache
+C:\Banu\Infinite_1\CSharp\FirstWinForm\FirstWinForm\obj\Debug\FirstWinForm.Properties.Resources.resources
+C:\Banu\Infinite_1\CSharp\FirstWinForm\FirstWinForm\obj\Debug\FirstWinForm.csproj.GenerateResource.cache
+C:\Banu\Infinite_1\CSharp\FirstWinForm\FirstWinForm\obj\Debug\FirstWinForm.csproj.CoreCompileInputs.cache
+C:\Banu\Infinite_1\CSharp\FirstWinForm\FirstWinForm\obj\Debug\FirstWinForm.exe
+C:\Banu\Infinite_1\CSharp\FirstWinForm\FirstWinForm\obj\Debug\FirstWinForm.pdb
+C:\Banu\Infinite_1\CSharp\FirstWinForm\FirstWinForm\obj\Debug\FirstWinForm.Form1.resources
