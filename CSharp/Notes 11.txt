@@ -1,0 +1,17 @@
+Files : Allows the application to persist the data for later use, unlike objects that are volatile
+
+In order to persist data, we have to write and read to and from a source respectively. This is enabled by making use of various in-built classes for persistence
+These are available in the System.IO namespace
+
+Serialization : is a process of converting object data into byte stream, so that it can be saved in the memory, files, databases
+
+De Serialization : is a reverse process of serialization, where byte data is converted into object data.
+
+We can do the above in many formats :
+
+1. Binary Serialization
+2. XML    ""
+3. SOAP   ""  (Simple Object Access protocol)
+4. JSON   "" (JavaScript Object Notation) 
+ {"Empid" : 100, "EmpName" : "Banurekha","Dept":"IT"}
+ 

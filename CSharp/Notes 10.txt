@@ -59,7 +59,10 @@ Important Methods of GC : GetGeneration(), Collect(), GetTotalmemory()
 Dispose() and Finalize() methods aid in Garbage Collection
 
 Dispose() is called by the application either with the object or using a 'using block'
- The class has to implement IDisposable interface
+ The class has to implement IDisposable interface, which allows the class to immediately release allocated resources(managed/unmanaged) such as file handles, streams, device contexts, network connections, database connections etc
+
+if the class does not implement IDisposable, the consumer of the class have to wait non-deterministic amount of time till the Garbage collector performs finalize()
+
 Finalize() is called by the GC(runtime), before the object is eligible for collection
 
 
@@ -68,4 +71,12 @@ the keyword 'using' in C# has 3 usage
  2. to include static classes
  3. in the program block (automatically calls the Dispose method and deallocates the objects memory)
 
+Shallow copy vs Deep copy
 
+Shallow : stores the reference of objects to the original memory address
+          it reflects changes made to the new object in the original object
+          are faster but lazy
+
+Deep : stores copies of the object values
+       does not reflect changes made to the new object in the original object
+       are little slower than shallow

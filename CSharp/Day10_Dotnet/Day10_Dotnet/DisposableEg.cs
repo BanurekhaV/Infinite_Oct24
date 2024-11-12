@@ -51,9 +51,22 @@ namespace Day10_Dotnet
                 WriteLine(sr.ReadToEnd());
                // Console.WriteLine("The generation no of sr is : " + GC.GetGeneration(sr));
             }
-          
-           // Console.WriteLine("The bytes collected from sr is : " + GC.CollectionCount(0));
-           Read();
+
+            // Console.WriteLine("The bytes collected from sr is : " + GC.CollectionCount(0));
+
+            Console.WriteLine("*******************");
+            //Equivalent to the above example 2 using try finally
+            var streader = new StreamReader("C:\\Banu\\Infinite_1\\Sample.txt");
+            try
+            {
+                Console.WriteLine(streader.ReadToEnd());
+            }
+            finally
+            {
+                if (streader != null)
+                    streader.Dispose();
+            }
+            Read();
         }
     }
 }

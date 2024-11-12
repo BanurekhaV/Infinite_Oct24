@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{2890FB18-D921-4B92-88BC-FA687D768ED7}</ProjectGuid>
+    <ProjectGuid>{993D9024-A817-4D3D-97D4-30385A799CCC}</ProjectGuid>
     <OutputType>Exe</OutputType>
-    <RootNamespace>Day10_Dotnet</RootNamespace>
-    <AssemblyName>Day10_Dotnet</AssemblyName>
+    <RootNamespace>Day11_Dotnet</RootNamespace>
+    <AssemblyName>Day11_Dotnet</AssemblyName>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -32,9 +32,6 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
-  <PropertyGroup>
-    <StartupObject>Day10_Dotnet.ShallowVsDeepCopy</StartupObject>
-  </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Core" />
@@ -46,12 +43,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="DisposableEg.cs" />
-    <Compile Include="EventsEg2.cs" />
-    <Compile Include="Event_Subscriber.cs" />
-    <Compile Include="GarbageProgram.cs" />
+    <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="ShallowVsDeepCopy.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
