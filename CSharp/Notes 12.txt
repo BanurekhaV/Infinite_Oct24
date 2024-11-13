@@ -4,4 +4,42 @@ Threads : Threads are defined as the execution path of a program
           The Thread that executes first is the Main Thread
           The Main Thread is automatically created when the program executes, and this in turn can create child threads to perform a particular job.
           The CurrentThread Property of the Thread class is used to access a Thread.
+
+Important Properties of a Thread :
+ - CurrentThread
+ - Is Alive
+ - Name
+ - ThreadState
+ - IsThreadPoolThread
+ - IsBackGround
+ - ManagedThreadID
+
+Functionalities of a Thread :
+
+ - Sleep
+ - Join
+ - Abort
+ - Suspend
+ - Resume
+ - Start
+
+Life Cycle of a Thread has the below states:
+ 
+- Unstarted
+- Runnable
+- Running
+- Not Runnable
+- Dead
+
+ThreadPool : is a collection of threads that can be reused for some task/function/job/activity. We will be able to use the threads from the pool by making use of the ThreadPool static class method known as QueueUserWorkItem(WaitCallBackobj)
+
+Thread Synchronization : is a mechanism where only one process/one thread is given access to critical/sensitive info/data of the program. All the other threads, process will have to wait until the critical section of the program is free.
+
+Methods to manage Synchronization :
+  Blocking Methods
+  Locking constructs
+  Signalling
+  No Block synchronization
+ 
+
           
