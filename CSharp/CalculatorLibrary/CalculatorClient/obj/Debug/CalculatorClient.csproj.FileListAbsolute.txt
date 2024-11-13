@@ -1,0 +1,10 @@
+C:\Banu\Infinite_1\CSharp\CalculatorLibrary\CalculatorClient\bin\Debug\CalculatorClient.exe.config
+C:\Banu\Infinite_1\CSharp\CalculatorLibrary\CalculatorClient\bin\Debug\CalculatorClient.exe
+C:\Banu\Infinite_1\CSharp\CalculatorLibrary\CalculatorClient\bin\Debug\CalculatorClient.pdb
+C:\Banu\Infinite_1\CSharp\CalculatorLibrary\CalculatorClient\bin\Debug\CalculatorLibrary.dll
+C:\Banu\Infinite_1\CSharp\CalculatorLibrary\CalculatorClient\bin\Debug\CalculatorLibrary.pdb
+C:\Banu\Infinite_1\CSharp\CalculatorLibrary\CalculatorClient\obj\Debug\CalculatorClient.csproj.AssemblyReference.cache
+C:\Banu\Infinite_1\CSharp\CalculatorLibrary\CalculatorClient\obj\Debug\CalculatorClient.csproj.CoreCompileInputs.cache
+C:\Banu\Infinite_1\CSharp\CalculatorLibrary\CalculatorClient\obj\Debug\CalculatorClient.csproj.CopyComplete
+C:\Banu\Infinite_1\CSharp\CalculatorLibrary\CalculatorClient\obj\Debug\CalculatorClient.exe
+C:\Banu\Infinite_1\CSharp\CalculatorLibrary\CalculatorClient\obj\Debug\CalculatorClient.pdb

@@ -31,7 +31,7 @@ Life Cycle of a Thread has the below states:
 - Not Runnable
 - Dead
 
-ThreadPool : is a collection of threads that can be reused for some task/function/job/activity. We will be able to use the threads from the pool by making use of the ThreadPool static class method known as QueueUserWorkItem(WaitCallBackobj)
+ThreadPool : is a collection of threads that can be reused for some task/function/job/activity. We will be able to use the threads from the pool by making use of the ThreadPool static class and a method known as QueueUserWorkItem(WaitCallBack obj). This method tries to allocate thread if available in the pool, else it will callback when available. Till such time the function is put in the queue.
 
 Thread Synchronization : is a mechanism where only one process/one thread is given access to critical/sensitive info/data of the program. All the other threads, process will have to wait until the critical section of the program is free.
 
@@ -42,4 +42,7 @@ Methods to manage Synchronization :
   No Block synchronization
  
 
+Class Library : are applications/project types that creates .dll assemblies. They cannot be executed on their own. In order to execute they need a Host (exe)
+
+Extensions Methods : 
           

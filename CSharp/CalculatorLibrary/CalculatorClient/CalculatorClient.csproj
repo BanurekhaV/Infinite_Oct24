@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{18B5F9BE-52C6-4B74-9A27-09038F8FE219}</ProjectGuid>
+    <ProjectGuid>{5067340A-B3D3-4503-A3BB-2DFE438424F2}</ProjectGuid>
     <OutputType>Exe</OutputType>
-    <RootNamespace>Day12_Dotnet</RootNamespace>
-    <AssemblyName>Day12_Dotnet</AssemblyName>
+    <RootNamespace>CalculatorClient</RootNamespace>
+    <AssemblyName>CalculatorClient</AssemblyName>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -32,9 +32,6 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
-  <PropertyGroup>
-    <StartupObject>Day12_Dotnet.ThreadSynchronization</StartupObject>
-  </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Core" />
@@ -46,16 +43,17 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="MultiThreadEg.cs" />
-    <Compile Include="SinglethreadEg.cs" />
+    <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="ThreadpoolEg.cs" />
-    <Compile Include="ThreadStartEg.cs" />
-    <Compile Include="ThreadStates.cs" />
-    <Compile Include="ThreadSynchronization.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\CalculatorLibrary\CalculatorLibrary.csproj">
+      <Project>{d41aa0a8-5c0b-4bc9-9b79-1e3c9f583976}</Project>
+      <Name>CalculatorLibrary</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
