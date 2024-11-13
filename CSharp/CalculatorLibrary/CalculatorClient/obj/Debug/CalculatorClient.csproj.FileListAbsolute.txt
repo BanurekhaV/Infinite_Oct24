@@ -8,3 +8,5 @@ C:\Banu\Infinite_1\CSharp\CalculatorLibrary\CalculatorClient\obj\Debug\Calculato
 C:\Banu\Infinite_1\CSharp\CalculatorLibrary\CalculatorClient\obj\Debug\CalculatorClient.csproj.CopyComplete
 C:\Banu\Infinite_1\CSharp\CalculatorLibrary\CalculatorClient\obj\Debug\CalculatorClient.exe
 C:\Banu\Infinite_1\CSharp\CalculatorLibrary\CalculatorClient\obj\Debug\CalculatorClient.pdb
+C:\Banu\Infinite_1\CSharp\CalculatorLibrary\CalculatorClient\bin\Debug\CalculatorLibraryExtension.dll
+C:\Banu\Infinite_1\CSharp\CalculatorLibrary\CalculatorClient\bin\Debug\CalculatorLibraryExtension.pdb

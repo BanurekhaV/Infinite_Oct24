@@ -4,17 +4,16 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{5067340A-B3D3-4503-A3BB-2DFE438424F2}</ProjectGuid>
-    <OutputType>Exe</OutputType>
-    <RootNamespace>CalculatorClient</RootNamespace>
-    <AssemblyName>CalculatorClient</AssemblyName>
+    <ProjectGuid>{94A88BC4-3D1F-415D-882E-4F420E428CAD}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>CalculatorLibraryExtension</RootNamespace>
+    <AssemblyName>CalculatorLibraryExtension</AssemblyName>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
-    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
     <Deterministic>true</Deterministic>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
-    <PlatformTarget>AnyCPU</PlatformTarget>
     <DebugSymbols>true</DebugSymbols>
     <DebugType>full</DebugType>
     <Optimize>false</Optimize>
@@ -24,7 +23,6 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
-    <PlatformTarget>AnyCPU</PlatformTarget>
     <DebugType>pdbonly</DebugType>
     <Optimize>true</Optimize>
     <OutputPath>bin\Release\</OutputPath>
@@ -43,17 +41,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Program.cs" />
+    <Compile Include="CalExtension.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="App.config" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\CalculatorLibraryExtension\CalculatorLibraryExtension.csproj">
-      <Project>{94a88bc4-3d1f-415d-882e-4f420e428cad}</Project>
-      <Name>CalculatorLibraryExtension</Name>
-    </ProjectReference>
     <ProjectReference Include="..\CalculatorLibrary\CalculatorLibrary.csproj">
       <Project>{d41aa0a8-5c0b-4bc9-9b79-1e3c9f583976}</Project>
       <Name>CalculatorLibrary</Name>

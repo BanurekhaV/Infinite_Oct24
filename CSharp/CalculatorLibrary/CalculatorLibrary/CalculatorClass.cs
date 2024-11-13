@@ -17,5 +17,10 @@ namespace CalculatorLibrary
         {
             return x - y;
         }
+
+        public int MultiplyFunc(int x, int y)
+        {
+            return x * y;
+        }
     }
 }

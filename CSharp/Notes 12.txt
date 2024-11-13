@@ -44,5 +44,32 @@ Methods to manage Synchronization :
 
 Class Library : are applications/project types that creates .dll assemblies. They cannot be executed on their own. In order to execute they need a Host (exe)
 
-Extensions Methods : 
-          
+Extensions Methods : are additional functionalities that are provided as a part of the original object
+
+- Are methods that are always marked static, but when they are bound with other class/structure, they convert into non-static 
+- We can also add extension methods to sealed classes
+- When an extension method is defined with the same name and signature of the existing method, then the compiler will resolve only the existing method, and not the extension method (Hence extension methods do not support overriding)
+
+Steps for creating extension methods : as per the demo
+1. Create a class Library Project called CalculatorLibrary
+2. Rename the public class as Calculatorclass   (original class)
+3. Add Functionalities to the class (AddFunc(), SubtractFunc())
+4. Build the project (observe the .dll assembly creation)
+5. The Library project cannot be tested directly, hence add a console/windows project called CalculatorClient
+6. Add reference to the CalculatorLibrary in the client project and also use the namespace in the relevant .cs file
+7. Instantiate an object of the CalculatorClass and invoke the add and subtract methods
+
+Now to extend the functionalities of the CalculatorClass, follow steps as below :
+
+1. Create another class Library project named CalculatorLibraryExtension
+2. Rename the public class to CalExtension and make it public static
+3. To the above project add the reference of the CalculatorLibrary project (1st Library prj)
+4. Also use the assembly namespace in the relevant .cs file
+5. Create additional static functions viz. MultiplyFunc(), and DivideFunc() as per our need
+6. To the newly created functions, pass the original class object as the first argument with the 'this' keyword as below:
+   public static MultiplyFunc(this CalculatorClass cobj, int x, int y){ }
+7. Build the second dll
+
+-Now go the Client project and add the reference to the second dll. Also use the namespace/dll assembly
+-Build it
+-now try invoking the extended methods with the original class object.          
