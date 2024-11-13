@@ -18,9 +18,10 @@ namespace CalculatorLibrary
             return x - y;
         }
 
-        public int MultiplyFunc(int x, int y)
-        {
-            return x * y;
-        }
+        //public int MultiplyFunc(int x, int y)
+        //{
+        //     Console.WriteLine("This is original method of the orginal object);
+        //    return 0;
+        //}
     }
 }
