@@ -15,6 +15,14 @@ public static Expression<Func<int,int,int>> EtreeFromLambda()
 
 !string.IsNullOrWhiteSpace(Name)? "Welcome, " + Name : null;
 
-DictionaryInitializer before C# 6.0
+Extern Alias : 
 
-Dictionary<string, string> dict = new D
+Local Functions : If we want to execute some piece of code multiple times within a function, then we can place such codes as inner functions called as local function
+ Note : 1. We cannot overload Local Functions
+        2. Cannot alter access modifiers such as private, public, protected, internal etc
+        3. All variables in the enclosing scope, including local variables can be accessed
+        4. Compiler throws a warning, if the parent function does not call the local function
+
+Named and Optional Parameters : public void fn(string s, int I, float f){ }
+
+obj.fn(
