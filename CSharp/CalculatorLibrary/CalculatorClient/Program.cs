@@ -17,7 +17,16 @@ namespace CalculatorClient
             Console.WriteLine(cc.MultiplyFunc(10,5));
             Console.WriteLine(cc.DivideFunc(10,5));
             Console.WriteLine(cc.DivideFunc(10.5f,5.5f));
+
+            Console.WriteLine("----Extension methods within the same namespace-----");
+            ExtensionExample2 ee = new ExtensionExample2();
+            ee.Function1();
+            ee.Function2();
+
+            Console.WriteLine(ee.Function3("Infinite Ltd.,")); 
             Console.Read();
         }
     }
+
+    
 }
