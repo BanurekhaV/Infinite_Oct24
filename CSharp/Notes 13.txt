@@ -1,0 +1,20 @@
+Lambda expressions
+Query expressions
+Expressions Trees : Allows us to represent code as data. They are tree like data structures where each node in the expression tree represents operations, variables, constants, expressions, and also other code elements
+
+Func<int,int,int>Sum(int n1, int n2)=>n1+n2; // lambda Expression to find the sum of 2 nos.
+
+Sum(5,6) // invoking the delegate thru lambda code
+
+public static Expression<Func<int,int,int>> EtreeFromLambda()
+{
+    Expression<Func<int,int,int>>SumExTree = (int n1, int n2)=>n1+n2;
+    return SumExTree;
+}
+
+
+!string.IsNullOrWhiteSpace(Name)? "Welcome, " + Name : null;
+
+DictionaryInitializer before C# 6.0
+
+Dictionary<string, string> dict = new D

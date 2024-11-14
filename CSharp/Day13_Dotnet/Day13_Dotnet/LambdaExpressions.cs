@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Day13_Dotnet
 {
-    class Program
+    class LambdaExpressions
     {
         static void Main(string[] args)
         {                                    //List initilaization
