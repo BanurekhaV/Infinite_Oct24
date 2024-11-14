@@ -25,4 +25,4 @@ Local Functions : If we want to execute some piece of code multiple times within
 
 Named and Optional Parameters : public void fn(string s, int I, float f){ }
 
-obj.fn(
+obj.fn(I=6,f=3.4,s="Hello")  
