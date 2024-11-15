@@ -1,0 +1,53 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Banu\\Infinite_1\\CSharp\\AsynAwaitWindows_Prj\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{CD13AFC5-5354-48F0-9DB1-99CF2EBE7CFD}|AsynAwaitWindows_Prj\\AsynAwaitWindows_Prj.csproj|c:\\banu\\infinite_1\\csharp\\asynawaitwindows_prj\\asynawaitwindows_prj\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CD13AFC5-5354-48F0-9DB1-99CF2EBE7CFD}|AsynAwaitWindows_Prj\\AsynAwaitWindows_Prj.csproj|solutionrelative:asynawaitwindows_prj\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CD13AFC5-5354-48F0-9DB1-99CF2EBE7CFD}|AsynAwaitWindows_Prj\\AsynAwaitWindows_Prj.csproj|c:\\banu\\infinite_1\\csharp\\asynawaitwindows_prj\\asynawaitwindows_prj\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{CD13AFC5-5354-48F0-9DB1-99CF2EBE7CFD}|AsynAwaitWindows_Prj\\AsynAwaitWindows_Prj.csproj|solutionrelative:asynawaitwindows_prj\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Form1.cs",
+              "DocumentMoniker": "C:\\Banu\\Infinite_1\\CSharp\\AsynAwaitWindows_Prj\\AsynAwaitWindows_Prj\\Form1.cs",
+              "RelativeDocumentMoniker": "AsynAwaitWindows_Prj\\Form1.cs",
+              "ToolTip": "C:\\Banu\\Infinite_1\\CSharp\\AsynAwaitWindows_Prj\\AsynAwaitWindows_Prj\\Form1.cs",
+              "RelativeToolTip": "AsynAwaitWindows_Prj\\Form1.cs",
+              "ViewState": "AQIAADQAAAAAAAAAAAAAAD4AAAA1AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-15T07:01:35.71Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Form1.cs [Design]",
+              "DocumentMoniker": "C:\\Banu\\Infinite_1\\CSharp\\AsynAwaitWindows_Prj\\AsynAwaitWindows_Prj\\Form1.cs",
+              "RelativeDocumentMoniker": "AsynAwaitWindows_Prj\\Form1.cs",
+              "ToolTip": "C:\\Banu\\Infinite_1\\CSharp\\AsynAwaitWindows_Prj\\AsynAwaitWindows_Prj\\Form1.cs [Design]",
+              "RelativeToolTip": "AsynAwaitWindows_Prj\\Form1.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-15T06:57:16.382Z",
+              "EditorCaption": " [Design]"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
