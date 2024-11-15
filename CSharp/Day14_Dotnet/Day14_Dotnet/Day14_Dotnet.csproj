@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{11ED03B5-9F97-4246-9583-7DE1F591431F}</ProjectGuid>
+    <ProjectGuid>{93BADEC7-3051-437B-A1BF-2492FEBDDD03}</ProjectGuid>
     <OutputType>Exe</OutputType>
-    <RootNamespace>Day13_Dotnet</RootNamespace>
-    <AssemblyName>Day13_Dotnet</AssemblyName>
+    <RootNamespace>Day14_Dotnet</RootNamespace>
+    <AssemblyName>Day14_Dotnet</AssemblyName>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -32,9 +32,6 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
-  <PropertyGroup>
-    <StartupObject>Day13_Dotnet.ExpressionTrees_Addons</StartupObject>
-  </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Core" />
@@ -46,31 +43,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="ExpressionTreesEg.cs" />
-    <Compile Include="ExpressionTrees_Addons.cs" />
-    <Compile Include="ExternAliasEg.cs" />
-    <Compile Include="LambdaExpressions.cs" />
-    <Compile Include="LangEnhancements1.cs" />
-    <Compile Include="LocalFunctions.cs" />
-    <Compile Include="Named_n_OptionalParameterEg.cs" />
-    <Compile Include="NullOperations.cs" />
+    <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="QueryExpressions.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\ClassLibrary1\ClassLibrary1.csproj">
-      <Project>{b433e6c8-af2c-4fc9-b647-53a741e7a687}</Project>
-      <Name>ClassLibrary1</Name>
-      <Aliases>X</Aliases>
-    </ProjectReference>
-    <ProjectReference Include="..\ClassLibrary2\ClassLibrary2.csproj">
-      <Project>{52fb5086-15fe-498c-861b-adb065a30ad4}</Project>
-      <Name>ClassLibrary2</Name>
-      <Aliases>Y</Aliases>
-    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

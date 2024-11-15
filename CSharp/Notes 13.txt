@@ -1,6 +1,8 @@
 Lambda expressions
 Query expressions
-Expressions Trees : Allows us to represent code as data. They are tree like data structures where each node in the expression tree represents operations, variables, constants, expressions, and also other code elements
+Expressions Trees : Allows us to represent code as data. They are tree like data structures where each node in the expression tree represents operations, variables, constants, expressions, and also other code elements. It is not a compiled and executable code. If we want to execute then we need to convert it into executable IL instructions. On execution the expression tree may return values, or it may just perform an action like calling a method
+
+Only expression trees that represent lambda expressions can be executed. These are known as LambdaExpressions. On compiling these lambda expressions, a TDelegate object is created, and then we can invoke the delegate
 
 Func<int,int,int>Sum(int n1, int n2)=>n1+n2; // lambda Expression to find the sum of 2 nos.
 
@@ -15,7 +17,7 @@ public static Expression<Func<int,int,int>> EtreeFromLambda()
 
 !string.IsNullOrWhiteSpace(Name)? "Welcome, " + Name : null;
 
-Extern Alias : 
+Extern Alias : When we have name clashes between 1 or more libraries that are included in a project, then we may avoid the ambiguity by creating extern aliases. (Are alias names given to libraries that have same class names/function names/member names)
 
 Local Functions : If we want to execute some piece of code multiple times within a function, then we can place such codes as inner functions called as local function
  Note : 1. We cannot overload Local Functions

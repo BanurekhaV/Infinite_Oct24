@@ -41,8 +41,5 @@ namespace Day13_Dotnet
             Console.Read();
         }
     }
-    class ExpressionTreesEg
-    {
-        
-    }
+   
 }
