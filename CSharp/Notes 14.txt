@@ -14,3 +14,10 @@ Tasks are higher level concepts than Threads
 
 Async and await : are code markers that help in parallel programming, where a task can keep continuing its work even if it has called another task/function
 These keyword offer a convenient way to write async. code that looks similar to sync. code, thereby making it easier to read and maintain
+
+
+Exception Filters : allows us to specify conditional clause for each catch block
+
+Expression Bodied members : is a feature that simplifies the programming code by creating expression bodies for functions and properties. It is similar to that of lambda expressions
+
+Non Nullable References : It is an attempt to ensure that Objects have valid references, else we have to make it nullable either by using '?' or Nullable<T> type . By default the framework allows null for reference types. if we want to have non nullable references, then we have to enable Nullable option in the property group of the applications project file (.csproj)
