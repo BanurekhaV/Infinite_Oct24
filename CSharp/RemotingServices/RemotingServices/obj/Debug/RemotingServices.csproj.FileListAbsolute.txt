@@ -1,0 +1,6 @@
+C:\Banu\Infinite_1\CSharp\RemotingServices\RemotingServices\bin\Debug\RemotingServices.dll
+C:\Banu\Infinite_1\CSharp\RemotingServices\RemotingServices\bin\Debug\RemotingServices.pdb
+C:\Banu\Infinite_1\CSharp\RemotingServices\RemotingServices\obj\Debug\RemotingServices.csproj.AssemblyReference.cache
+C:\Banu\Infinite_1\CSharp\RemotingServices\RemotingServices\obj\Debug\RemotingServices.csproj.CoreCompileInputs.cache
+C:\Banu\Infinite_1\CSharp\RemotingServices\RemotingServices\obj\Debug\RemotingServices.dll
+C:\Banu\Infinite_1\CSharp\RemotingServices\RemotingServices\obj\Debug\RemotingServices.pdb

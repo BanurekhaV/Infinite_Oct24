@@ -16,6 +16,25 @@ namespace Day15_Dotnet
             this.FName = fn;
             this.LName = ln;
         }
+
+        public static void PrintType(object obj)
+        {
+            
+            switch(obj)
+            {
+                case Student s:
+                    Console.WriteLine($"obj is student and the name is : {s.FName}{s.LName}");
+                    break;
+                case int i:
+                    Console.WriteLine($"obj is an int and the values is :{i}");
+                    break;
+                    case double d:
+                        Console.WriteLine($"obj is a double and the value is {d}");
+                    break;
+                default:
+                    Console.WriteLine("Obj is some unknown type");break;
+            }
+        }
     }
     class PatternEg1
     {
@@ -32,7 +51,22 @@ namespace Day15_Dotnet
                // case Student s when s.FName.StartsWith("A"): Console.WriteLine(s.FName);break;
                 case var x: Console.WriteLine(x?.GetType().Name);break;
             }
+
+            Console.WriteLine("********************");
+
+            Student.PrintType(35);
+            Student.PrintType(stud);
+            Student.PrintType(3.14);
+            Student.PrintType("Hello");
+
+            Console.WriteLine("******Relational Pattern*******");
+
+            
+
+            
             Console.Read();
         }
+
+        
     }
 }

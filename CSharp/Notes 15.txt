@@ -29,3 +29,56 @@ Pattern Matching : is a feature that allows testing an expression for the occurr
   5. object deconstruction(positional pattern)
 
 we can use is as well as switch for patterns
+
+Relational pattern :
+
+Static void Main()
+{
+
+Console.WriteLine("Enter Number :");
+            int number = Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine(GetNumbersSign(number));
+Console.Read();
+}
+
+public static string GetNumbersSign(int number)
+        {
+            switch(number)
+            {
+                case < 0:
+                    return "Negative";
+                case 0:
+                    return "Zero";
+                case >= 1:
+                    return "Positive";
+            }
+        }
+
+
+The above can be rewritten more concisely using a switch expression
+
+public static void GetNumbersSign(int number)
+{
+  return number switch
+   {
+      < 0 =>"Negative",
+      = => "Zero",
+      >= 1 => "Positive"
+   };
+
+We can work with relational patterns using 'is'
+
+int n=2;
+cw(n is <=10); 
+cw(n is >5);
+
+public static void GetMoreDetails(string str)   
+{
+  if(str is null)
+{
+  cw("Null string");
+}
+if(str is {Length:0}
+ {
+  cw("Empty string"); return; }
+}

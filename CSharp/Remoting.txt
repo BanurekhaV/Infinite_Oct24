@@ -1,0 +1,38 @@
+Remoting : Is a mechanism for communication between objects of various applications, that may not be in the same process (domain), nor in the same system. 
+-This requires different transport protocols, network protocols, serialization formats etc
+-Is a Microsoft Framework that provides services like
+   a) Object Activation
+   b) Life time support of objects
+   c) Communication Channels
+   d) Transport Messages (xml,json,text,binary)
+
+Domain : When an application is being loaded onto the memory, a process is created with the application with an ID. This is known as App Domain
+
+Channels : that allows data/message exchange as streams of bytes - Http, Tcp channel
+
+Contexts : A context is a set of common constraints, usage, access, functionalities etc within the object
+
+Proxy/proxies : is an instance of the remote object directly available to the client. It does all marshalling across various context, and then forwards the request to actual remote object
+
+Marshalling : Specifies how a remote object is exposed to the client. The process of calling methods, passing parameters from one context to another. There are 2 ways
+   - Marshal by Value : The remote creates a copy of the object and passes the copy to the client
+   - Marshal by Ref : the client creates proxy for the remote object and uses this object for further processing
+
+Types of Remote Objects:
+ 1. Single Call : objects that serve one request
+ 2. SingleTon : Objects that serve multiple clients. One object can serve all request of a client. The remote maintains the state of each client
+ 3. Client Activated Objects : Upon clients request for the remote object, the instance of the required object is activated, and the reference of the object is sent back to the client. A proxy objects gets created at the client side. All calls will be executed on the proxy.
+
+
+various techniques for distributed applications
+- Remote Procedure Call (RPC)
+- DCOM (Dist component object Model)
+- Remoting : replacement of DCOM
+- Web Services
+- WCF (Wind. Comm, Framework)
+- API 
+
+Steps for Remoting :
+1. Create a class library where all remote objects are created
+2. Create a Console Application - This acts like a Host/server that host the class library
+3. Create a client (Console/Windows)

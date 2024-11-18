@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{C701334C-CC0A-4326-B335-B1596CAAB460}</ProjectGuid>
+    <ProjectGuid>{85283077-E4B6-4912-9B08-972BD5DCB741}</ProjectGuid>
     <OutputType>Exe</OutputType>
-    <RootNamespace>Day15_Dotnet</RootNamespace>
-    <AssemblyName>Day15_Dotnet</AssemblyName>
+    <RootNamespace>RemoteClient</RootNamespace>
+    <AssemblyName>RemoteClient</AssemblyName>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -32,12 +32,13 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
-  <PropertyGroup>
-    <StartupObject>Day15_Dotnet.PatternEg1</StartupObject>
-  </PropertyGroup>
   <ItemGroup>
+    <Reference Include="RemotingServices">
+      <HintPath>..\..\RemotingServices\RemotingServices\bin\Debug\RemotingServices.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Remoting" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -46,11 +47,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="PatternEg1.cs" />
-    <Compile Include="PatternsEg2.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Tuples.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
