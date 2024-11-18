@@ -1,0 +1,31 @@
+Throws :
+
+return y !=0 ? x %y : throw new DivideByZeroException
+
+Tuples: Is a data structure that contains a sequence of elements of different data types. It can hold objects with its properties, and we dont have to create a separate type for it
+
+Why Tuples : If we wish to have multiple return values from a method, then we can use tuples
+
+Different ways in which we can return multiple values 
+1. Using Custom Datatype : Eg student object . We can return multiple values(properties) from a method using a custom object (i.e class). But in some scenarios, we may not need all the date.
+
+2. using Ref and out : We can return multiple values from a method using 'out', but understanding and internal implementations are a bit difficult. out and ref are not allowed with async methods
+
+3. Use Dynamic type : We can return multiple values from a method using dynamic datatype. But from performance point of view, we may not want to use Dynamic types
+
+
+is operator : is to check the compatibility with other type
+   std is obj ? 
+
+as operator is to convert one type to another if possible
+  std as obj
+
+Pattern Matching : is a feature that allows testing an expression for the occurrence of any pattern. 
+ With pattern matching introduced in C# 7.0, we can do matching as below
+  1. type checking (type pattern)
+  2. null checking(constant pattern)
+  3. comparisons(relational pattern) 
+  4. checking and comparing values of properties (property pattern)
+  5. object deconstruction(positional pattern)
+
+we can use is as well as switch for patterns
