@@ -82,3 +82,12 @@ if(str is {Length:0}
  {
   cw("Empty string"); return; }
 }
+
+Iterators : are methods that are used to retrieve elements in a collection
+- It used yield return to return the element
+- yield break to stop the iteration
+- return types of iterator IEnumerable, IEnumerator
+- iterator cannot be used in events, instance/static constructors
+- yield is not a reserved word, but in combination with return or break statements, they have a special meaning
+- cannot use multiple yields
+

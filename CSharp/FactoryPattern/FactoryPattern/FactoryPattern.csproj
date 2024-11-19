@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{C701334C-CC0A-4326-B335-B1596CAAB460}</ProjectGuid>
+    <ProjectGuid>{5EF0EE9A-88F7-4EFC-880E-30A6F99FB9E4}</ProjectGuid>
     <OutputType>Exe</OutputType>
-    <RootNamespace>Day15_Dotnet</RootNamespace>
-    <AssemblyName>Day15_Dotnet</AssemblyName>
+    <RootNamespace>FactoryPattern</RootNamespace>
+    <AssemblyName>FactoryPattern</AssemblyName>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -32,9 +32,6 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
-  <PropertyGroup>
-    <StartupObject>Day15_Dotnet.ObjectPoolinEg</StartupObject>
-  </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Core" />
@@ -46,13 +43,13 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="ObjectPoolinEg.cs" />
-    <Compile Include="PatternEg1.cs" />
-    <Compile Include="PatternsEg2.cs" />
-    <Compile Include="Program.cs" />
+    <Compile Include="Client.cs" />
+    <Compile Include="CreditCardFactory.cs" />
+    <Compile Include="ICreditCard.cs" />
+    <Compile Include="MoneyBack.cs" />
+    <Compile Include="Platinum.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Tuples.cs" />
-    <Compile Include="YieldEg.cs" />
+    <Compile Include="Titanium.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

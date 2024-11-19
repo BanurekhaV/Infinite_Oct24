@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{C701334C-CC0A-4326-B335-B1596CAAB460}</ProjectGuid>
+    <ProjectGuid>{C8778ECF-70E3-438B-965A-0DF625ED13FD}</ProjectGuid>
     <OutputType>Exe</OutputType>
-    <RootNamespace>Day15_Dotnet</RootNamespace>
-    <AssemblyName>Day15_Dotnet</AssemblyName>
+    <RootNamespace>Factory_2</RootNamespace>
+    <AssemblyName>Factory_2</AssemblyName>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -32,9 +32,6 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
-  <PropertyGroup>
-    <StartupObject>Day15_Dotnet.ObjectPoolinEg</StartupObject>
-  </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Core" />
@@ -46,16 +43,17 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="ObjectPoolinEg.cs" />
-    <Compile Include="PatternEg1.cs" />
-    <Compile Include="PatternsEg2.cs" />
-    <Compile Include="Program.cs" />
+    <Compile Include="Client2.cs" />
+    <Compile Include="Factories\IPaymentGateway.cs" />
+    <Compile Include="Factories\PaymentGatewayFactory.cs" />
+    <Compile Include="Implementors\COD.cs" />
+    <Compile Include="Implementors\NetBanking.cs" />
+    <Compile Include="Implementors\Wallet.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Tuples.cs" />
-    <Compile Include="YieldEg.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

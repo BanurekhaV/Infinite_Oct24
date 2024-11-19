@@ -1,0 +1,67 @@
+Object Pooling : is a software development design pattern and a container of list of other objects. Since creating objects is considered to be an expensive process, which can impact the applications performance, pooling objects helps us in these situations
+
+- Object sin the pool have a life cycle of Creation, Validation, and Destroying  
+
+Software Engineering Principles :
+1. Separation of concern
+2. Modularization
+3. Abstractions (what rather than how)
+4. Anticipation of Changes :
+        -Generality (de-coupled codes)
+        -Incremental Development
+        -Consistency of Look and Feel
+5. DRY : Do Not Repeat Yourselves
+6. KISS : Keep it Simple Stupid
+7. YAGNI : You Aren't Gonna need it (avoid features and functions that are not required)
+8. SOLID : Are Design Principles
+
+ S : Single Responsibility Principle (SRP) : a class, structure in the code should always have one job to do
+
+ O : Open Close Principle (OCP) : a s/w module/class is open for extensions, but closed for modifications
+
+ L : Liskov's Substitution Principle (LSP) : it is an extension of OCP, where derived classes extending from Base should not change the behaviour of the base class (Usage of Interface Methods)
+
+ I : Interface Segregation Principle (ISP) : Not to force the implementing classes to implement all the methods of the Interface. Instead of fat one fat interface, create many small/thin interfaces with minimum methods
+
+ D : Dependency Inversion Principle (DIP) : States that high level modules/classes(consumers/clients) should not depend on low level modules/classes(implementing classes). Both should depend on Abstraction (Layered architecture)
+
+- DIP as a design principle suggests solution to the dependency problem, but does not specify any technique for the same.
+
+- IoC : Inversion of Control : is the actual mechanism to implement DIP
+
+- DI : Dependency Injection : is the design pattern to inject concrete implementation of the low level module components into high level components
+
+Ioc is a Principle and DI is Implementation
+
+DI can be used as below:
+  1. Constructor Injection : Instance of the dependency type can be passed as an argument to the constructor of dependent type 
+  
+ 2. Method Injection : Instance of the dependency type can be passed as an argument to the method of a class
+
+ 3. Property Injection : Instance of the dependency type can be passed as an argument to the specific property of the dependent type
+
+
+Based on the SOLID Principles, we have Software Design Patterns
+-------------------------------------------------------------------
+
+
+Design Patterns : are solutions to common problems in software designs. Is a tested document providing solutions for recurring problems in any given context
+
+History and Evolution : Four authors famously knows as Gang of Four, introduced the design pattern concepts in their book 'Elements of Reusable Object-Oriented Software
+
+The GOF categorised the design patterns into 3
+1. Creational Pattern : Object creation and initialization without exposing the logic for creation
+  
+      1: Factory Pattern : Suggests to have a factory where types of object required by the user are created and initialized
+
+      2. Abstract Factory Pattern : As per GOF, this pattern provides a way to encapsulate a group of factories with a common theme without specifying their concrete classes(implementing classes)
+    
+      3. Singleton Pattern : This pattern ensures that only one instance of the singleton class is created throughout the application
+      provides a global access point to that instance 
+      provides thread safety as it creates only one instance, preventing multiple instances due to multi threaded application
+      Singleton instances are initialized in a lazy manner , meaning it is created only on the first request and not when the application starts. 
+
+2. Structural Pattern : Structural changes of Classes and Interfaces  (Adapter, Bridge, Decorator, proxy)
+
+3. Behavioural Pattern : Relationships between objects and its communication (Iterator, Observer)
+
