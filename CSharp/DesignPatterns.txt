@@ -1,6 +1,6 @@
 Object Pooling : is a software development design pattern and a container of list of other objects. Since creating objects is considered to be an expensive process, which can impact the applications performance, pooling objects helps us in these situations
 
-- Object sin the pool have a life cycle of Creation, Validation, and Destroying  
+- Objects in the pool have a life cycle of Creation, Validation, and Destroying  
 
 Software Engineering Principles :
 1. Separation of concern
