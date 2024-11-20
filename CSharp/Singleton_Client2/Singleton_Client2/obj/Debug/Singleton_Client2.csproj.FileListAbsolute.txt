@@ -1,0 +1,11 @@
+C:\Banu\Infinite_1\CSharp\Singleton_Client2\Singleton_Client2\bin\Debug\Singleton_Client2.exe.config
+C:\Banu\Infinite_1\CSharp\Singleton_Client2\Singleton_Client2\bin\Debug\Singleton_Client2.exe
+C:\Banu\Infinite_1\CSharp\Singleton_Client2\Singleton_Client2\bin\Debug\Singleton_Client2.pdb
+C:\Banu\Infinite_1\CSharp\Singleton_Client2\Singleton_Client2\bin\Debug\SingleTonPattern.exe
+C:\Banu\Infinite_1\CSharp\Singleton_Client2\Singleton_Client2\bin\Debug\SingleTonPattern.pdb
+C:\Banu\Infinite_1\CSharp\Singleton_Client2\Singleton_Client2\bin\Debug\SingleTonPattern.exe.config
+C:\Banu\Infinite_1\CSharp\Singleton_Client2\Singleton_Client2\obj\Debug\Singleton_Client2.csproj.AssemblyReference.cache
+C:\Banu\Infinite_1\CSharp\Singleton_Client2\Singleton_Client2\obj\Debug\Singleton_Client2.csproj.CoreCompileInputs.cache
+C:\Banu\Infinite_1\CSharp\Singleton_Client2\Singleton_Client2\obj\Debug\Singleton_Client2.csproj.CopyComplete
+C:\Banu\Infinite_1\CSharp\Singleton_Client2\Singleton_Client2\obj\Debug\Singleton_Client2.exe
+C:\Banu\Infinite_1\CSharp\Singleton_Client2\Singleton_Client2\obj\Debug\Singleton_Client2.pdb
