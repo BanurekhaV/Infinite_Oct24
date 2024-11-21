@@ -1,0 +1,6 @@
+C:\Banu\Infinite_1\CSharp\NUnitMain\NUnitMain\bin\Debug\NUnitMain.dll
+C:\Banu\Infinite_1\CSharp\NUnitMain\NUnitMain\bin\Debug\NUnitMain.pdb
+C:\Banu\Infinite_1\CSharp\NUnitMain\NUnitMain\obj\Debug\NUnitMain.csproj.AssemblyReference.cache
+C:\Banu\Infinite_1\CSharp\NUnitMain\NUnitMain\obj\Debug\NUnitMain.csproj.CoreCompileInputs.cache
+C:\Banu\Infinite_1\CSharp\NUnitMain\NUnitMain\obj\Debug\NUnitMain.dll
+C:\Banu\Infinite_1\CSharp\NUnitMain\NUnitMain\obj\Debug\NUnitMain.pdb
