@@ -1,0 +1,7 @@
+C:\Banu\Infinite_1\CSharp\Singleton_Caching\Singleton_Caching\bin\Debug\Singleton_Caching.exe.config
+C:\Banu\Infinite_1\CSharp\Singleton_Caching\Singleton_Caching\bin\Debug\Singleton_Caching.exe
+C:\Banu\Infinite_1\CSharp\Singleton_Caching\Singleton_Caching\bin\Debug\Singleton_Caching.pdb
+C:\Banu\Infinite_1\CSharp\Singleton_Caching\Singleton_Caching\obj\Debug\Singleton_Caching.csproj.AssemblyReference.cache
+C:\Banu\Infinite_1\CSharp\Singleton_Caching\Singleton_Caching\obj\Debug\Singleton_Caching.csproj.CoreCompileInputs.cache
+C:\Banu\Infinite_1\CSharp\Singleton_Caching\Singleton_Caching\obj\Debug\Singleton_Caching.exe
+C:\Banu\Infinite_1\CSharp\Singleton_Caching\Singleton_Caching\obj\Debug\Singleton_Caching.pdb
