@@ -65,43 +65,7 @@ The GOF categorised the design patterns into 3
        4. Concrete Product : that implements the abstract product methods
        5. Client           : uses interfaces declared by abstract factory and product to create a family of products
     
-      3. Singleton Pattern : This pattern ensures that only one instance of the singleton class is created throughout the application
-      provides a global access point to that instance 
-      provides thread safety as it creates only one instance, preventing multiple instances due to multi threaded application
-      Singleton instances are initialized in a lazy manner , meaning it is created only on the first request and not when the application starts. 
-
-   Singleton Implementation Guidelines :
-
-1. Singleton class to be made Sealed class
-2. Private Parameterless constructor
-3. Private static members(variables)
-4. Public static methods or properties
-
-Singleton pattern can be implemented in many ways :
-
- 1. No thread safe 
- 2. Thread safe
- 3. Thread safe with double checking lock
- 4. Eager loading
- 5. Lazy<T> loading
-
-When to use Singleton pattern
-
--Shared Resources Management
--Logging Services
--Caching 
--Controlled Access and Operations
-
-Comparison between Static class and singleton class
-
-Static :                                              Singleton
-
- Is a class                                        is a design pattern
- only static constructor                           private constructor
- cannot inherit by default                         can be inherited, unless we use the sealed modifier 
- cannot pass the class object as a parameter       We can pass the dependency class object as a parameter
- has only one instance                             has only one instance
-
+      3. Singleton Pattern : 
 
 
 2. Structural Pattern : Structural changes of Classes and Interfaces  (Adapter, Bridge, Decorator, proxy)

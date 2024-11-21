@@ -1,0 +1,18 @@
+Dependency Injection : is a process of providing the dependency object to the dependent object via constructor, methods and properties
+
+DI pattern insists that the dependency object is always interface-based
+
+
+DI Framework sin the market : Unity(Ioc), Castle Windsor, Spring.Net, StructureMap, Ninject etc.
+
+Unity Framework : is a general purpose Inversion of Control container which is extensible open source licenced under Apache 2.0
+
+Resp of the Ioc Container :
+Specifies the type of Objects to be created and injected
+Registering the types
+Resolving concrete types with registered types (implementing types with interface types)
+
+Layered Architecture : 
+1. User Interface (UI)
+2. Business Logic - BAL(Business Access layer)
+3. Data Layer - DAL (Data Access Layer)

@@ -1,0 +1,7 @@
+C:\Banu\Infinite_1\CSharp\DI_1\DI_1\bin\Debug\DI_1.exe.config
+C:\Banu\Infinite_1\CSharp\DI_1\DI_1\bin\Debug\DI_1.exe
+C:\Banu\Infinite_1\CSharp\DI_1\DI_1\bin\Debug\DI_1.pdb
+C:\Banu\Infinite_1\CSharp\DI_1\DI_1\obj\Debug\DI_1.csproj.AssemblyReference.cache
+C:\Banu\Infinite_1\CSharp\DI_1\DI_1\obj\Debug\DI_1.csproj.CoreCompileInputs.cache
+C:\Banu\Infinite_1\CSharp\DI_1\DI_1\obj\Debug\DI_1.exe
+C:\Banu\Infinite_1\CSharp\DI_1\DI_1\obj\Debug\DI_1.pdb
