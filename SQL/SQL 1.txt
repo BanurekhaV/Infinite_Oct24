@@ -1,0 +1,62 @@
+create database InfiniteDB
+
+use InfiniteDB
+
+create table tblDepartment
+(
+  DeptNum int primary key,
+  Deptname varchar(20)not null,
+  DeptLocation varchar(20),
+)
+
+create table tblEmployee
+(
+  EmpId int primary key,
+  EmpName varchar(40)not null,
+  Gender char(7),
+  Salary float,
+  DeptId int references tblDepartment(DeptNum)
+)
+--to add a column to a table after its creation with constraints
+--note : constraints can be given only if the table is not having any data
+alter table tblemployee
+add Phoneno varchar(12) unique
+
+--we can add a column to a table which has rows without constraints
+
+alter table tblemployee
+add Phoneno varchar(12)  --no constraints
+--to drop constraints on a column of a table 
+alter table tblemployee
+drop constraint [UQ__tblEmplo__F2111EDAC2FA25AF] -- the constraint name is system generated
+
+--to drop a column from a table
+alter table tblemployee
+drop column phoneno
+
+--add rows to the table 
+insert into tbldepartment values(2,'HR','Bangalore'),
+(3,'Admin','Hyderabad')
+
+--to insert values for only few columns of the table
+--we give column list as below:
+insert into tbldepartment(DeptNum,Deptname) values(4,'Operations')
+
+select * from tblDepartment
+
+insert into tblemployee values(100,'Aadi Jain','Male',5000,1),
+(104, 'Ajay Sairam','Male',5200,null),(103,'Aarthi','Female',5100,2),
+(102, 'AdiSiva','Male',5000,2)
+
+select * from tblemployee
+
+--to modify data in a table
+update tblEmployee set phoneno='9456233567'where EmpId=103
+
+--to add a constraint after table creation
+alter table tblemployee
+add constraint uqphone unique(phoneno)
+
+--to drop a constraint
+alter table tblemployee
+drop constraint uqphone

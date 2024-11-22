@@ -1,0 +1,79 @@
+DataBase : Can be defined as the storage of inter related data that has been organised in such a manner that process of retrieval of data is effective and efficient
+
+Management System : Set of programs to access the data. An Environment that is both convenient and efficient to use
+
+Purpose of Databases :
+Drawbacks of file system
+  - Data Redundancy leading to inconsistency
+  - Difficulty in accessing data
+  - Data Isolation
+  - Integrity
+  - Concurrency access
+  - Security problems
+  
+DBMS : is built on Data Model 
+       Data Model : a collection of tools to describe
+                   -Data
+                   -Data relationship
+                   -Data semantics
+                   -Data Constraints
+
+
+Data Models : 
+ - Hierarchical 
+ - Network
+ - Relational
+ - Object Relational (supports media- hypertext, multimedia)
+
+Relational Model : Important terms 
+-Relation : a table (collection of well defined specific data strictly organized in a tabular manner
+-Tuple : a row in a table 
+-Attribute : a column in a table
+-Degree : number of attributes in a table
+-Cardinality : number of tuples/rows
+-Primary Key : a column/set of columns that identifies a unique row/tuple
+-Foreign Key :a column in a table that always is dependent on the PK column of another table
+-Entity : is anything that exists and is distinguishable
+-Entity Set : a group of similar entities (employee -> fulltime/parttime/contract)
+-Relationship : an association between entities
+
+Types of Relationships:
+ one-one
+ one-many
+ many-many
+
+SQL : Structured Query Language - a simple English based lang to work with databases. This is not case sensitive
+Components of SQL :
+1. Data Definition Lang (DDL) : (create, alter, drop, truncate, rename)
+2. Data Manipulation Lang(DML) : (Insert, Update, Delete)
+3. Data Query Lang (DQL) : (Select)
+4. Data Control lang (DCL) : (Grant, Revoke)
+5. Transaction Control Lang (TCL) : (Commit, Rollback)
+
+Keys in RDBMS :
+ Super Key
+ Candidate Keys
+ Primary Key
+ Alternate keys
+ Composite/Compound key
+ Unique Key
+ Foreign Key
+
+Integrity Constraints : are rules/restrictions enforced on the data column. This ensures the accuracy and reliability of the data in the database. These are 3 in nos.
+
+ 1. Domain Integrity : states that every element from a relation should respect the type and the length restrictions. Also the range of values permitted. (Unique, Check, Default)
+
+ 2. Entity Integrity : states that no primary key column has duplicate or null values (Primary Key)
+
+ 3. Referential Integrity : states consistency to be maintained among the rows of 2 relations (Foreign Key)
+
+DDL:
+Create <object> <object name>
+
+Table creation syntax:
+create <object<<object name>(collist <datatype><size> <constraints>)
+
+--adding a column after creation of table
+
+alter table <tablename>
+add <columnname><datatype>(size) <constraints> (can give constraints provided there is no data, else cannot)
