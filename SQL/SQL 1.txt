@@ -60,3 +60,37 @@ add constraint uqphone unique(phoneno)
 --to drop a constraint
 alter table tblemployee
 drop constraint uqphone
+
+--table level constraints
+create table Employee
+(
+  EmpId int ,
+  EmpName varchar(40),
+  Gender char(7),
+  Salary float,
+  DeptId int,
+  primary key(Empid),
+  foreign key(Deptid) references tblDepartment(Deptnum)
+)
+--to delete a table
+drop table employee
+
+--check constraints
+alter table tblemployee
+add constraint chksal check(salary >=5000)
+
+--default constraints
+alter table tbldepartment
+add constraint deflocation Default 'Blore' for deptlocation
+
+--to effect default values, we have to avoid the column with default in the insert statement
+insert into tbldepartment(deptnum,deptname) values(5,'Sales')
+
+sp_help tblemployee
+
+--to enable or disable check constraints
+--disabling
+alter table tblemployee nocheck constraint chksal
+
+--enabling
+alter table tblemployee check constraint chksal
