@@ -1,0 +1,85 @@
+{
+  "format": 1,
+  "restore": {
+    "C:\\Banu\\Infinite_1\\CSharp\\MoqTest\\Testing_using_MOQ\\Testing_using_MOQ.csproj": {}
+  },
+  "projects": {
+    "C:\\Banu\\Infinite_1\\CSharp\\MoqTest\\MoqTest\\MoqTest.csproj": {
+      "restore": {
+        "projectUniqueName": "C:\\Banu\\Infinite_1\\CSharp\\MoqTest\\MoqTest\\MoqTest.csproj",
+        "projectName": "MoqTest",
+        "projectPath": "C:\\Banu\\Infinite_1\\CSharp\\MoqTest\\MoqTest\\MoqTest.csproj",
+        "frameworks": {
+          "net472": {
+            "projectReferences": {}
+          }
+        }
+      },
+      "frameworks": {
+        "net472": {}
+      }
+    },
+    "C:\\Banu\\Infinite_1\\CSharp\\MoqTest\\Testing_using_MOQ\\Testing_using_MOQ.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Banu\\Infinite_1\\CSharp\\MoqTest\\Testing_using_MOQ\\Testing_using_MOQ.csproj",
+        "projectName": "Testing_using_MOQ",
+        "projectPath": "C:\\Banu\\Infinite_1\\CSharp\\MoqTest\\Testing_using_MOQ\\Testing_using_MOQ.csproj",
+        "packagesPath": "C:\\Users\\Banurekha\\.nuget\\packages\\",
+        "outputPath": "C:\\Banu\\Infinite_1\\CSharp\\MoqTest\\Testing_using_MOQ\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\Banurekha\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net472"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\dotnet\\library-packs": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net472": {
+            "targetAlias": "net472",
+            "projectReferences": {
+              "C:\\Banu\\Infinite_1\\CSharp\\MoqTest\\MoqTest\\MoqTest.csproj": {
+                "projectPath": "C:\\Banu\\Infinite_1\\CSharp\\MoqTest\\MoqTest\\MoqTest.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net472": {
+          "targetAlias": "net472",
+          "dependencies": {
+            "Microsoft.NET.Test.Sdk": {
+              "target": "Package",
+              "version": "[16.5.0, )"
+            },
+            "Moq": {
+              "target": "Package",
+              "version": "[4.20.72, )"
+            },
+            "NUnit": {
+              "target": "Package",
+              "version": "[4.2.2, )"
+            },
+            "NUnit3TestAdapter": {
+              "target": "Package",
+              "version": "[4.6.0, )"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.416\\RuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,6 @@
+C:\Banu\Infinite_1\CSharp\MoqTest\MoqTest\bin\Debug\MoqTest.exe.config
+C:\Banu\Infinite_1\CSharp\MoqTest\MoqTest\bin\Debug\MoqTest.exe
+C:\Banu\Infinite_1\CSharp\MoqTest\MoqTest\bin\Debug\MoqTest.pdb
+C:\Banu\Infinite_1\CSharp\MoqTest\MoqTest\obj\Debug\MoqTest.csproj.CoreCompileInputs.cache
+C:\Banu\Infinite_1\CSharp\MoqTest\MoqTest\obj\Debug\MoqTest.exe
+C:\Banu\Infinite_1\CSharp\MoqTest\MoqTest\obj\Debug\MoqTest.pdb

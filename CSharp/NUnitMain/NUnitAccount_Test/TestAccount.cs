@@ -85,5 +85,38 @@ namespace NUnitAccount_Test
                 ClassicAssert.IsNotNull(x.Name);
             }
         }
+
+        //testing reservation/user class
+        [Test]
+        public void CancellationByAdmin_ReturnTrue()
+        {
+            //Arrange
+            var reservation = new Reservation();
+
+            //Act
+            var result = reservation.CanBeCancelledBy(new User { IsAdmin = true });
+
+            //Assert
+            ClassicAssert.IsTrue(result);
+        }
+
+        [Test]
+        public void CancellationByBookedBy_ReturnsTrue()
+        {
+            var user = new User();
+            var reservation = new Reservation { BookedBy = user };
+
+            var result = reservation.CanBeCancelledBy(user);
+
+            ClassicAssert.IsTrue(result);
+        }
+
+        [Test]
+        public void Cancellation_MadeBy_Others_ReturnFalse()
+        {
+            var reservation = new Reservation { BookedBy = new User() };
+            var result = reservation.CanBeCancelledBy(new User());
+            ClassicAssert.IsFalse(result);
+        }
     }
 }

@@ -74,4 +74,24 @@ namespace NUnitMain
             return x + y;
         }
     }
+
+    public class User
+    {
+        public Boolean IsAdmin { get; set; }
+    }
+
+    public class Reservation
+    {
+        public User BookedBy { get; set; }
+
+        public bool CanBeCancelledBy(User user)
+        {
+            if (user.IsAdmin)
+                return true;
+            if (BookedBy == user)
+                return true;
+            else
+                return false;
+        }
+    }
 }
