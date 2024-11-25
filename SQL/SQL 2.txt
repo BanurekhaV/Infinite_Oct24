@@ -166,3 +166,116 @@ group by gender,deptid
 select deptid, gender, count(*)as 'Emp Count' from tblEmployee
 group by deptid,gender
 having count(*)>2
+
+--find dept wise avg of salary having an average of salary > 5100
+select deptid,avg(salary) as 'Average Salary' from tblemployee
+group by deptid having avg(salary)>5100
+
+--re write the above query to list deptname wise avg salary being > 5100
+--the above involves joining 2 tables 
+
+select deptname, avg(salary) [Average of Salary]
+from tblDepartment,tblEmployee
+where tblDepartment.DeptNum = tblEmployee.DeptId
+group by deptname
+having avg(salary)>5100
+
+--with table aliases, and references
+select t1.Deptname, avg(t2.salary) 
+from tblDepartment t1, tblEmployee t2
+where t1.DeptNum = t2.DeptId
+group by deptname
+having avg(salary)>5100
+
+--For each dept, find the sum of salary where the sum is greater than 15000
+
+select t1.Deptname, sum(t2.salary) 
+from tblDepartment t1, tblEmployee t2
+where t1.DeptNum = t2.DeptId
+group by deptname
+having sum(salary)>15000
+
+--Joins:
+--1. cross Join
+select * from tblemployee, tblDepartment
+
+--or
+select * from tblEmployee cross join tblDepartment
+
+--2. Equi/Natural/Inner Join
+select deptname, empname, Salary
+from tblDepartment,tblEmployee
+where tblDepartment.DeptNum = tblEmployee.DeptId
+
+--or
+select deptname, empname, Salary
+from tblDepartment inner join tblEmployee
+on tblDepartment.DeptNum = tblEmployee.DeptId
+--or
+select deptname, empname, Salary
+from tblDepartment join tblEmployee
+on tblDepartment.DeptNum = tblEmployee.DeptId
+
+--3. outer joins (matching + non matching records)
+--left outer join (matches all rows from 2 tables, 
+--and non matching rows from the left hand side table
+
+select deptname, empname, Salary
+from tblDepartment left outer join tblEmployee
+on tblDepartment.DeptNum = tblEmployee.DeptId
+
+--or 
+select deptname, empname, Salary
+from tblDepartment left join tblEmployee
+on tblDepartment.DeptNum = tblEmployee.DeptId
+
+--right outer join
+--(matches all rows from 2 tables, 
+--and non matching rows from the right hand side table
+
+select deptname, empname, Salary
+from tblDepartment right outer join tblEmployee
+on tblDepartment.DeptNum = tblEmployee.DeptId
+
+--or
+
+select deptname, empname, Salary
+from tblDepartment right join tblEmployee
+on tblDepartment.DeptNum = tblEmployee.DeptId
+
+--full outer join (matching rows + non matching from both the tables)
+select deptname, empname, Salary
+from tblDepartment  full outer join tblEmployee
+on tblDepartment.DeptNum = tblEmployee.DeptId
+
+--4. self Join
+--display all the supervisor names and their subordinate names
+select t1.empname as 'Supervisor Name', t2.empname as 'Subordinate Name'
+from tblemployee t1 join tblemployee t2
+on t1.empid=t2.mgrid
+
+--Sub Query:
+
+-- find all employees who earn more than devanshu
+--q1 to find one employee salary
+select salary from tblemployee where empid=109
+
+--q2 
+select empname from tblemployee where salary >5150
+
+--the above using subquery
+ select empname from tblemployee 
+ where salary > (select salary from tblemployee where empid=109)
+
+ --multirow subquery
+ select empname, salary from tblemployee 
+ where salary <any (select salary from tblemployee where DeptId in(1,3))
+
+ select empname, salary from tblemployee 
+ where salary >any (select salary from tblemployee where DeptId in(1,3))
+
+ select empname, salary from tblemployee 
+ where salary >all (select salary from tblemployee where DeptId in(1,3))
+
+ select empname, salary from tblemployee 
+ where salary in (select salary from tblemployee where DeptId in(1,3))

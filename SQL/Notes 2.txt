@@ -45,4 +45,46 @@ to override the above precedence, use parenthesis ()
 - dividing the tuples of a relation into sub sets/smaller data sets
 - we can apply group by clause on columns that are not in the select list (may not get meaningful results which convey the status)
 - we may have to group by on all columns in the select list except the aggregates
+
+Having clause restricts no. of groups, where as where restricts no, of rows
+
+SQL statements order of execution :
+  from
+  where
+  group by
+  having
+  order by
+  select
+
+
+Joins : are conditions that are applied in a where clause
+
+Joins are of various types :
+  Equi /Natural
+  Non Equijoin  
+  Self join
+  Cross Join
+  Inner Join
+  Outer Joins
+
+Sub Queries : Guidelines for sub query
+ - Enclose subquery in parenthesis
+ - Place the subquery on the right hand side of the comparison operator
+ - Use single row operators with single row subqueries and multi row operators with multi row subqueries
+
+Single row -operators : =, < ,>, <>, >=, <=
+Multi row operators :
+ in  - Equal to any member in the list (sub query list)
+
+ any - Compare value to each values returned by the subquery. 
+       If any one matches with the list
+       Can be used in conjunction with the single row operators
+
+ all - Compare value to each values returned by the subquery. 
+       If the values matches all data in the list
+       Can be used in conjunction with the single row operators
+
+
+
+
 - we cannot group by on alias names
