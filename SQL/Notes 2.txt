@@ -16,6 +16,33 @@ Logical - not, and, or
 
 1.  Is a DML Command                       Is a DDL Command                    Is a DDL command
 2.  Can apply where predicate              Cannot apply any predicates         Operates on the objects at schema level
-3.  Rollback deletion                      Cannot Rollback
+3.  Rollback deletion                      Cannot be Rolled back
 4.  Is slower than truncate                is faster
 5.  Retains the structure                  Retains the structure
+
+
+Truncated details with data can be rolled back as a part of a transaction using
+  1. Log files, Back up files, or sys tools -sql recovery tool
+
+Rules of precedence
+
+1. Arithmetic
+2. Concatenation
+3. Comparison
+4. Is[not] null, like, not [in]
+5. [not] between
+6. Not , And, Or
+
+to override the above precedence, use parenthesis ()
+
+--sorting the output using order by
+ - sort by multiple columns
+ - sort asc, or desc
+ - sort by alias name
+ - sort by a column that is not in the select list
+
+--grouping ( on columns whose values repeat)
+- dividing the tuples of a relation into sub sets/smaller data sets
+- we can apply group by clause on columns that are not in the select list (may not get meaningful results which convey the status)
+- we may have to group by on all columns in the select list except the aggregates
+- we cannot group by on alias names

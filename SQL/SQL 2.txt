@@ -92,3 +92,77 @@ delete from tbldummy where did >=2
 truncate table tbldummy 
 rollback  -- delete / rollback is possible only within a transaction
 select * from tbldummy
+
+
+--string operations
+select concat( 'Happy ', ' BirthDay ' , 'to ', 'you ', '25')
+select replace('Jack and Jill', 'J', 'Bl')
+select ASCII('C')
+
+--date operations
+select substring(convert(varchar(11),getdate(),113),4,8)as [Month YYYY]
+
+select convert(varchar(11),getdate())
+select getdate()
+
+select datename(dw,getdate())
+
+--order by (sorts only the output)
+--asc, desc
+
+select empid, empname, salary
+from tblemployee
+order by empname desc
+
+update tblemployee set salary =5000 where empname like 'G%'
+--multiple column sort
+
+select empname , salary , gender from tblEmployee
+order by salary desc, empname asc, gender asc
+
+--multiple column sort by alias name
+select empname as EmployeeName, salary as [Emp Salary], gender from tblEmployee
+order by [Emp Salary] desc, EmployeeName asc, gender asc
+
+--sorting by column not in select list
+select empname, gender from tblemployee
+order by salary desc
+
+--number functions
+select round(45.926, 2)
+
+select avg(salary) from tblEmployee
+
+--find all employees who earn more than the vaerage of salary
+
+select * from tblemployee where salary >avg(salary)
+--cannot have aggregates to the RHS of where clause
+
+--group by clause
+select deptid from tblemployee
+group by deptid
+
+--find dept wise avg salary
+select deptid, avg(salary) from tblemployee 
+group by deptid
+
+--dept wise, gender wise  average salary 
+select deptid, gender , avg(salary) from tblemployee 
+group by deptid, gender
+order by deptid,gender
+
+--count the no.of male and female employees
+select gender,count(gender) from tblemployee
+group by gender
+
+select gender,count(*) from tblemployee
+group by gender
+
+--dept wise, count of male and female employees
+select deptid,gender,count(*) from tblemployee
+group by gender,deptid
+
+--dept wise, count of male and female employees which are having count>2
+select deptid, gender, count(*)as 'Emp Count' from tblEmployee
+group by deptid,gender
+having count(*)>2
