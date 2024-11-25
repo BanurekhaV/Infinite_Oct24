@@ -78,21 +78,8 @@ create <object<<object name>(collist <datatype><size> <constraints>)
 alter table <tablename>
 add <columnname><datatype>(size) <constraints> (can give constraints provided there is no data, else cannot)
 
+Insert with multiple values
+Insert into select columns
+Insert with and without default
 
-
-What is SQL Server 
- Advantages of SQL Server 2012 
- SQL Server architecture 
- SQL Server security Model 
- SQL Server System databases 
  
-Day 21, 22 
-Module 38:  SQL Server Tools  
- Server Tools 
- SQL Server manager 
- SQL Server Agent 
- Server Network Utility 
- Client Tools 
- SQL Enterprise Manager 
- SQL Query Analyzer 
- Client Network Utility

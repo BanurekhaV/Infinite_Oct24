@@ -1,0 +1,94 @@
+use infinitedb
+
+select * from tbldepartment
+select * from tblemployee
+
+--select options
+select Empid, empname,salary from tblEmployee  -- projection
+
+select Empid, empname,salary from tblEmployee where Salary>5000 -- predicate
+
+--top records
+select top 3 * from tblemployee
+
+--top percentage
+select top 10 percent empname from tblemployee
+
+--alias
+select empid EmployeeID, empname as 'Employee Name' from tblemployee
+
+--computational columns/arithmetic operators
+select empname as 'Employee Name', salary 'Monthly Salary', 
+(salary*12) as 'Annual Salary', (Salary/30) 'Daily Salary' from tblemployee
+
+--Relational operators
+select * from tblemployee where gender ='Female'
+select * from tblemployee where salary >5000 
+
+select empname, deptid, (salary+1000) Incentive from tblemployee where DeptId>1
+
+--logical
+
+select * from tblemployee where (salary >5000 and salary <5200) or deptid=2
+
+--between and not between (for inclusive ranges)
+select * from tblemployee where salary between 5000 and 5200 
+select * from tblemployee where salary not between 5000 and 5200 
+
+--null values
+select * from tblemployee where deptid is null
+
+select * from tblemployee where deptid is not null
+
+--in operator 
+--fetch all employees who work for deptid 1 and 2
+select * from tblemployee where deptid in(1,2)  -- works like 'or'
+
+select * from tblemployee where deptid not in(1,2)
+
+insert into tblemployee values(112,'Hareesh','Male',5300,2,0087633),
+(107, 'Bharghav','Male',5200,null,33344455),(108,'Chiramya','Male',5400,2,3454563),
+(109, 'Devanshu','Male',5150,3,5553344),(110,'Gowthami','Female',5250,3,455666777)
+
+--wild card characters with like keyword
+-- % [percentile] - substitutes 0,1 or more characters
+-- _[underscore] - substitues exactly 1 character
+-- [range] - substitues characters within the given range
+-- ^[caret] - subtitutes characters not within the range
+
+select * from tblemployee where empname like 'A%'
+select * from tblemployee where empname like '__a%'
+select * from tblemployee where empname like '%h'
+select * from tblemployee where empname like '%h%'
+
+select * from tblemployee where empname like 'A[ajd]%'
+select * from tblemployee where empname like '_[^ajd]%'
+
+select * from tblemployee where (salary >5000 and salary <5200) or (deptid=2)
+and(empname like 'A%')
+
+--aggregates
+select max(salary) from tblemployee
+select min(salary) 'Minimum Salary', AVG(salary) from tblemployee
+
+select count(empid) from tblemployee  -- count includes duplicates, but excludes null
+select count(deptid) from tblemployee
+
+--distinct (removes duplicates)
+select count(distinct(deptid)) from tblemployee
+
+--deletion
+insert into tblemployee values(200,'Banurekha','Female',5200,4,56789123)
+
+delete from tblemployee where empid=200
+select * from tblemployee
+
+--difference between drop and delete
+
+create table tbldummy(did int, dname varchar(20))
+
+insert into tbldummy values(1,'AAA'),(3,'BBB'),(2,'CCC')
+delete from tbldummy where did >=2
+truncate table tbldummy 
+rollback  -- delete / rollback is possible only within a transaction
+select * from tbldummy

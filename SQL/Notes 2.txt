@@ -1,0 +1,21 @@
+Selection
+Projection
+Join
+Union
+Difference
+Divide
+
+Alias
+Computational
+Top Record and percentages
+Arithmetic Operators  +,-,*,/
+Relational Operator <>,!=,=,<,>,<=,>=
+Logical - not, and, or
+
+     Delete                                Truncate                              Drop
+
+1.  Is a DML Command                       Is a DDL Command                    Is a DDL command
+2.  Can apply where predicate              Cannot apply any predicates         Operates on the objects at schema level
+3.  Rollback deletion                      Cannot Rollback
+4.  Is slower than truncate                is faster
+5.  Retains the structure                  Retains the structure
