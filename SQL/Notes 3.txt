@@ -1,0 +1,22 @@
+Hard Delete : permanent, cannot retrieve 
+
+   delete tbldepartment where deptnum=1
+
+Soft Delete : the record/row/tuple will be updated with some comments
+
+All applns. will have CRUD (Create, Read, Update, Delete)
+
+
+T-Sql : programming with sql 
+- variables
+- if else
+- case
+- while
+- break, continue
+
+Case : works as alternates for any condition
+ Simple Case : case keyword is immediately followed by case expression and before when statement
+ Searched Case : case keyword is followed by when statement. There is no case expression between case and when statements
+ Nested case : case within a case
+
+  

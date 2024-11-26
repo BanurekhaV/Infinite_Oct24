@@ -130,3 +130,77 @@ insert into test values(Next Value for dbo.myseq, 'Jenkins')
 select * from test
 
 sp_help test
+
+
+
+--hard delete
+delete from tbldepartment where deptnum=1
+--soft delete
+update tbldepartment set Remarks ='Non-Operational' where deptnum=1
+
+--case
+create table casetable(cid int, cname varchar(20))
+
+insert into casetable values(5,'White'),(3,'Blue'),(2,'Green'),(4,'Red')
+
+--simple case without else
+select cid,cname,
+ case cname
+    when 'Red' then 'Danger'
+	when 'Blue' then 'Primary'
+	when 'Green' then 'Success'
+  end as 'Color Remarks'
+ from casetable
+
+ --simple case with else
+select cid,cname,
+ case cname
+    when 'Red' then 'Danger'
+	when 'Blue' then 'Primary'
+	when 'Green' then 'Success'
+	else 'No Remarks'
+ end as 'Color Remarks'
+ from casetable
+
+ --searched case with else
+ select cid,cname,
+ case
+   when cname ='Red' then 'Danger'
+   when cname = 'Blue' then 'Primary'
+   when cname = 'Green' then 'Success'
+   else 'Incorrect Color'
+ end as ColorStatus
+ from casetable
+
+ --nested case :
+ declare @totsales int    -- decl a variable of a type
+ set @totsales=230  -- assigning values to the variable
+ select case
+    when @totsales >=500 then 'Bumper Sales'
+	when @totsales <500 then
+	   case 
+	      when @totsales between 100 and 200 then 'Poor sales'
+		  when @totsales between 201 and 300 then 'Ok Sales'
+		  when @totsales between 301 and 400 then 'Good Sales'
+		  when @totsales between 401 and 500 then 'Very Good Sales'
+		  else 'No Sales'
+		end
+	end as SalesDetails
+
+--nested case inside if else
+declare @sales int
+set @sales=245
+select @sales as 'Total Sales'
+
+print 'The Total Sales made is ' + ' ' + cast(@sales as varchar(5))
+if @sales > 500
+  select 'Bumper Sales'
+else
+ begin
+  select case
+    when @sales between 100 and 200 then 'Poor sales'
+	when @sales between 201 and 300 then 'Ok Sales'
+	when @sales between 301 and 400 then 'Good Sales'
+	else 'No Sales'
+   end 'Sales Status'
+end
