@@ -204,3 +204,64 @@ else
 	else 'No Sales'
    end 'Sales Status'
 end
+
+
+--Tsql
+--1.
+begin
+declare @v1 int=50, @v2 int =100
+declare @sum int = @v1
+--set @sum = @v1
+print @sum
+if(@v1 > @v2)
+  print 'v1 is greater ' 
+else
+print 'v2 is greater'
+end
+
+--eg 2. using tsql increase the salary of all employees by rs 100/- who are earning less than emp 100
+
+begin
+declare @sal float
+declare @name varchar(30)
+select @name=empname, @sal=salary from tblemployee where empid=100 -- 5100
+
+if(@sal <=5000)
+ begin
+   set @sal =@sal+100
+   print 'the revised salary is ' + cast(@sal as varchar(5))
+ end
+ else
+  begin
+    print 'Salary is Ok'
+  end
+end
+
+--while
+declare @ctr int =1
+while @ctr <=5
+ begin
+   print @ctr
+   set @ctr =@ctr+1
+  end
+
+  --while with break
+  declare @ctr1 int =0
+while @ctr1 <=5
+ begin
+   set @ctr1 =@ctr1+1
+   if @ctr1=4
+   break
+   print @ctr1
+  end
+
+  --while with continue
+    declare @ctr2 int =0
+while @ctr2 <=5
+ begin
+   set @ctr2 =@ctr2+1
+   if @ctr2=4
+  continue
+   print @ctr2
+  end
+  end
