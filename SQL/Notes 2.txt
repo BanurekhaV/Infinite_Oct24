@@ -45,6 +45,7 @@ to override the above precedence, use parenthesis ()
 - dividing the tuples of a relation into sub sets/smaller data sets
 - we can apply group by clause on columns that are not in the select list (may not get meaningful results which convey the status)
 - we may have to group by on all columns in the select list except the aggregates
+- we cannot group by on alias names
 
 Having clause restricts no. of groups, where as where restricts no, of rows
 
@@ -67,7 +68,10 @@ Joins are of various types :
   Inner Join
   Outer Joins
 
-Sub Queries : Guidelines for sub query
+Sub Queries : are nested queries that gets executed once before handing over the details to the 
+outer query/main query
+
+Guidelines for sub query
  - Enclose subquery in parenthesis
  - Place the subquery on the right hand side of the comparison operator
  - Use single row operators with single row subqueries and multi row operators with multi row subqueries
@@ -84,7 +88,18 @@ Multi row operators :
        If the values matches all data in the list
        Can be used in conjunction with the single row operators
 
+--group by in subqueries
+
+--exists / not exists operator :
+  - test for existence of rows in the result of the subquery
+  - if found, the search stops and the inner query returns true
+  - if not found, then inner query returns false, and continues to search the rest of the rows
+
+--Exists/not exists is equivalent to 'in' and 'not in'. But these operators involve data retrieval, where as exists will not
+
+Corelated Sub Query : is a way of reading every row in a table and comparing values in each row against the  related data
+
+- 
 
 
 
-- we cannot group by on alias names
