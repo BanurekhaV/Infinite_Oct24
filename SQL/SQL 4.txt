@@ -1,0 +1,98 @@
+--set commands
+create table utable1(uid int identity, uname varchar(20),ugrade char(1), upercentage int)
+
+insert into utable1 values('Sriteja','A',85),('Manisha','A',80),('Nikhil','B',65),('DurgaSai','B',60)
+
+create table utable2(uid int identity, uname varchar(20),ugrade char(1), upercentage int)
+
+insert into utable2 values('Hari','A',85),('Prakruthi','A',82),('Sainaga','B',65),('Mohit','B',60)
+
+select * from utable1
+select * from utable2
+
+--union
+select uname,ugrade, upercentage from utable1
+union all
+select uname,ugrade, upercentage from utable2
+
+update utable2 set uname='Sriteja' where uname='Hari'
+
+--intersect
+select uname,ugrade, upercentage from utable1
+intersect
+select uname,ugrade, upercentage from utable2
+
+--except
+select uname,ugrade, upercentage from utable1
+except
+select uname,ugrade, upercentage from utable2
+
+--for except
+create table empdata(ID int identity, Ename varchar(20),Age int, City varchar(20))
+
+insert into empdata values('Hemanth',22,'Chennai'),('Suchitha',22,'Bangalore'),('Pavan',23,'Vizag')
+
+Create table Bonusdata(BId int, Eid int, BonusAmt int)
+
+insert into Bonusdata values(100,4,5000),(111,3,8000),(121,2,6000)
+
+select ID, Ename, bonusamt from empdata left join Bonusdata on empdata.ID = Bonusdata.Eid
+except
+select ID, Ename, bonusamt from empdata right join Bonusdata on empdata.ID = Bonusdata.Eid
+
+--CTE
+with firstcte(EmployeeName, AnnualSalary, Department)
+as (select empname,(salary *12), tbldepartment.Deptname from tblEmployee join tblDepartment
+on tblEmployee.DeptId = tblDepartment.DeptNum)
+
+--main query 1
+--select * from firstcte
+
+--query 2
+select department, avg(annualsalary)'Dept salary' from firstcte
+group by department having avg(annualsalary)>64000
+
+
+--eg 2 multiple cte's
+with cte1 as(select * from tblemployee),
+cte2 as(select * from tblDepartment)
+
+--main query
+select cte1.empname,cte1.salary,cte2.deptname from cte1 join cte2 on cte1.deptid=cte2.deptnum
+and cte1.Salary > 5300
+
+--eg 3. dml operations with cte
+with dmlcte(DepartmentNumber,DepartmentName,NewLocation)
+as(select deptnum,deptname,Deptlocation from tblDepartment)
+
+--insertion
+--insert into dmlcte values(10,'New Dept','Cochin')
+
+--updation
+update dmlcte set NewLocation= 'Navi Mumbai' where DepartmentNumber=10
+select * from tblDepartment
+
+
+--recursive cte's
+with cte_week(n,wkday)
+as(select 0,DATENAME(dw,0)
+union all
+select n + 1, datename(dw,n+1) from cte_week where n < 6)
+
+select n,wkday from cte_week
+select datename(dw,getdate())
+
+--Hierachial queries with recusrive cte
+with ourcte(EmpNo,Ename,MGR,EmpLevel)
+as(select empno,ename,mgr_id, 1 EmpLevel          -- initial subquery
+    from Emp where mgr_id is null
+union all
+select e.empno,e.ename,e.mgr_id,oc.emplevel + 1   -- recursive
+from emp e inner join ourcte oc on e.mgr_id=oc.empno
+where e.mgr_id is not null)
+
+select * from ourcte
+order by EmpLevel
+
+
+

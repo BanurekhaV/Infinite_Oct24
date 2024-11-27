@@ -19,4 +19,4 @@ Case : works as alternates for any condition
  Searched Case : case keyword is followed by when statement. There is no case expression between case and when statements
  Nested case : case within a case
 
- CTE : Common table Expression
+

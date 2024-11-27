@@ -265,3 +265,38 @@ while @ctr2 <=5
    print @ctr2
   end
   end
+
+
+--updating thru while loop
+
+declare @CursorTestID INT 
+
+select @CursorTestID = min(empid) from tblemployee
+print @cursorTestID
+DECLARE @RowCnt BIGINT = 0
+declare @salary float, @rsal float
+-- Get a count of total rows to process, with a SELECT COUNT statement
+SELECT @RowCnt = max(empid) from tblemployee
+select @salary = salary from tblemployee where empid=@cursorTestID  -- 5100
+  
+WHILE @CursorTestID <= @RowCnt
+BEGIN
+    select @rsal=salary from tblemployee where empid=@CursorTestID
+   if(@rsal<@salary)
+     begin
+   UPDATE tblemployee
+   SET salary = @rsal + 100
+   --set @rsal=@rsal+100
+   --print @rsal
+   WHERE empid = @CursorTestID
+   end
+	else
+	 begin
+	   print 'Salary is Fine'
+     end
+  SET @CursorTestID = @CursorTestID + 1  
+END
+
+
+select * from tblemployee
+

@@ -1,0 +1,26 @@
+Set Commands : are operators that can work with multiple result sets
+
+Rules for using set commands :
+ 1. The result set of 2 queries must have same number of columns
+ 2. The datatypes of the columns of both the result set should be same
+ 3. The positional ordering of the column returned as a result of the query must be same
+ 4. In case we need sorted output, we can order only the final result
+
+- Union : combines 2 result sets and removes duplicates if any
+- Union all : includes duplicates
+
+
+CTE : Common table Expression
+ Are expressions that allow us to define temporary resultset that is available within the execution scope
+ We can perform DML operations
+ We can have multiple ctes's separated with a ','
+ One cte can refer to other cte's
+ We can recursive cte's
+
+Advantages : Reusability
+             Complex queries can be broken and represented as multiple cte's
+             More readable
+             Does not occupy memory
+
+Disadvantages : Can be used only within the scope of its declaration and not outside
+                not supported by many database platforms
