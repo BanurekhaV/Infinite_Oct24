@@ -95,4 +95,69 @@ select * from ourcte
 order by EmpLevel
 
 
+--stored procedures
+create procedure sp_welcome
+as
+begin
+ select 'Hello and Welcome to SQL procedures'
+ end
 
+ --to execute the procedure
+ --1. execute procedure name
+ --2. exec procedure name
+ --3. procedure name
+ execute sp_welcome
+ exec sp_welcome
+ sp_welcome
+
+ sp_helptext sp_welcome
+
+ --eg 1
+ create procedure sp_empdata
+ as begin 
+ select * from emp where deptno=20
+ end
+
+ sp_empdata
+
+ --eg 2
+ create or alter proc sp_delemp
+ as
+ begin
+ select * from tblemployee
+ insert into tblemployee values(200,'Banurekha','Female',5200,5,6690007)   -- hard coded values
+ select * from tblemployee
+ delete from tblemployee where empid=200
+ select * from tblemployee
+ print 'Record deleted on ' + cast(getdate() as varchar(12)) 
+ end
+
+ sp_delemp
+
+ --eg 3. Procedures with paramenter
+ create or alter proc sp_wish @name varchar(20)   -- parameterized proc
+ as
+ begin
+ select concat('Hello ' ,@name)
+ end
+
+ sp_wish 'Somasekhar'
+
+ --eg 4. find all employees who work for an given deptid
+ create or alter proc sp_getEmpDept(@deptid int)
+ as
+ begin
+  select * from emp where deptno = @deptid
+  end
+
+sp_getEmpDept 30
+
+--eg 5. get the name of the dept where a given employee works
+create or alter proc sp_getdeptname(@eid int)
+as
+begin
+ select dname from dept join emp on dept.deptno = emp.deptno and
+ emp.empno = @eid
+ end
+
+ sp_getdeptname 7566

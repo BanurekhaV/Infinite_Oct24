@@ -24,3 +24,18 @@ Advantages : Reusability
 
 Disadvantages : Can be used only within the scope of its declaration and not outside
                 not supported by many database platforms
+
+Query : has to be parsed, compiled with a query plan to execute, then execute the query as per plan
+
+vs Stored procedure : Are sql statements that are parsed and executed on a query plan. Once executed, the plan is saved as a part of the stored procedure as an object in the database schema.
+-This allows reusability
+-This provides better performance over query
+-Procedures can take parameters for input
+-Can output values
+-Also returns an integer value (every procedure has an int return type)
+-can implement DQL/DML statements inside Procedures
+-Can call other procedures within one procedure
+-Can handle exceptions, transactions
+
+
+
