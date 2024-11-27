@@ -39,3 +39,5 @@ vs Stored procedure : Are sql statements that are parsed and executed on a query
 
 
 
+
+

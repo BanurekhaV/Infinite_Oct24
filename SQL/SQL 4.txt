@@ -161,3 +161,98 @@ begin
  end
 
  sp_getdeptname 7566
+
+
+ --eg 6. increase the salary of the given employee id by 100/-, if the salary is < 1250
+ --no permanent updation
+ create or alter proc sp_updatesal(@eid int)
+ as
+ begin
+ declare @revisedsal float, @sal float
+ declare @ename varchar(20)
+ select @ename = empname, @sal=salary from tblemployee where empid=@eid
+
+ if(@sal <5300)
+   begin
+    set @revisedsal = @sal +100
+	print 'salary has been revised from ' + cast(@sal as varchar(5)) + 
+	' to ' + cast(@revisedsal as varchar(5))
+	end
+	else
+	 begin
+	  print ' Salary is fine'
+    end
+end
+
+select * from tblemployee where salary <=5300
+sp_updatesal 109
+
+--procedures with output
+create or alter proc sp_Taxcalculator @eid int, @annualsalary float output
+as
+begin
+ declare @temp float
+ select @temp = (salary*12) from tblemployee where empid=@eid
+  if(@temp > 64000)
+   begin
+    set @annualsalary =@temp
+	end
+	else
+	begin
+	 print 'No tax levied as annual salary is less than 66000'
+	 end
+end
+
+--to execute the above proc with output value (option 1)
+--declare @salary float
+--declare @taxamt float
+--exec sp_Taxcalculator 111,@salary output
+--set @taxamt = @salary*10/100
+--print 'Salary earned is ' + cast(@salary as varchar(8))
+--print 'Tax amount to be deducted is ' + cast(@taxamt as varchar(8))
+
+--change the order of procedure execution (option 2)
+declare @outsal float, @tax float
+exec sp_Taxcalculator @annualsalary=@outsal output, @eid='111'
+set @tax = @outsal*10/100
+print 'Salary earned is ' + cast(@outsal as varchar(8))
+print 'Tax amount to be deducted is ' + cast(@tax as varchar(8))
+
+--given an employee name, get the salary of the employee as an output
+create or alter proc sp_getsalary @ename varchar(20), @salary int output
+as
+begin
+ select @salary=salary from tblemployee where empname=@ename
+ end
+
+ declare @empsal int
+ exec sp_getsalary 'Gowthami', @empsal output
+ select @empsal
+
+ --create a procedure that takes an empl no, and outputs the manager name and the emp salary
+
+ --procedures with return type
+ --if we need any integer data from a procedure, then we may use the return type
+
+ create or alter proc sp_getLocation @did int
+ as
+ begin
+ return (select deptlocation from tblDepartment where deptnum=@did)
+ end
+
+ --to execute proc with return values
+
+ declare @loc varchar(20)
+ exec @loc = sp_getLocation 3
+ print @loc
+
+
+ create or alter proc sp_getLocation @deptname varchar(20)
+ as
+ begin
+ return (select deptnum from tblDepartment where Deptname=@deptname)
+ end
+
+ declare @deptnumber int
+ exec @deptnumber =  sp_getLocation 'IT'
+ print @deptnumber
