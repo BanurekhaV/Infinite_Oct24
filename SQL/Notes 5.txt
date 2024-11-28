@@ -41,3 +41,17 @@ with commit or rollback statements/commands we can ensure
   - Group logically related operations
   - Preview the data changes before and after
 
+ACID Test : are to be passed successfully by the transaction
+Atomicity : requires the transaction involving more parts of information/information change to commit fully or roll back fully
+
+Consistency : requires the transaction to have a valid state of the data(either post changes or pre changes)
+Isolation : requires the transaction which is still running, and yet to commit are not interfered with other transactions
+Durability : requires the transaction to preserve all committed data to be made available to others
+
+Locking : is a mechanism of saving the state of the object during transaction
+
+  shared lock
+  exclusive 
+
+Save Transactions : are logical markers of a set of statements. It is not an ANSI standard SQL
+

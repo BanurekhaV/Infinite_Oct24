@@ -90,6 +90,7 @@ begin
   --begin transaction
    if(@stockavailable is null)
     begin
+    set @stockavailable = 0
    raiserror('Wrong Product',15,1)
  --   rollback transaction
 	end  
@@ -140,3 +141,50 @@ exec sp_productsales 1,10
 
 select * from products
 select * from productsales
+
+
+--Transactions
+
+begin tran 
+ select * from tblemployee where empname='Banurekha'
+ --insert into tblemployee values(200,'Banurekha','Female',5600,5,345678)
+-- alter table tblemployee add remarks varchar(50)
+ update tblemployee set salary=5800 where empid=200
+ select * from tblEmployee
+
+ rollback
+
+ --eg 2
+ begin tran
+  insert into tbldepartment values(15,'Testing','Pune')  -- this has to happen
+  save tran t1
+    select * from tblDepartment
+   select * from tblemployee
+  delete from tblemployee where empid=200
+  select * from tblemployee
+  save tran t2
+  update tbldepartment set deptname='Quality' where deptnum=15
+  rollback tran t2
+  rollback tran t1
+  rollback
+  select * from tblDepartment
+  select * from tblEmployee
+ -- rollback  
+   --or 
+ -- commit 
+
+
+  select * from tblDepartment
+
+  --implicit transactions mode enables or disables autocommit
+  --when off - auto commit is on 
+  --when on - auto commit off (we can either rollback or commit)
+
+  set implicit_transactions off
+
+  update tbldepartment set deptname='Testing' where deptnum=15
+
+  alter table tbldepartment 
+  drop column budget 
+
+  commit
