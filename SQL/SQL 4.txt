@@ -256,3 +256,35 @@ begin
  declare @deptnumber int
  exec @deptnumber =  sp_getLocation 'IT'
  print @deptnumber
+
+
+use infinitedb
+--procedures with return values 
+drop proc sp_totdept
+
+create or alter proc sp_totEmpcount @deptid int
+as
+begin
+ return (select count(empid) from tblemployee where deptid=@deptid)
+ end
+
+ declare @totemp int
+ exec @totemp = sp_totempcount 2
+ print @totemp
+
+ --ex 1: 
+ /* create a procedure that takes deptno as input, and outputs the average salary of 
+  that department, and also returns the count of employees in that department */
+
+  create or alter proc sp_getavgsalDeptCount(@deptid int , @avgsal float output)
+  as
+  begin
+   select @avgsal = avg(salary) from tblemployee where deptid=@deptid
+   return(select count(empid)from tblemployee where deptid=@deptid)
+   end
+
+declare @aSal float
+declare @totemp int
+exec @totemp = sp_getavgsalDeptCount 1, @asal output
+print 'Total Employees in the Dept 1 is :  ' + cast(@totemp as varchar(3)) + 
+  ' and the dept average is : ' + cast(@asal as varchar(8))

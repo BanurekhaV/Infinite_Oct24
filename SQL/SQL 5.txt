@@ -1,0 +1,142 @@
+use infinitedb
+--procedures with return values 
+drop proc sp_totdept
+
+create or alter proc sp_totEmpcount @deptid int
+as
+begin
+ return (select count(empid) from tblemployee where deptid=@deptid)
+ end
+
+ declare @totemp int
+ exec @totemp = sp_totempcount 2
+ print @totemp
+
+ --ex 1: 
+ /* create a procedure that takes deptno as input, and outputs the average salary of 
+  that department, and also returns the count of employees in that department */
+
+  create or alter proc sp_getavgsalDeptCount(@deptid int , @avgsal float output)
+  as
+  begin
+   select @avgsal = avg(salary) from tblemployee where deptid=@deptid
+   return(select count(empid)from tblemployee where deptid=@deptid)
+   end
+
+declare @aSal float
+declare @totemp int
+exec @totemp = sp_getavgsalDeptCount 1, @asal output
+print 'Total Employees in the Dept 1 is :  ' + cast(@totemp as varchar(3)) + 
+  ' and the dept average is : ' + cast(@asal as varchar(8))
+
+
+select * from mytable
+
+select * from sysmessages
+
+--error handling proc
+create or alter proc errorProc
+as
+begin
+begin try
+  select salary + empname from tblemployee where empid=103
+end try
+begin catch
+ --select 'Some error occured.. Try later '
+ --raiserror(13114,16,5)
+ throw 50009,'Unable to convert datatype', 8
+ end catch
+end
+
+errorproc
+
+--to create user defined error messages as apart of the sysmessages
+--using system stored procedure sp_addmessage
+
+sp_helptext sp_addmessage
+
+sp_addmessage 63000,8,'Unable to Convert datatypes'
+
+--full example with dml operations and error handlers in a procedure
+
+create table Products
+(ProductId int primary key,
+ProductName varchar(40),
+Price int,
+QuantityAvailable int)
+
+insert into Products values(101,'Laptops',55000,100),
+(102,'Desktops',38000,50),(103,'Tablets',65000,35),(104,'Mobiles',45000,70)
+
+--create productsales table
+create table ProductSales
+(ProductSalesId int primary key,
+PrdId int,
+QuantitySold int)
+
+alter table productsales
+add constraint fkprdid foreign key(prdid) references products(productid)
+
+create or alter proc sp_productsales
+@prdid int, @qtyto_sell int
+as
+begin
+ --first let us check the stock available for the product we want to sell
+ declare @stockavailable int
+ select @stockavailable = QuantityAvailable from products where productid = @prdid
+ --select @stockavailable
+ --if the qtytosell is more than than qtyavailable then we have to raise an error
+ 
+  --begin transaction
+   if(@stockavailable is null)
+    begin
+   raiserror('Wrong Product',15,1)
+ --   rollback transaction
+	end  
+    if(@stockavailable < @qtyto_sell)
+  begin
+    raiserror('Enough stock is not available',16,1)
+  end
+  else
+  --if stock is enough
+   begin
+    --we can start a transaction
+	 begin transaction
+	   --first we will reduce the qty available in products table
+	   update Products set QuantityAvailable = QuantityAvailable - @qtyto_sell
+	   where productid=@prdid
+	   --after updation, we need to make an entry in the productsales table
+	   --check if the table is having any data, if no, then 0, else max of the saledid +1
+	 declare @maxsaleid int
+
+	 select @maxsaleid = case
+	   when max(productsalesid) is null then 0
+	   else max(productsalesid)
+	   end
+	   from productsales
+	--increment @maxsaleid by 1, to avoid primary key violation
+	set @maxsaleid = @maxsaleid + 1
+	--we need to insert 
+	insert into productsales(productsalesid,prdid,quantitysold)
+	  values(@maxsaleid,@prdid,@qtyto_sell)
+	  --@@Error global variable that has non zero value if error, or else zero 
+	  --indicating the previous sql statements encountered error or not
+	  if(@@ERROR <> 0)
+	    begin
+		  rollback transaction
+		  print 'Error..Rolled back transaction'
+        end
+	   else
+	     begin
+		   commit transaction
+		   print 'Transaction successfull '
+		   
+		 end
+	end
+end
+		 
+
+exec sp_productsales 1,10
+
+select * from products
+select * from productsales

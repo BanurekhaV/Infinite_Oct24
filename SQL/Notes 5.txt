@@ -1,0 +1,43 @@
+Error Handling : SQL allows simple error handlers with begin try and begin catch blocks
+-we can raise and throw specific used defined errors
+-All predefined error are below 50000, and all user defined errors are above 50000
+
+Error messages : are brief info describing the error and has a maximum limit of 2047 characters
+
+Severity Level : Tells us the importance of the error
+ This ranges between 0 and 24
+ 0-9 : not severe, considered as status messages/information
+ 11-16 : Indicates user generated errors
+ 17-19 : Indicates software errors that cannot be rectified by the users. It has to be reported to sysadmin
+ 20-24 : Indicate fatal errors that can damage the database/system. The database connection will be terminated immediately to ensure database security
+
+state : it is an arbitrary value not very important to the user. This ranges between 0 and 127
+
+Note : we can throw any errors with an error number >=50000, along with error message and severity level
+syntax : throw <errornumber>, <error message>, <severity level>
+    throw 50010, 'Some Error occurred', 12
+
+raiserror : raiserror(<errormesg>,<severity>,<errorstate>)
+
+- to add user defined messages to the sysmessages table
+ syntax : sp_addmessage <error num>,<error message>,<severity num>
+select * from sysmessages 
+
+Transactions : A collection of sql statements that are executed together or not executed at all
+ - A database transaction consists of 
+    1. DML statements
+    2. DDL
+    3. DCL
+    4. DQL
+
+Begins when the first dml statement is executed and ends with any of the following
+   - A commit or a rollback
+   - Auto commit
+   - User exits
+   - System crashes
+
+with commit or rollback statements/commands we can ensure
+  - Data Consistency
+  - Group logically related operations
+  - Preview the data changes before and after
+
