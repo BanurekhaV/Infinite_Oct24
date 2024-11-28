@@ -50,8 +50,10 @@ Durability : requires the transaction to preserve all committed data to be made 
 
 Locking : is a mechanism of saving the state of the object during transaction
 
+
   shared lock
   exclusive 
 
 Save Transactions : are logical markers of a set of statements. It is not an ANSI standard SQL
+
 

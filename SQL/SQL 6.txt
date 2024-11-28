@@ -1,0 +1,72 @@
+----------------------------------------------
+  --Functions - scalar
+  --eg 1
+  create function fnDisplayData(@ename varchar(30),@doj date)
+  returns nvarchar(100) --specifies what data type, is the function going to return
+  as
+   begin
+     return (select @ename + ' ' + ' Joined on ' + cast(@doj as varchar(12)))
+	end
+
+--to execute the function
+--we need to specify either a 2 part or 3 part reference/qualification
+select infinitedb.dbo.fndisplaydata(ename, hiredate) from emp
+
+select dbo.fndisplaydata(ename,hiredate),job from emp
+
+--eg 2
+--write a function that takes employee id and returns the salary
+
+create or alter function fngetSalary(@eid int)
+returns float
+as
+begin
+ return (select sal from emp where empno = @eid)
+ end
+
+ select empno as 'Employee Number' ,dbo.fngetSalary(empno) 'Employee salary' from emp
+  order by sal
+
+--write a function that calculates the Area of rectangle
+
+create or alter function fn_rectArea(@ln int, @bd int)
+returns int
+as
+begin
+  declare @area int
+  set @area= @ln*@bd
+  return @area
+  end
+
+
+  select dbo.fn_rectArea(5,6) [Area of Recatangle]
+
+  --eg 3
+  --write a function that calculates the age of a person whose dob is given as an input
+  
+  create or alter function fn_CalculateAge(@dob date)
+  returns int
+  as
+  begin
+  declare @age int
+  set @age = datediff(year,@dob,getdate())
+  return @age
+  end
+
+  select dbo.fn_CalculateAge('10/10/1998') CurrentAge
+
+  
+  --inline table valued function
+  create function fn_getEmpDetails(@deptid int)
+  returns table
+  as
+   return (select empno,ename,sal,job,deptno from emp where deptno=@deptid)
+
+select * from dbo.fn_getEmpDetails(20)
+
+select ename,sal,job,deptno from dbo.fn_getEmpDetails(20) where job='clerk'
+
+select job, avg(sal)as Average from dbo.fn_getEmpDetails(20) group by job
+
+select job, avg(sal)as Average from dbo.fn_getEmpDetails(20) group by job
+having avg(sal)>1000

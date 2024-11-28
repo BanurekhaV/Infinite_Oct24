@@ -1,0 +1,13 @@
+Functions : are reusable piece of code that is a part of the database schema. Are like procedures
+- All functions should return a scalar datatype
+- cannot return text, ntext, images, timestamp, cursor etc.
+- may or may not take input parameters
+
+Broadly they are of 2 types  :
+  1. Scalar
+  2. Table Valued : 
+      - Inline Table Valued Functions: are functions that return a table(rows, cols)
+        - are not enclosed between begin and end statements
+        - used in where. join clauses apart from select
+        - gives better performance than multivalued table functions
+      - Multi Statement Table Valued Functions :
