@@ -194,4 +194,168 @@ select * from tbldepartment
 select * from tblemployee
 
 
+--triggers
 
+create trigger trgEmpIns
+on tblemployee
+for insert
+as
+begin
+  select * from inserted
+  select * from tblemployee
+  end
+
+  --for the trigger to fire
+  insert into tblemployee values(300,'Harsha','Male',5600,2,567834567)
+
+  create or alter trigger trgEmpDel
+  on tblemployee
+  for delete
+  as
+   begin
+   select * from deleted
+   end
+
+   set implicit_transactions on
+
+   delete from tblemployee where empid in(200,300)
+
+   rollback 
+   select * from tblemployee
+
+--eg 3
+create or alter trigger trgupdEmp
+on tblemployee
+for update
+as
+begin
+ select * from deleted
+ select * from inserted
+ declare @oldsal float
+ declare @newsal float
+ select @oldsal = salary from deleted
+ select @newsal = salary from inserted
+ if(@newsal> @oldsal)
+  begin
+     print 'emp salary has been upgraded'
+  end
+   else
+    begin
+	 print 'Emp salary decreased'
+  end
+  end
+
+  rollback
+
+
+ update tblemployee set empname='Banu', salary=5000 where empid=200
+
+--dropping triggers
+ 
+
+--triggers that can restrict dml operations
+create or alter trigger trgNoChanges
+on tbldepartment
+for insert,update,delete
+as
+ begin
+  Select 'Permission denied.. Contact Admin'
+  rollback
+  end
+
+  insert into tbldepartment values(100,'Century','Earth')
+  select * from tbldepartment
+
+
+  create table AuditLogs(msg nvarchar(max))
+
+  --let us create a trigger that records the logs on every new employee addition
+
+  create or alter trigger trgAuditInsert
+  on tblemployee
+  for insert
+  as
+  begin
+   declare @id int
+    select @id= empid from inserted
+
+	insert into auditlogs  
+	values('New Employee with Emp Id ' + ' ' + cast(@id as varchar(5))  + ' is added at '
+	+ cast(getdate() as varchar(20)))
+	end
+
+
+insert into tblemployee values(115,'Durgasai','Male',5700,3,1234567)
+
+select * from auditlogs
+
+--exercise 
+/* add a column AuditDate date to the auditlogs table
+write a trigger for updation of tblemployee */
+
+alter table auditlogs add auditdate date
+
+create or alter trigger trgExercise
+on tblemployee
+for update
+as
+ begin
+  declare @id int, @olddept int, @newdept int
+  declare @oldempname varchar(30),@newempname varchar(30)
+  declare @oldSal float, @newsal float
+
+  --declare a variable to build the audit string
+  declare @auditdata varchar(max)
+  select * from deleted
+  select * from inserted
+  --store the inserted data into  temporary table('#') or can use inserted table ittself
+  select * into #temptable from inserted
+  --loop thru all the updated records incaes we have updated many records
+  while(exists(select empid from #temptable))
+   begin
+    set @auditdata = ' '
+
+	--let us select the first row of the temporary table
+	select top 1 @id=empid,@newempname=empname, @newsal=salary,
+	@newdept=deptid from #temptable
+
+	--let us also select the data from the deleted
+	select @oldempname=empname, @oldsal=salary,@olddept=deptid from deleted where  empid=@id
+
+	set @auditdata = 'Employee with ID : ' + cast(@id as varchar(5)) + ' changed ' 
+
+	--if old data is updated with new data, we should track
+	if(@oldempname <> @newempname)
+	 begin
+	  set @auditdata = @auditdata + ' the Name from ' + @oldempname + ' to ' + @newempname
+	  end
+	  --for salary changes
+	  if(@oldsal <> @newsal)
+	   begin
+	    set @auditdata = @auditdata + ' Salary from '+ cast(@oldsal as varchar(10)) + 
+		 ' to ' + cast(@newsal as varchar(10))
+		 end
+
+		 --for dept
+		 if(@olddept <> @newdept)
+		  begin
+		   set @auditdata = @auditdata + ' Department from '+ cast(@olddept as varchar(10)) + 
+		 ' to ' + cast(@newdept as varchar(10))
+		 end
+
+		 --now the entire audit string is ready , and we can insert the data
+		 insert into auditlogs(msg,auditdate) values(@auditdata, getdate())
+    
+	--now we should delete the top row, so that the second row becomes top to continue the loop
+	delete from #temptable where empid=@id
+	end
+	end
+
+select * from tblemployee where gender ='Female'
+update tblemployee set salary=salary+100 where gender='Female'  -- multiple row updations
+
+update tblemployee set empname='NewComer', deptid=15 where empid=200  --single row updation, but multiple columns
+
+select * from auditlogs
+
+rollback
