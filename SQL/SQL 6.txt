@@ -70,3 +70,96 @@ select job, avg(sal)as Average from dbo.fn_getEmpDetails(20) group by job
 
 select job, avg(sal)as Average from dbo.fn_getEmpDetails(20) group by job
 having avg(sal)>1000
+
+
+
+--multistatement table valued
+create or alter function fn_GetEmpByGender(@gen varchar(8))
+returns 
+@EmpByGender table(
+EmpId int, EmployeeName varchar(40),Gender varchar(8))
+as
+begin
+  --bulk insertion
+  insert into @EmpByGender
+  select empid, empname,gender from tblemployee where gender=@gen
+  --handle exception situation
+  if @@ROWCOUNT = 0
+    begin
+	 insert into @EmpByGender values(0,'No Emp found with the given gender',null)	
+	 end
+   return
+end
+
+--to execute the above function
+select * from dbo.fn_Getempbygender('female')
+
+select * from @empbygender
+
+-----------------
+use Northwind
+
+select * from Customers
+
+create or alter function fn_getCustbyCountry(@country varchar(20))
+returns
+@CustomerByCountry table(
+CustomerID varchar(10),
+CustomerName varchar(35),
+Country varchar(10))
+as
+begin
+ insert into @CustomerByCountry select
+  customerid,contactname,country from customers where country=@country
+
+  if @@rowcount =0 
+  begin
+   insert into @CustomerByCountry values(' ','No customers found',null)
+  end
+return
+end 
+
+select * from dbo.fn_getCustbyCountry('India')
+
+----Indexes
+sp_help sample1
+
+select * from tblemployee order by phoneno
+
+create table Sample1(SampleId int, Samplename varchar(10))
+
+insert into sample1 values(null,'ZZ'),(7,'BB'),(5,'CC'),(10,'DD')
+select * from Sample1
+
+--create index
+create clustered index idxsampleid on sample1(sampleid)
+-- the above only sorts the physical data
+
+--drop an index
+drop index sample1.idxsampleid
+
+--unique clustered index ensures no duplicates
+delete from sample1 where samplename ='ZZ'
+
+create unique clustered index idxsid on sample1(sampleid)
+
+--only one clustered /table
+create clustered index idxname on sample1(samplename)
+
+--non clustered 
+--if we create as below, then always only non unique, non clustered index would get created
+create index idxsal on tblemployee(salary)
+
+--unique non clustered
+create unique nonclustered index idxloc on tbldepartment(deptlocation)
+
+select * from tbldepartment
+update tbldepartment set deptlocation='Chennai' where deptnum=4
+
+drop index tbldepartment.idxloc
+
+--filtered index
+select * from emp
+create index idxsalary on emp(sal) where sal >1600
+
+select * from emp where sal between 2500 and 5000

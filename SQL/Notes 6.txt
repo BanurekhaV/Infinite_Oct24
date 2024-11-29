@@ -9,5 +9,51 @@ Broadly they are of 2 types  :
       - Inline Table Valued Functions: are functions that return a table(rows, cols)
         - are not enclosed between begin and end statements
         - used in where. join clauses apart from select
-        - gives better performance than multivalued table functions
-      - Multi Statement Table Valued Functions :
+        - gives better performance than multi statement valued table functions
+      - Multi Statement Table Valued Functions : are functions that can return a structure like table
+        - contains begin and end clauses
+        - the table like structure can be as per the users requirement
+
+if any given task, can be achieved using inline table valued function, then prefer the same over MSTV functions
+
+Differences between Functions and Stored procesures
+
+- A function must return a scalar value, where as a procedure returns only integer values (if required)
+- Functions can have only input parameters, where as procedures can have input, output parameters
+- Functions do not support data modifications using dml statements, where as procedures allow data modifications
+- Functions cannot support transactions, error handling where as procedures can have transactions and error management
+- Functions can call only other functions, where as procedures can call other procedures and functions
+- Functions can be used in select, join and where clauses, where as procedures need explicit execute command
+
+
+Indexes : are mechanisms to sort the physical order of the data in the database
+
+Why indexes ? without indexes, any query/data modifications will cause the SQL engine to search the referenced info in a top- down approach. 
+
+But a single well placed index can shorten the query time from dozens of minutes to less than a second
+-Speeds up the data access
+-Enforces uniqueness
+
+-They occupy disk space
+
+Indexes are of 3 types : 
+1. Clustered Index : 
+     -sorts the physical table on every dml operation
+     -there can be only one clustered index per table
+     -does not need additional space
+   clustered index allows duplicate values and unique clustered does not (allows one null)
+
+2. Non Clustered Index :
+    -can have many non clustered index per table
+    -occupies space in the disk
+    -any dml operations does not affect the table, instead only the index table
+    -can be either clustered or non-clustered
+
+3. Filtered Index : 
+     -is a non clustered index with a predicate
+     -used in situations where we need only a portion of the index
+    -creates a separate table called as index table with index column and key to the data page
+
+
+2. Non Clustered Index
+
