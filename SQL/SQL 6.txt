@@ -163,3 +163,35 @@ select * from emp
 create index idxsalary on emp(sal) where sal >1600
 
 select * from emp where sal between 2500 and 5000
+
+----Views
+--eg 1: single table view
+drop view vwempdata
+create view vwEmpdata
+as select empid,empname,salary,phoneno from tblemployee
+
+sp_helptext vwempdata
+
+select * from vwempdata
+
+insert into vwempdata values(300,'Infinite',7000,99999999)
+update vwempdata set empname ='Harsh' where empid=300
+delete from vwempdata where empid=300
+--all dml operations are successfull thru the view
+-- when the underlying table can take null values for the other coulmns not in the view
+-- when the view is based on just 1 table
+
+create view vwEmpByDept
+as select empid,empname,salary, tbldepartment.deptname from tblemployee join tbldepartment
+on tblemployee.deptid = tbldepartment.deptnum
+
+select * from vwEmpByDept
+
+insert into vwempbydept values(300,'Keerthi',6000,'Purchase')
+update vwEmpByDept set deptname ='Admin' where empid=100
+
+select * from tbldepartment
+select * from tblemployee
+
+
+

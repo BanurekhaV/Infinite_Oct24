@@ -52,8 +52,45 @@ Indexes are of 3 types :
 3. Filtered Index : 
      -is a non clustered index with a predicate
      -used in situations where we need only a portion of the index
+
+Guidelines for Indexing :
+  -Columns to Index :
+    Primary and Foreign key columns
+    Those columns which are frequently searched in ranges
+    Those column which are frequently accessed in sorted order
+    Those columns which are grouped together during aggregation
+
+  -Columns not to index on :
+     Columns that are seldom referenced in queries
+     Columns that contain very few data
+     Columns that are defined with text, ntext, image etc. data types
+
+When to create index :
+   - columns that contain number of null values
+   - when the table is large and most queries are expected to retrieve less than 2 to 4% of rows
+
+When not to create index:
+   - when the table is small   
+   - columns are referred often
+   - more than 4% of rows are retrieved as a result of the query
     -creates a separate table called as index table with index column and key to the data page
 
+Views : are relations that is not of the conceptual model, but is made visible to the user as a virtual relation
+  - The database will have the definition of views which are virtual or the query expression is stored along with the view name in the database, but no data
+  - every time we query a virtual table, the view definition constructs the query using the base table (original tables with data)
 
-2. Non Clustered Index
+
+Triggers : are reusable piece of code like any procedure or functions of a database
+           they are used to enforce/define business rules/constraints
+           they are not called for execution, instead will fire automatically on certain events
+           they can be before/after/instead of triggers
+
+Magic tables : are temporary tables that get created within a trigger body when it is executed.
+               the scope of the magic table is within the execution scope
+               they are 2 in  number 
+                        1. Inserted Table
+                        2. Deleted Table
+       all updates are always deletion followed by insertion
+             
+ 
 
