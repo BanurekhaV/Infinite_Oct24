@@ -250,9 +250,10 @@ begin
 
  update tblemployee set empname='Banu', salary=5000 where empid=200
 
---dropping triggers
- 
+--dropping table level triggers
 
+    drop trigger <triggername>
+  
 --triggers that can restrict dml operations
 create or alter trigger trgNoChanges
 on tbldepartment
@@ -359,3 +360,35 @@ update tblemployee set empname='NewComer', deptid=15 where empid=200  --single r
 select * from auditlogs
 
 rollback
+
+
+--instead of triggers
+--we are unable to insert data in the tables thru the below view
+insert into vwempbydept values(301,'SaiKeerthi',6000,'1236577788','HR')
+
+--error message 
+--View or function 'vwempbydept' is not updatable because the modification affects multiple base tables.
+
+--we can resolve such issues with an instead of trigger on the view
+create trigger trg_ViewIns_Insteadof
+on vwempbydept
+instead of insert
+as
+begin
+  declare @departmentid int
+  --first let us check if the given department in the insert clause is valid('HR')
+  set @departmentid = (select deptnum from tbldepartment d, inserted where inserted.deptname = d.deptname)
+
+  --let us now check if the data in @department variable is having daata or is null
+  if(@departmentid is null)
+   begin
+    raiserror('Invalid Department Name.. terminating', 16,1)
+	return
+	end
+
+	--if @departmentid is valid
+	insert into tblemployee(Empid,empname,salary,phoneno,deptname) 
+	select empid,empname,salary,@departmentid,phoneno from inserted
+	end
+
+	insert into vwempbydept values(301,'SaiKeerthi',6000,'HR','1236577788')
