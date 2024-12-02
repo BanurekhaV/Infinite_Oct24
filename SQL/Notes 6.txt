@@ -84,6 +84,7 @@ Triggers : are reusable piece of code like any procedure or functions of a datab
            they are used to enforce/define business rules/constraints
            they are not called for execution, instead will fire automatically on certain events
            they can be before/after/instead of triggers
+They are of DML types or DDL types
 
 Magic tables : are temporary tables that get created within a trigger body when it is executed.
                the scope of the magic table is within the execution scope
@@ -91,6 +92,10 @@ Magic tables : are temporary tables that get created within a trigger body when 
                         1. Inserted Table
                         2. Deleted Table
        all updates are always deletion followed by insertion
-             
+
+DDL triggers : are again of 2 types
+
+      1. Database Scoped : triggers applicable on DDL events of a particular database
+      2. Server Scoped :    triggers applicable on DDL events of all the databases in the server   
  
 

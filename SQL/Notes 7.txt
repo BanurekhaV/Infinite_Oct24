@@ -1,0 +1,20 @@
+Cursors : are objects that store the result set of any query and allows traversal over the rows
+
+They are of 2 types
+
+-Implicit Cursors : are created by the database engine automatically and processed
+-Explicit Cursors : are user defined that can be used for traversal and manipulation
+
+Life Cycle :
+  1. Declare a Cursor
+  2. Open the Cursor
+  3. Fetch the data as long as there are rows
+  4. Close the Cursor
+  5. Deallocate the Cursor
+
+Cursor Traversal :
+1. Forward Only : can move forward only(1st row, 2nd row...)
+2. Static Cursor : Cursors that do not reflect any changes made after opening it
+3. Dynamic Cursor : Cursors that can reflect changes made after opening it
+4. Keyset : They cursors are driven by some unique values
+

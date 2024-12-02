@@ -1,0 +1,58 @@
+ --cursors 
+--eg 1
+
+--declaring some variables to be used inside the cursor
+
+ declare @pname varchar(25), @price int, @qty int
+ --declare a cursor
+ declare prd_cursor cursor
+ for select productname,price,quantityavailable from Products
+
+ --open the cursor
+ open prd_cursor
+ --read the data from the cursor
+ fetch next from prd_cursor into @pname,@price,@qty
+
+ --iterate the cursor set till we have rows to read
+ while @@FETCH_STATUS = 0
+  begin
+   print 'The Product named ' + @pname + ' ' + 'Costs ' + cast(@price as varchar(8)) +
+    ' and the availability is ' + cast(@qty as varchar(3))
+	
+	--start fetching the balance rows
+	fetch next from prd_cursor into @pname,@price,@qty
+ end
+
+ --close the cursor
+ close prd_curosr
+ --deallocate the cursor
+ deallocate prd_cursor
+
+ --eg 2
+ --cursors with some tsql
+ declare @sal float, @ename varchar(30)
+ declare empcursor cursor
+ for select empname,salary from tblemployee
+
+ open empcursor
+ fetch next from empcursor into @ename,@sal
+ while @@FETCH_STATUS = 0
+  begin
+  if(@sal > 5500)
+    begin
+	 print @ename + ' Earns ' + cast(@sal as varchar(8))
+	end
+	else
+	 begin
+	  print @ename + ' needs an increment '
+	  end
+	  fetch next from empcursor into @ename,@sal
+	  end
+	  close empcursor
+	 
+	 
+	 /*close cur2
+	  open cur2
+	  declare @dno int, @dname varchar(10)
+	declare cur2 cursor for select * from tbldepartment
+	fetch next from cur2 into @dno, @dname */

@@ -370,7 +370,21 @@ insert into vwempbydept values(301,'SaiKeerthi',6000,'1236577788','HR')
 --View or function 'vwempbydept' is not updatable because the modification affects multiple base tables.
 
 --we can resolve such issues with an instead of trigger on the view
-create trigger trg_ViewIns_Insteadof
+
+use infinitedb
+sp_helptext vwempbydept
+
+create or alter view vwEmpByDept  
+as select empid,empname,salary, phoneno,tbldepartment.deptname from tblemployee join tbldepartment  
+on tblemployee.deptid = tbldepartment.deptnum
+
+select * from vwEmpByDept
+
+select * from tblDepartment
+update tbldepartment set deptname='IT' where deptnum=1
+insert into vwempbydept values(301,'SaiKeerthi',6000,'1236577788','HR')
+
+create or alter trigger trg_ViewIns_Insteadof
 on vwempbydept
 instead of insert
 as
@@ -387,8 +401,49 @@ begin
 	end
 
 	--if @departmentid is valid
-	insert into tblemployee(Empid,empname,salary,phoneno,deptname) 
-	select empid,empname,salary,@departmentid,phoneno from inserted
+	insert into tblemployee(Empid,empname,salary,phoneno,deptid) 
+	select empid,empname,salary,phoneno,@departmentid from inserted
 	end
 
+
 	insert into vwempbydept values(301,'SaiKeerthi',6000,'HR','1236577788')
+
+
+--ddl database scopped triggers :
+
+drop trigger trg_restrict_create_table
+create or alter trigger trg_restrict_create_table
+on database 
+for create_table
+as
+ begin
+   print 'Access Denied'
+   rollback transaction
+ end
+
+ drop table testtable
+
+ use northwind
+ create table testtable(tid int, tname char(10))
+ select * from testtable
+
+ 
+ --to drop database level triggers
+ drop trigger if exists trg_restrict_create_table on database
+
+ --server scopped triggers
+ create or alter trigger trg_restrict_all
+ on all server
+ for create_table, alter_table,drop_table
+ as
+ begin
+  print ' you cannot create,alter or drop any database objects in this server'
+  rollback transaction
+ end
+
+ --try creating or altering any table
+ alter table tblemployee add newcol varchar(10)
+ alter table tblemployee drop column newcol
+
+ --to drop server scopped triggers
+ drop trigger if exists trg_restrict_all on all server
