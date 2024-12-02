@@ -18,3 +18,30 @@ Cursor Traversal :
 3. Dynamic Cursor : Cursors that can reflect changes made after opening it
 4. Keyset : They cursors are driven by some unique values
 
+Cursors Vs While
+
+--Cursors are updatable
+--Cursors can move forward and backwards using First, Last, Next, Prior, Relative, Absolute
+--Cursors have varied options to behave with regards to locking while updations
+--Cursors don't need any condition as a test 
+--Global Cursors can be passed to stored procedures
+
+Cons
+ --Global Cursors are a risk when faced with cursor errors due to the cursor being closed by some stored procedure
+ --Cursors are slower in performance, than a while or CTE's
+
+While Loops :
+ --are faster than cursors
+ --uses less amounts of locks
+ --Less usage of tempdb
+
+Cons 
+  --Moving back and forth is not possible
+  --Risk of infinite looping
+
+--File Groups : are basically collection of file objects. Primary group is the default group where all data and lof files are stored
+Whenever we create a database, sql server creates 2 files
+  1. A data File (.mdf)
+  2. Transaction Log file (.ldf)
+
+Secondary files .ndf
