@@ -15,3 +15,55 @@ Cube : is similar to rollup, used with group by clause. It can provide sub and g
 1. row_number() - allocates numbers based on the rows over a particular column
 2. rank() - allocates rank over a particular column, but skips the sequence of the  next number, in case there are more rows taking up the same rank
 3.dense_rank() - allocates rank over a particular column, without skipping any sequence
+
+
+Normalization : is a process of decomposing a larger, complex dataset into several small , simpler ones
+-move from lower forms to higher
+
+why Normalization : 
+ -Redundancy is the rool cause of several problems associated with relational schemas
+ -Redundancy causes several anomalies : Insert,update,delete
+ -Wastage of storage 
+
+The normalization process is based on the primary or candidate keys of a relation and functional dependencies among 
+the other attributes/columns
+
+Normal Forms : 1 NF : A table is said to be in 1NF, when every row contains exactly one value for each attribute
+(At the intersection of a row and a column, there should exists only one data
+ Eg : 
+ Emp{Eno, Dept, Prjcode, Hours}
+
+  2 NF A table is already in 1NF, and every non-prime attribute in that relation/table should be fully functionally dependent on the primary key (whole key/composite) and nor partially. 
+  -- remove all partial dependencies
+
+on decomposition 
+
+Emp {Eno, Dept}  - (Eno) PK
+Projects{Eno, Prjcode, Hours}  (Eno, Prjcode) PK
+
+
+  3 NF : a->b->c : then a->c (transitive dependency) 
+ A table is already in 2NF, and no non prime attributes is transitively dependent on the primary key. Prohibit transitive dependency and ensure only direct dependency
+
+Emp{Eno, Dept}(Eno) PK
+ Dept{Dept, DeptHead} (Dept) Pk
+Projects{Eno, Prjcode, Hours}  (Eno, Prjcode) PK
+
+-- select Eno,Dept,Prjcode,Hours from Dept join Emp on Dept.dept=Emp.Dept join projects on emp.eno = projects.eno
+
+Calculated/Computed Columns : are columns that are computed from an expression that can make use of other columns of the same table
+ - are virtual columns by default, and are not stored in the disk
+ - are computed at the run time using reference expression
+ - if we want the data to be stored, we can set the persisted property on
+ - we can create index on the computed column if persisted
+
+--Limitations of computed columns
+- cannot refer to columns of other table
+- can be used in insert/update statements
+- can be used in select, where, order by
+- can apply foreign keys, check constraints on computed columns only if it is persisted
+
+Persisted is a property attribute for computed columns
+
+
+  
