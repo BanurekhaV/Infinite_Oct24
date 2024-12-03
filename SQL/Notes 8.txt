@@ -1,0 +1,17 @@
+Some misc.
+
+isnull() - function used when we want a specific value that needs to be returned if the expression value is null
+-can be used in DQL and DML statements
+
+coalesce() - function that evaluates a list of values and returns the first non-null value
+ - it is an alternate to isnull() that does not have any restrictions in the no. of arguments like isnull()
+ - it is comparable to case statement, but has an advantage over case statement, as it is easier to write and is less code
+
+RollUp : is an extension of the group by clause to calculate sub totals and grand totals for a set of columns
+
+Cube : is similar to rollup, used with group by clause. It can provide sub and grand totals, for all the permutations of the columns set
+
+--addl func
+1. row_number() - allocates numbers based on the rows over a particular column
+2. rank() - allocates rank over a particular column, but skips the sequence of the  next number, in case there are more rows taking up the same rank
+3.dense_rank() - allocates rank over a particular column, without skipping any sequence

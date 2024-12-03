@@ -1,0 +1,114 @@
+--misc
+select isnull('Hello','replace value of null')as 'isNull'
+
+select isnull(null,'replace value of null')as 'isNull'
+
+create table NullFuncCheck
+(
+serialno int,name varchar(20),location varchar(20),age int,occupation varchar(20))
+
+insert into NullFuncCheck values(1,'Roshani','USA',27,'Software Engg'),
+(2,'Rahul','India',null,'Artist'),(3,'Sohan','UK',null,'Writer'),
+(4,'Jamuna','India',34,'professor')
+
+select * from nullfunccheck
+
+--if we want some other values for null replacement
+select *,isnull(age,60)as 'New Age' from NullFuncCheck
+
+update NullFuncCheck 
+set age=isnull(age,60)
+
+insert into NullFuncCheck values(5,'Sona','Canada',isnull(null,50),'Banker')
+
+--coalsce
+declare @str1 char,@str2 char,@str3 char
+--all values being null
+select coalesce(@str1,@str2)as 'Coalesce Results',
+   case 
+    when @str1 is not null then @str1
+	when @str2 is  null then 'null value'
+  end as 'Case Results'
+
+  select coalesce(null,null,null,5,null)
+  select isnull(null,isnull(null,isnull(null,isnull(5,null))))
+
+  use northwind
+
+  select * from Employees
+  --let us concatenate name parts to a full name 
+
+  --1.
+  select titleofcourtesy,firstname,lastname,TitleOfCourtesy +' '+
+  coalesce(firstname,' ')+' '+coalesce(lastname,'')as [Employee Full Name] from employees
+
+  --roll up
+  use infinitedb
+  select deptid,sum(salary)as TotalSalary from tblemployee
+  group by deptid
+
+  select deptid,sum(salary)as Total from tblemployee
+  group by rollup(deptid)
+
+  select coalesce(deptid,500)as Department, sum(salary)as 'Total salary' from tblemployee
+  group by rollup(deptid)
+
+  --subtotals and grand totals deptwise, gender wise
+  select coalesce(deptid,500)as Department, coalesce(gender,'All Genders'),
+  sum(salary)as 'Total Salary' from tblemployee
+  group by rollup(deptid,gender)
+
+  --without coalesce
+  select deptid as Department, gender,
+  sum(salary)as 'Total Salary' from tblemployee
+  group by rollup(deptid,gender)
+
+
+  select * from tblemployee
+  order by gender,deptid
+
+  --cube 
+  update tblemployee set gender='Female' where empid=301
+
+  select coalesce(deptid,500)as DepartmentNumber, coalesce(gender,'All Genders')as Gender,
+  sum(salary) as 'total salary' from tblemployee
+  group by cube(deptid, gender)
+
+  --salary grouped by both dept and gender
+  -- salary grouped by gender alone
+  -- salary grouped by dept alone
+  -- grand total of all salaries
+
+  --addl. functions
+  create table Marks(stdname varchar(20),subject varchar(20),marks_scored int)
+
+  insert into Marks values('Tarun','Maths',80),('Tarun','Science',70),('T overarun','English',65),
+  ('Somasekhar','Maths',68),('Somasekhar','Science',85),('Somasekhar','English',90),
+  ('Shripriya','Maths',65),('Shripriya','Science',90),('Shripriya','English',60)
+
+  select * from Marks
+  --rownumber()
+  select stdname,subject,marks_scored,row_number() over(order by marks_scored desc)Row_Nos 
+  from marks
+
+  --rank()
+  select stdname,subject,marks_scored,rank() over(order by marks_scored desc)Ranknos 
+  from marks
+
+  --denserank()
+  select stdname,subject,marks_scored,dense_rank() over(order by marks_scored desc)Ranknos 
+  from marks
+
+ --seggregation based on particular columns can be used with partition
+
+ --ranks with partition
+ update marks set marks_scored=90 where subject='Science' and stdname='Somasekhar'
+
+ select * from Marks
+
+ select stdname,subject,marks_scored,rank() over(partition by subject order by marks_scored desc)Ranknos 
+  from marks
+
+ select stdname,subject,marks_scored,dense_rank() over(partition by subject order by marks_scored desc)Ranknos 
+  from marks
+

@@ -157,3 +157,14 @@ create table homecustomers(custid int, cname varchar(30))
 
 
 create table homesuppliers(suppid int, sname varchar(30)) on hcgrp1
+
+use homecare
+
+dbcc showfilestats
+
+--if we have a record size of 40000 rows, then the resultant size will be
+--(40000 *8.0/1024)= 312 mb free space 
+
+select db_name() as [DatabaseName], name,File_ID,physical_name,
+(size *8.0/1024)as Size, ((size*8.0/1024)-(FILEPROPERTY(name,'SpaceUsed')*8.0/1024))as FreeSpace
+from sys.database_files
