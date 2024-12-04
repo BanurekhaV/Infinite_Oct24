@@ -1,0 +1,114 @@
+Bitwise Operator: Logical operations involving bit operators are included as a part of DQL
+& And Bit : returns a bit set to 1 if both corresponding bits are 1
+| Or Bit  : Returns  bit set to 1 if at least one corresponding bit is 1
+^ XOR bit : returns a bit set to 1 if only one of the corresponding bit is 1
+~ NOT Bit : inverts all the bits
+
+Isolation Level : as a part of DBMS transactions, isolation level define the degree to which the operations in one transaction are isolated with the other transaction. The isolation level defines how and when the changes made by one transaction reflects in another, therby ensuring data consistency and integrity. There are 4 levels
+
+1. Read Uncommited : Lowest level. One Transaction is able to read the uncommitted data of other transaction. This is Dirty Reads.
+2. Read Comitted : This level ensures that other transactions are able to read data that is been committed at the moment, as it holds read and write locks preventing any updations. Dirty reads
+3. Repeatable Read : Most restrictive level, not allowing other transactions to read
+4. Serializable : Highest level of isolation, where it guarantees exclusive locks for its execution
+
+SQL Profiler : is a Monitor tool that
+             - Monitors the performance of any SQL server work loads
+             - step through problem queries to find the cause of the problem
+             - find and diagnose slow running queries
+             - capture the series of T-sql statements that can/has lead to a problem
+             - create performance counters to diagnose problems
+
+
+use homecare
+
+create table BitTable
+(bkey int identity not null primary key,
+colA bit,
+colB bit)
+
+insert into BitTable
+values(0,0),(0,1),(1,0),(1,1)
+
+select * from BitTable
+
+--| -Or
+select *,colA | ColB as LogicalOR from BitTable
+
+--& and
+select *,colA & ColB as LogicalAND from BitTable
+
+--^ Xor
+select *,colA ^ ColB as LogicalXOR from BitTable
+
+--~ Not
+select *,colA |colB as LogicalOR , ~(colA |colB)as LogicalNot_OR from BitTable
+
+select *,colA & colB as LogicalAnd , ~(colA & colB)as LogicalNot_And from BitTable
+
+use InfiniteDB
+select * from tblemployee
+begin transaction
+ update tblemployee
+ set salary = 10000 where empid=200
+ update tblemployee set deptid=15, salary=20000 where empid=200
+ commit tran
+ rollback
+
+ begin transaction
+  select * from tblemployee
+  where empid=200
+  commit transaction
+
+  select * from employees
+
+  use InfiniteDB
+  alter database infinitedb
+  set Read_committed_snapshot on
+
+  --------------------------------
+
+ -- SQL profiler
+use HomeCare
+
+create table TestTable(ID int primary key,
+DataVal char(1))
+
+insert into TestTable values(1,'A'),(2,'B'),(3,'C')
+
+--now let us create few procedutes for insertion and selection
+create or alter proc Sp_Insertdata @id int, @dval char(1), @result varchar(10) output
+as
+begin
+ begin try
+  begin transaction
+  insert into TestTable(ID,Dataval) values(@id,@dval)
+  commit 
+    set @result ='OK'
+ end try
+ begin catch
+  if @@TRANCOUNT > 0
+   rollback
+     set @result ='Error'
+  end catch
+
+end
+
+--selection procedure
+create proc sp_GetData @dval char(1)
+as
+begin
+ select ID,Dataval from TestTable where dataval =@dval
+ end
+
+ --executing proc 1
+ declare @outresult varchar(10)
+ exec Sp_Insertdata 4,'D', @outresult output
+ select @outresult
+
+ select * from TestTable
+
+  declare @outresult varchar(10)
+ exec Sp_Insertdata 3,'D', @outresult output
+ select @outresult
+
+ exec sp_getdata 'D'

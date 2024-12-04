@@ -112,3 +112,22 @@ select coalesce(@str1,@str2)as 'Coalesce Results',
  select stdname,subject,marks_scored,dense_rank() over(partition by subject order by marks_scored desc)Ranknos 
   from marks
 
+ --calculated column/ Computed Columns
+
+  sp_help tblemployee
+
+  alter table tblemployee
+  add AnnualSalary as(Salary*12) persisted
+
+  select * from tblemployee
+
+  alter table tblemployee
+  drop column Annualsalary 
+
+  update tblemployee set salary=null where empid=200
+
+  create index idxcc on tblemployee(annualsalary)
+
+  select empname, salary, isnull(annualsalary,7000) from tblemployee
+    where annualsalary>64000
+  --
