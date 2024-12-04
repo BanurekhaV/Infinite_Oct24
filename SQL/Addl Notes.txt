@@ -112,3 +112,28 @@ begin
  select @outresult
 
  exec sp_getdata 'D'
+
+--trancount with commit
+
+ print @@trancount
+ begin tran
+  print @@trancount
+   begin tran
+   print @@trancount
+  commit
+  print @@trancount
+  commit
+  print @@trancount
+
+  --trancount with rollback
+
+   print @@trancount
+ begin tran
+  print @@trancount
+   begin tran
+   print @@trancount
+  --commit
+  rollback
+  print @@trancount
+  --commit
+  --print @@trancount

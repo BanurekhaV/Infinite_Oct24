@@ -1,0 +1,15 @@
+ADO.Net is a set of classes belonging to the dotnet framework, that acts like a bridge between the front end appln with the back end databases
+-Encapsulates all the data access operations as objects and the front end interacts with these objects, thereby hiding all the details of data movement
+-Activex Data Objects
+
+ADO Architecture
+ 1. Connected : applns. remain connected with the database through out processing 
+ 2. Disconnected : applns automatically connect/disconnect during the processing. The application uses a temporary structure on the application side called a DataSet
+
+Important classes/objects of ADO.Net
+Connection
+Command
+   --execute commands 
+DataReader
+DataAdapter
+DataSet
