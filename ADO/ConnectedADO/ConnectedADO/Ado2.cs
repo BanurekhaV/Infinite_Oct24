@@ -26,8 +26,8 @@ namespace ConnectedADO
 
         internal SqlDataReader SelectRegions()
         {
-            SqlDataReader dr = da.SelectData();
-            return dr;
+            SqlDataReader dr1 = da.SelectData();
+            return dr1;
         }
 
         public void CallProc()
@@ -50,6 +50,8 @@ namespace ConnectedADO
     {
         static SqlConnection conn = null;
         static SqlCommand cmd = null;
+        static int res;
+        static SqlDataReader dr;
 
         public SqlConnection getConnection()
         {
@@ -60,49 +62,58 @@ namespace ConnectedADO
             return conn;
         }
 
+        public  void getDisconnectSelect()
+        {
+            conn = getConnection();
+            SqlDataAdapter da = new SqlDataAdapter("Select * from region", conn);
+            DataSet ds = new DataSet();
+            da.Fill(ds);
+            conn.Close();
+        }
+
         public SqlDataReader SelectData()
         {
-            //try
-            //{
+            try
+            {
                 conn = getConnection();
                 cmd = new SqlCommand("Select * from Region", conn);
-                SqlDataReader dr = cmd.ExecuteReader();
+                dr = cmd.ExecuteReader();
            
-                return dr;
-                
-                //while(dr.Read())
+               // return dr;
+
+                //while (dr.Read())
                 //{
                 //    Console.WriteLine(dr["RegionID"] + " " + dr["RegionDescription"]);
                 //}
-            //}
-            //catch(SqlException se)
-            //{
-            //    Console.WriteLine(se.Message);
-            //}
-            //finally   
+            }
+            catch (SqlException se)
+            {
+                Console.WriteLine(se.Message);
+            }
+            //finally
             //{
 
-            //    conn.Close();                
+            //    //conn.Close();
             //}
+            return dr;
         }
 
         public int InsertRegion(int rid, string rdesc)
-        {
-            int res;
-            //try
-            //{
+        {             
+            try
+            {
                 conn = getConnection();
                 cmd = new SqlCommand("insert into region values(@rgid,@rgdesc)", conn);
                 cmd.Parameters.AddWithValue("@rgid", rid);
                 cmd.Parameters.AddWithValue("@rgdesc", rdesc);
                 res=cmd.ExecuteNonQuery();
                 return res;
-            //}
-            //catch(SqlException se)
-            //{
-            //    Console.WriteLine(se.Message);
-            //}
-            
+            }
+            catch (SqlException se)
+            {
+                Console.WriteLine(se.Message);
+            }
+            return res;
         }
 
         public void CallProc()
@@ -162,16 +173,16 @@ namespace ConnectedADO
         {
             Region region = new Region();
             Console.WriteLine();
-            //int res=region.InsertRegion();
-            //if(res>0)
+            //int res = region.InsertRegion();
+            //if (res > 0)
             //    Console.WriteLine("Record Successfully");
             //else
             //    Console.WriteLine("Failed to Insert");
             Console.WriteLine();
-            SqlDataReader dr=region.SelectRegions();
-            while(dr.Read())
+            SqlDataReader dr2 = region.SelectRegions();
+            while(dr2.Read())
             {                
-                    Console.WriteLine($"The Region Id is {dr["RegionID"] } and the Description is {dr["RegionDescription"]}");                
+                    Console.WriteLine($"The Region Id is {dr2["RegionID"] } and the Description is {dr2["RegionDescription"]}");                
             }
             Console.WriteLine("--------Calling Procedure with no Input/OutPut-------");
             region.CallProc();

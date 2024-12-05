@@ -27,6 +27,12 @@ Command : provides methods for storing, executing sql statements/procedures etc
 DataReader : is used to retrieve the data from the datasource. Acts like a resultset
 
 DataAdapter : 
-DataSet
+DataSet : is a container object that contains
+          - Data Tables
+          - DataRows
+          - DataColumns
+          - Data Relationships
+          - DataConstraints
+      
 
-DotNet Applicat
+
