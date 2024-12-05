@@ -2,14 +2,31 @@ ADO.Net is a set of classes belonging to the dotnet framework, that acts like a 
 -Encapsulates all the data access operations as objects and the front end interacts with these objects, thereby hiding all the details of data movement
 -Activex Data Objects
 
+Advantages :
+ Single Oriented API : ADO provides a single object set of classes. Can work with any data sources, with corresponding providers
+ Managed Code : The ADO classes are managed classes
+ Deployment using MDAC which uses Activex Objects
+ XML support for data storage and transfer
+ Visual Data Components
+ Performance and Scalability
+
+
 ADO Architecture
  1. Connected : applns. remain connected with the database through out processing 
  2. Disconnected : applns automatically connect/disconnect during the processing. The application uses a temporary structure on the application side called a DataSet
 
 Important classes/objects of ADO.Net
-Connection
-Command
-   --execute commands 
-DataReader
-DataAdapter
+
+Connection : this class is used to connect to the database, manage transactions and connection pooling
+
+Command : provides methods for storing, executing sql statements/procedures etc
+   --execute methods of the command
+       1. ExceuteReader() returns a DataReader object that stores the output of sql statements. This would typically be an SQL select statement or a stored procedure that contains one or more select 
+       2. ExecuteNonquery() returns an int. This would typically include DML statements
+             
+DataReader : is used to retrieve the data from the datasource. Acts like a resultset
+
+DataAdapter : 
 DataSet
+
+DotNet Applicat
