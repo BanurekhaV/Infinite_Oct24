@@ -39,6 +39,11 @@ namespace ConnectedADO
         {
             da.GetRegionCount();
         }
+
+        public void ProcWithParameter()
+        {
+            da.ProcWithParameter();
+        }
     }
 
     class DataAccess
@@ -125,6 +130,31 @@ namespace ConnectedADO
             int count=Convert.ToInt32(cmd.ExecuteScalar());
             Console.WriteLine("No of Regions Available is {0}",count);
         }
+
+        public void ProcWithParameter()
+        {
+            conn = getConnection();
+            Console.WriteLine("Enter The Customer ID :");
+            string custid = Console.ReadLine();
+            cmd = new SqlCommand("custordersorders", conn);
+            cmd.CommandType = CommandType.StoredProcedure;
+            //option 1 to attach parameter values 
+            //cmd.Parameters.AddWithValue("@customerid", custid);
+
+            //option 2
+            SqlParameter param1 = new SqlParameter();
+            param1.ParameterName = "@customerid";
+            param1.Value = custid;
+            param1.DbType = DbType.String;
+            param1.Direction = ParameterDirection.Input;
+
+            cmd.Parameters.Add(param1);
+            SqlDataReader sdr = cmd.ExecuteReader();
+            while(sdr.Read())
+            {
+                Console.WriteLine(sdr["OrderId"] + " " + sdr["OrderDate"] + " " + sdr["ShippedDate"]);
+            }
+        }
     }
     class Ado2
     {
@@ -147,6 +177,8 @@ namespace ConnectedADO
             region.CallProc();
             Console.WriteLine("---------Region Count----------");
             region.GetRegionCount();
+            Console.WriteLine("-----Procedure with Parameter-------");
+            region.ProcWithParameter();
              Console.Read();
         }
     }
