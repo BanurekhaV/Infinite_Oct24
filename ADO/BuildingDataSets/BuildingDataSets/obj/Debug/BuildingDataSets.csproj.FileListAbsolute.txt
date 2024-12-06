@@ -1,0 +1,7 @@
+C:\Banu\Infinite_1\ADO\BuildingDataSets\BuildingDataSets\obj\Debug\BuildingDataSets.csproj.AssemblyReference.cache
+C:\Banu\Infinite_1\ADO\BuildingDataSets\BuildingDataSets\obj\Debug\BuildingDataSets.csproj.CoreCompileInputs.cache
+C:\Banu\Infinite_1\ADO\BuildingDataSets\BuildingDataSets\bin\Debug\BuildingDataSets.exe.config
+C:\Banu\Infinite_1\ADO\BuildingDataSets\BuildingDataSets\bin\Debug\BuildingDataSets.exe
+C:\Banu\Infinite_1\ADO\BuildingDataSets\BuildingDataSets\bin\Debug\BuildingDataSets.pdb
+C:\Banu\Infinite_1\ADO\BuildingDataSets\BuildingDataSets\obj\Debug\BuildingDataSets.exe
+C:\Banu\Infinite_1\ADO\BuildingDataSets\BuildingDataSets\obj\Debug\BuildingDataSets.pdb

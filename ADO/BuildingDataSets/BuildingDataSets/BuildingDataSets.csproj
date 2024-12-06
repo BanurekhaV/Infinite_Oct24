@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{A78B07C3-1A56-4373-B46B-1DC626BE92C6}</ProjectGuid>
+    <ProjectGuid>{66E52A88-CA42-4507-AE08-69C15ED9F616}</ProjectGuid>
     <OutputType>Exe</OutputType>
-    <RootNamespace>DisconnectedADO</RootNamespace>
-    <AssemblyName>DisconnectedADO</AssemblyName>
+    <RootNamespace>BuildingDataSets</RootNamespace>
+    <AssemblyName>BuildingDataSets</AssemblyName>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -33,12 +33,11 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <PropertyGroup>
-    <StartupObject>DisconnectedADO.ProcedureCalls</StartupObject>
+    <StartupObject>BuildingDataSets.DataConstraints</StartupObject>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Core" />
-    <Reference Include="System.Transactions" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -47,8 +46,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="ConnectionPooling.cs" />
-    <Compile Include="ProcedureCalls.cs" />
+    <Compile Include="DataConstraints.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
