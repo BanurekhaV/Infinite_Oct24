@@ -14,8 +14,9 @@ namespace DisconnectedADO
         public static SqlDataAdapter da = null;
         static void Main(string[] args)
         {
-            //  Disconnected_approach();
-            AddRegion_with_Adapter();
+              Disconnected_approach();
+            //  AddRegion_with_Adapter();
+           // UpdateRegion();
             Console.Read();
         }
 
@@ -129,5 +130,36 @@ namespace DisconnectedADO
             }
 
         }
+
+        public static void UpdateRegion()
+        {
+            con = new SqlConnection("Data Source=Laptop-tjj7d977;database=northwind;trusted_connection=true;");
+            con.Open();
+            string query = "select * from region";
+            da = new SqlDataAdapter(query, con);
+            DataSet ds = new DataSet();
+            da.Fill(ds, "Region");
+
+            //update a row
+            DataTable dt = ds.Tables["Region"];
+            dt.Rows[7]["RegionDescription"] = "Cyclone Free Region";
+            SqlCommandBuilder scb = new SqlCommandBuilder(da);
+            da.UpdateCommand = scb.GetUpdateCommand();
+
+            da.Update(ds, "Region");
+            Console.WriteLine("------------Post Updation----------");
+            da.Fill(ds);
+            dt = ds.Tables["Region"];
+            foreach (DataRow drow in dt.Rows)
+            {
+                foreach (DataColumn dcol in dt.Columns)
+                {
+                    Console.Write(drow[dcol]);
+                    Console.WriteLine();
+                }
+            }
+
+        }
+       
     }
 }
