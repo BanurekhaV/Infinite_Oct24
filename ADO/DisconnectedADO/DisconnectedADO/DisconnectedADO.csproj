@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{40529969-87E0-40BA-BF33-AC67D732E515}</ProjectGuid>
+    <ProjectGuid>{A78B07C3-1A56-4373-B46B-1DC626BE92C6}</ProjectGuid>
     <OutputType>Exe</OutputType>
-    <RootNamespace>ConnectedADO</RootNamespace>
-    <AssemblyName>ConnectedADO</AssemblyName>
+    <RootNamespace>DisconnectedADO</RootNamespace>
+    <AssemblyName>DisconnectedADO</AssemblyName>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -32,9 +32,6 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
-  <PropertyGroup>
-    <StartupObject>ConnectedADO.Ado2</StartupObject>
-  </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Core" />
@@ -46,8 +43,6 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Ado2.cs" />
-    <Compile Include="DisonnectedAdo.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

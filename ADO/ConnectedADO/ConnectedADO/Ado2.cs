@@ -62,15 +62,6 @@ namespace ConnectedADO
             return conn;
         }
 
-        public  void getDisconnectSelect()
-        {
-            conn = getConnection();
-            SqlDataAdapter da = new SqlDataAdapter("Select * from region", conn);
-            DataSet ds = new DataSet();
-            da.Fill(ds);
-            conn.Close();
-        }
-
         public SqlDataReader SelectData()
         {
             try

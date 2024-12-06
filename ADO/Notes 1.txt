@@ -26,13 +26,16 @@ Command : provides methods for storing, executing sql statements/procedures etc
              
 DataReader : is used to retrieve the data from the datasource. Acts like a resultset
 
-DataAdapter : 
+DataAdapter : is a class with a set of functionalities to connect to the database,execute commands, update and refresh the dataset with the data
+
 DataSet : is a container object that contains
           - Data Tables
           - DataRows
           - DataColumns
           - Data Relationships
           - DataConstraints
+    - is an in-memory structure that is made available closer to the client
+   
       
 
 
