@@ -1,0 +1,7 @@
+C:\Banu\Infinite_1\ADO\LINQQueries\LINQQueries\obj\Debug\LINQQueries.csproj.AssemblyReference.cache
+C:\Banu\Infinite_1\ADO\LINQQueries\LINQQueries\obj\Debug\LINQQueries.csproj.CoreCompileInputs.cache
+C:\Banu\Infinite_1\ADO\LINQQueries\LINQQueries\bin\Debug\LINQQueries.exe.config
+C:\Banu\Infinite_1\ADO\LINQQueries\LINQQueries\bin\Debug\LINQQueries.exe
+C:\Banu\Infinite_1\ADO\LINQQueries\LINQQueries\bin\Debug\LINQQueries.pdb
+C:\Banu\Infinite_1\ADO\LINQQueries\LINQQueries\obj\Debug\LINQQueries.exe
+C:\Banu\Infinite_1\ADO\LINQQueries\LINQQueries\obj\Debug\LINQQueries.pdb

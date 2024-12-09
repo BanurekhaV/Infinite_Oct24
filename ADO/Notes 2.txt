@@ -61,5 +61,19 @@ LINQ : Language Integrated Query
 
 There are 2 basic ways to write Linq queries
  1. Query Syntax/Expression
+       from<range variable> in<IEnumerable>/IQueryable> standard operators<lambda exp>
+               select or group by
+      
  2. Method Syntax/Methods Extension/Fluent 
+     
+
+LINQ to Collections (arrays)
+LINQ to Objects
+LINQ to Datatables
+LINQ to SQL
+    
+
+Linq queries can be executed as
+   - Immediate
+   - Deferred
 
