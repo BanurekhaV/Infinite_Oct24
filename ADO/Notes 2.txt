@@ -69,11 +69,23 @@ There are 2 basic ways to write Linq queries
 
 LINQ to Collections (arrays)
 LINQ to Objects
-LINQ to Datatables
+LINQ to Data tables
 LINQ to SQL
     
 
 Linq queries can be executed as
-   - Immediate
-   - Deferred
+   - Immediate : is also known as Greedy Operator
+   - Query is executed at the point of declaration/construction
+   - Aggregate functions, Element Operators(first,last,single,tolist,toarray, todictionary)
+
+   - Deferred : also known as lazy operator
+    - Query is not executed at the point of declaration/construction
+    - Is executed when we access the query result 
+    - Projection Operators - select, select many
+    - Restriction Operators - where
+    - Paging operators - take, skip
+
+ -Deferred query avoids unnecessary execution and hence improves performance
+ - Query Construction and execution are decoupled
+ - A deferred query is re-evaluated whenever we enumerate, hence always getting the latest data
 
