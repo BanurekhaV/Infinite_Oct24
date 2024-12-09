@@ -1,0 +1,7 @@
+C:\Banu\Infinite_1\ADO\Linq_Sql_VS\Linq_Sql_VS\bin\Debug\Linq_Sql_VS.exe.config
+C:\Banu\Infinite_1\ADO\Linq_Sql_VS\Linq_Sql_VS\bin\Debug\Linq_Sql_VS.exe
+C:\Banu\Infinite_1\ADO\Linq_Sql_VS\Linq_Sql_VS\bin\Debug\Linq_Sql_VS.pdb
+C:\Banu\Infinite_1\ADO\Linq_Sql_VS\Linq_Sql_VS\obj\Debug\Linq_Sql_VS.csproj.AssemblyReference.cache
+C:\Banu\Infinite_1\ADO\Linq_Sql_VS\Linq_Sql_VS\obj\Debug\Linq_Sql_VS.csproj.CoreCompileInputs.cache
+C:\Banu\Infinite_1\ADO\Linq_Sql_VS\Linq_Sql_VS\obj\Debug\Linq_Sql_VS.exe
+C:\Banu\Infinite_1\ADO\Linq_Sql_VS\Linq_Sql_VS\obj\Debug\Linq_Sql_VS.pdb

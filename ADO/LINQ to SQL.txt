@@ -1,0 +1,16 @@
+LINQ to SQL : is an infrastructure(run-time) for management of relational data as objects. 
+-For most of the dot net web developers LINQ to SQL is also known as DLINQ, that enables LINQ queries on SQL database using simple English looking syntax. 
+- It allows DML operations also, but with certain limitations
+- Benefits of linq queries are reduced code complexity
+
+
+Table           	 --     Class
+Columns         	 --     Properties
+Rows            	 --     Instance
+Stored Procedures	 --     Methods
+
+To work with Linq to SQL, we need to convert all relational objects/entities of the database into object oriented types. This process is known as Object relational mapper (orm)
+
+- mapped objects are generated using either of the following
+  1. Visual Studio (Using Linq-to-Sql classes, that generates a.dbml file with the mappings)
+  2. SQL Metal ( a tool which is an executable that generates a .dbml file with the mappings)
