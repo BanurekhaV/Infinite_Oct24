@@ -1,0 +1,65 @@
+XML : Extensible Mark Up Language
+ - It is a text based markup lang.
+ - It is derived SGML(Standard Generalized Mark Up Lang.)
+ - It is a public standard (W3 open standards)
+ - XML tags identify the data that are used to store and organize 
+ - User defined tags(customization)
+
+Xml Usage : xml simplifies creation of html documents for small and large website/applns
+       - it is used to store and exchange data
+       - enables customization  of data
+       - xml can express any data type
+
+<xml>
+<messages>
+ <text>
+  <Hello>
+  <Hi>
+ </text>
+</message>
+
+&lt - <
+&amp - &
+&apos -'
+&quot -"
+
+xml documents can be created and validated against (well formed)
+ 1. DTD : Document Type Definition
+ 2. XSD : Xml schema definition
+
+DTD :
+<?xml version="1.0">
+<!Doctype Employee System "employee.dtd>
+<employees>
+ <employee>
+  <firstname>ShahRukh</firstname>
+  <lastname>Khan</lastname>
+ </employee>
+<employee>
+  <firstname>ShahRukh</firstname>
+  <lastname>Khan</lastname>
+ </employee>
+</employees>
+
+XSD :
+<?xml version="1.0">
+<Employee
+   xmlns="http://www.infinite.com"
+   xmlns:xsi="http://www.w3.org/2001/xmlschema-instance
+   xsi:schemaLocation="http://www.infinite.com employee.xsd>
+<firstname>Amitabh </forstname>
+
+</employee>
+ 
+LINQ : Language Integrated Query
+ - is a query lang that is a standard to query any data source
+ - less code
+ - more readable
+ - provides intellisense support
+ - compile time safe
+ - familiar lang (English like)
+
+There are 2 basic ways to write Linq queries
+ 1. Query Syntax/Expression
+ 2. Method Syntax/Methods Extension/Fluent 
+
