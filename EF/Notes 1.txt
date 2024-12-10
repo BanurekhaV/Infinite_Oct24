@@ -11,7 +11,7 @@ Data Base Context : Is an Instance of the database, that allows individual/group
 
 Life cycle of an Entity Object/ Entity States:
 
-1. Added : The entity is marked added, when we perform insertion. The entity will be tracked by the context, but the data will not be available yet in the database
+1. Added : The entity is marked added, when we perform insertion. The entity will be tracked by the context, but the data will not be available yet in the database. When we call SaveChanges(), the state will be Unchanged
 
 2. Deleted : The entity is marked deleted, when we delete rows. The entity will be tracked by the context, and the data will be available in the database. When we call SaveChanges(), the entity state will be detached
 
