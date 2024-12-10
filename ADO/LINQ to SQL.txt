@@ -13,4 +13,39 @@ To work with Linq to SQL, we need to convert all relational objects/entities of 
 
 - mapped objects are generated using either of the following
   1. Visual Studio (Using Linq-to-Sql classes, that generates a.dbml file with the mappings)
+
+  steps to work with VS:
+------------------------
+ 1. Create a Console Application for .net framework
+
+ 2. Right click on the project->add->new item
+
+ 3. Search for Linq-to-Sql-classes (if not found goto tools->get tools and features->individual component-->type linq-to-sql in the search window->select the check box->and install the component)
+
+ 4. You may change the dbml file name and click ok/add
+
+ 5. Observe that there are 2 files that get generated viz. dbml layout and designer.cs
+
+ 6. Explore the contextfile.cs inside the designer.cs and observe parameterized constructors
+
+ 7. Go to the view->sql server object, and locate either local db instance of the database or remote instance from the sqlserver (if you do not find any databases, then add a server)
+
+ 8. select the database with which you want to work, and you can drop any tables from the explorer onto the layout of dbml(left hand side), and any functions or procedures to the right hand side of the layout
+
+ 9. Allow the dbml to map the objects
+
+ 10. Build the application
+
+ 11. check the designer.cs file for an empty constructor inside the context class. Also the dragged objects are mapped as classes
+
+ 12. Now create and instantiate context class object.
+
+ 13. Now you are ready to work with the mapped sql objects using linq 
+
+
   2. SQL Metal ( a tool which is an executable that generates a .dbml file with the mappings)
+----------------------------------------------------------------------------------------------
+
+steps :  go to visual studio developer command prompt thru tools->commandlineprompt and type the below giving your specific server, database, and dbml file names
+
+C:\Windows\System32>sqlmetal.exe /server:Laptop-tjj7d977 /database:Northwind /dbml:C:\Banu\Infinite_1\ADO\northwinddbml.dbml /context:NorthwindContext

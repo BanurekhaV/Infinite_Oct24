@@ -9,6 +9,20 @@
       <Column Name="DeptId" Type="System.Int32" DbType="Int" CanBeNull="true" />
       <Column Name="Phoneno" Type="System.String" DbType="VarChar(12)" CanBeNull="true" />
       <Column Name="AnnualSalary" Type="System.Double" DbType="Float" IsDbGenerated="true" CanBeNull="true" UpdateCheck="Never" />
+      <Association Name="tblDepartment_tblEmployee" Member="tblDepartment" ThisKey="DeptId" OtherKey="DeptNum" Type="tblDepartment" IsForeignKey="true" />
     </Type>
   </Table>
+  <Table Name="dbo.tblDepartment" Member="tblDepartments">
+    <Type Name="tblDepartment">
+      <Column Name="DeptNum" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="Deptname" Type="System.String" DbType="VarChar(20) NOT NULL" CanBeNull="false" />
+      <Column Name="DeptLocation" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
+      <Association Name="tblDepartment_tblEmployee" Member="tblEmployees" ThisKey="DeptNum" OtherKey="DeptId" Type="tblEmployee" />
+    </Type>
+  </Table>
+  <Function Name="dbo.sp_getsalary" Method="sp_getsalary">
+    <Parameter Name="ename" Type="System.String" DbType="VarChar(20)" />
+    <Parameter Name="salary" Type="System.Int32" DbType="Int" Direction="InOut" />
+    <Return Type="System.Int32" />
+  </Function>
 </Database>

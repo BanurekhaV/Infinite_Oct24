@@ -33,6 +33,9 @@ namespace Linq_Sql_VS
     partial void InserttblEmployee(tblEmployee instance);
     partial void UpdatetblEmployee(tblEmployee instance);
     partial void DeletetblEmployee(tblEmployee instance);
+    partial void InserttblDepartment(tblDepartment instance);
+    partial void UpdatetblDepartment(tblDepartment instance);
+    partial void DeletetblDepartment(tblDepartment instance);
     #endregion
 		
 		public MydbmlDataContext() : 
@@ -72,6 +75,22 @@ namespace Linq_Sql_VS
 				return this.GetTable<tblEmployee>();
 			}
 		}
+		
+		public System.Data.Linq.Table<tblDepartment> tblDepartments
+		{
+			get
+			{
+				return this.GetTable<tblDepartment>();
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.sp_getsalary")]
+		public int sp_getsalary([global::System.Data.Linq.Mapping.ParameterAttribute(DbType="VarChar(20)")] string ename, [global::System.Data.Linq.Mapping.ParameterAttribute(DbType="Int")] ref System.Nullable<int> salary)
+		{
+			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), ename, salary);
+			salary = ((System.Nullable<int>)(result.GetParameterValue(1)));
+			return ((int)(result.ReturnValue));
+		}
 	}
 	
 	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.tblEmployee")]
@@ -93,6 +112,8 @@ namespace Linq_Sql_VS
 		private string _Phoneno;
 		
 		private System.Nullable<double> _AnnualSalary;
+		
+		private EntityRef<tblDepartment> _tblDepartment;
 		
     #region Extensibility Method Definitions
     partial void OnLoaded();
@@ -116,6 +137,7 @@ namespace Linq_Sql_VS
 		
 		public tblEmployee()
 		{
+			this._tblDepartment = default(EntityRef<tblDepartment>);
 			OnCreated();
 		}
 		
@@ -210,6 +232,10 @@ namespace Linq_Sql_VS
 			{
 				if ((this._DeptId != value))
 				{
+					if (this._tblDepartment.HasLoadedOrAssignedValue)
+					{
+						throw new System.Data.Linq.ForeignKeyReferenceAlreadyHasValueException();
+					}
 					this.OnDeptIdChanging(value);
 					this.SendPropertyChanging();
 					this._DeptId = value;
@@ -259,6 +285,40 @@ namespace Linq_Sql_VS
 			}
 		}
 		
+		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="tblDepartment_tblEmployee", Storage="_tblDepartment", ThisKey="DeptId", OtherKey="DeptNum", IsForeignKey=true)]
+		public tblDepartment tblDepartment
+		{
+			get
+			{
+				return this._tblDepartment.Entity;
+			}
+			set
+			{
+				tblDepartment previousValue = this._tblDepartment.Entity;
+				if (((previousValue != value) 
+							|| (this._tblDepartment.HasLoadedOrAssignedValue == false)))
+				{
+					this.SendPropertyChanging();
+					if ((previousValue != null))
+					{
+						this._tblDepartment.Entity = null;
+						previousValue.tblEmployees.Remove(this);
+					}
+					this._tblDepartment.Entity = value;
+					if ((value != null))
+					{
+						value.tblEmployees.Add(this);
+						this._DeptId = value.DeptNum;
+					}
+					else
+					{
+						this._DeptId = default(Nullable<int>);
+					}
+					this.SendPropertyChanged("tblDepartment");
+				}
+			}
+		}
+		
 		public event PropertyChangingEventHandler PropertyChanging;
 		
 		public event PropertyChangedEventHandler PropertyChanged;
@@ -277,6 +337,144 @@ namespace Linq_Sql_VS
 			{
 				this.PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
 			}
+		}
+	}
+	
+	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.tblDepartment")]
+	public partial class tblDepartment : INotifyPropertyChanging, INotifyPropertyChanged
+	{
+		
+		private static PropertyChangingEventArgs emptyChangingEventArgs = new PropertyChangingEventArgs(String.Empty);
+		
+		private int _DeptNum;
+		
+		private string _Deptname;
+		
+		private string _DeptLocation;
+		
+		private EntitySet<tblEmployee> _tblEmployees;
+		
+    #region Extensibility Method Definitions
+    partial void OnLoaded();
+    partial void OnValidate(System.Data.Linq.ChangeAction action);
+    partial void OnCreated();
+    partial void OnDeptNumChanging(int value);
+    partial void OnDeptNumChanged();
+    partial void OnDeptnameChanging(string value);
+    partial void OnDeptnameChanged();
+    partial void OnDeptLocationChanging(string value);
+    partial void OnDeptLocationChanged();
+    #endregion
+		
+		public tblDepartment()
+		{
+			this._tblEmployees = new EntitySet<tblEmployee>(new Action<tblEmployee>(this.attach_tblEmployees), new Action<tblEmployee>(this.detach_tblEmployees));
+			OnCreated();
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_DeptNum", DbType="Int NOT NULL", IsPrimaryKey=true)]
+		public int DeptNum
+		{
+			get
+			{
+				return this._DeptNum;
+			}
+			set
+			{
+				if ((this._DeptNum != value))
+				{
+					this.OnDeptNumChanging(value);
+					this.SendPropertyChanging();
+					this._DeptNum = value;
+					this.SendPropertyChanged("DeptNum");
+					this.OnDeptNumChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Deptname", DbType="VarChar(20) NOT NULL", CanBeNull=false)]
+		public string Deptname
+		{
+			get
+			{
+				return this._Deptname;
+			}
+			set
+			{
+				if ((this._Deptname != value))
+				{
+					this.OnDeptnameChanging(value);
+					this.SendPropertyChanging();
+					this._Deptname = value;
+					this.SendPropertyChanged("Deptname");
+					this.OnDeptnameChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_DeptLocation", DbType="VarChar(20)")]
+		public string DeptLocation
+		{
+			get
+			{
+				return this._DeptLocation;
+			}
+			set
+			{
+				if ((this._DeptLocation != value))
+				{
+					this.OnDeptLocationChanging(value);
+					this.SendPropertyChanging();
+					this._DeptLocation = value;
+					this.SendPropertyChanged("DeptLocation");
+					this.OnDeptLocationChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="tblDepartment_tblEmployee", Storage="_tblEmployees", ThisKey="DeptNum", OtherKey="DeptId")]
+		public EntitySet<tblEmployee> tblEmployees
+		{
+			get
+			{
+				return this._tblEmployees;
+			}
+			set
+			{
+				this._tblEmployees.Assign(value);
+			}
+		}
+		
+		public event PropertyChangingEventHandler PropertyChanging;
+		
+		public event PropertyChangedEventHandler PropertyChanged;
+		
+		protected virtual void SendPropertyChanging()
+		{
+			if ((this.PropertyChanging != null))
+			{
+				this.PropertyChanging(this, emptyChangingEventArgs);
+			}
+		}
+		
+		protected virtual void SendPropertyChanged(String propertyName)
+		{
+			if ((this.PropertyChanged != null))
+			{
+				this.PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
+			}
+		}
+		
+		private void attach_tblEmployees(tblEmployee entity)
+		{
+			this.SendPropertyChanging();
+			entity.tblDepartment = this;
+		}
+		
+		private void detach_tblEmployees(tblEmployee entity)
+		{
+			this.SendPropertyChanging();
+			entity.tblDepartment = null;
 		}
 	}
 }
