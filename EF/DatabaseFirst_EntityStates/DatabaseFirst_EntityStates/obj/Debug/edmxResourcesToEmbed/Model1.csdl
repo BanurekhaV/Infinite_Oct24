@@ -1,0 +1,57 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="InfiniteDBModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="tblDepartment">
+    <Key>
+      <PropertyRef Name="DeptNum" />
+    </Key>
+    <Property Name="DeptNum" Type="Int32" Nullable="false" />
+    <Property Name="Deptname" Type="String" MaxLength="20" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="DeptLocation" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="tblEmployees" Relationship="Self.FK__tblEmploy__DeptI__267ABA7A" FromRole="tblDepartment" ToRole="tblEmployee" />
+  </EntityType>
+  <EntityType Name="tblEmployee">
+    <Key>
+      <PropertyRef Name="EmpId" />
+    </Key>
+    <Property Name="EmpId" Type="Int32" Nullable="false" />
+    <Property Name="EmpName" Type="String" MaxLength="40" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Gender" Type="String" MaxLength="7" FixedLength="true" Unicode="false" />
+    <Property Name="Salary" Type="Double" />
+    <Property Name="DeptId" Type="Int32" />
+    <Property Name="Phoneno" Type="String" MaxLength="12" FixedLength="false" Unicode="false" />
+    <Property Name="AnnualSalary" Type="Double" annotation:StoreGeneratedPattern="Computed" />
+    <NavigationProperty Name="tblDepartment" Relationship="Self.FK__tblEmploy__DeptI__267ABA7A" FromRole="tblEmployee" ToRole="tblDepartment" />
+  </EntityType>
+  <Association Name="FK__tblEmploy__DeptI__267ABA7A">
+    <End Role="tblDepartment" Type="Self.tblDepartment" Multiplicity="0..1" />
+    <End Role="tblEmployee" Type="Self.tblEmployee" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tblDepartment">
+        <PropertyRef Name="DeptNum" />
+      </Principal>
+      <Dependent Role="tblEmployee">
+        <PropertyRef Name="DeptId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="InfiniteDBEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="tblDepartments" EntityType="Self.tblDepartment" />
+    <EntitySet Name="tblEmployees" EntityType="Self.tblEmployee" />
+    <AssociationSet Name="FK__tblEmploy__DeptI__267ABA7A" Association="Self.FK__tblEmploy__DeptI__267ABA7A">
+      <End Role="tblDepartment" EntitySet="tblDepartments" />
+      <End Role="tblEmployee" EntitySet="tblEmployees" />
+    </AssociationSet>
+    <FunctionImport Name="fn_GetEmpByGender" IsComposable="true" ReturnType="Collection(InfiniteDBModel.fn_GetEmpByGender_Result)">
+      <Parameter Name="gen" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="sp_getsalary">
+      <Parameter Name="ename" Mode="In" Type="String" />
+      <Parameter Name="salary" Mode="InOut" Type="Int32" />
+    </FunctionImport>
+  </EntityContainer>
+  <ComplexType Name="fn_GetEmpByGender_Result">
+    <Property Type="Int32" Name="EmpId" Nullable="true" />
+    <Property Type="String" Name="EmployeeName" Nullable="true" MaxLength="40" />
+    <Property Type="String" Name="Gender" Nullable="true" MaxLength="8" />
+  </ComplexType>
+</Schema>
