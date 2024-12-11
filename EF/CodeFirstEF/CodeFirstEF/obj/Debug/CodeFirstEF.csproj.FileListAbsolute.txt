@@ -12,3 +12,4 @@ C:\Banu\Infinite_1\EF\CodeFirstEF\CodeFirstEF\bin\Debug\EntityFramework.SqlServe
 C:\Banu\Infinite_1\EF\CodeFirstEF\CodeFirstEF\obj\Debug\CodeFirstEF.csproj.CopyComplete
 C:\Banu\Infinite_1\EF\CodeFirstEF\CodeFirstEF\obj\Debug\CodeFirstEF.Migrations.InitialCreate.resources
 C:\Banu\Infinite_1\EF\CodeFirstEF\CodeFirstEF\obj\Debug\CodeFirstEF.csproj.GenerateResource.cache
+C:\Banu\Infinite_1\EF\CodeFirstEF\CodeFirstEF\obj\Debug\CodeFirstEF.Migrations.ColaddedtoAuthors.resources

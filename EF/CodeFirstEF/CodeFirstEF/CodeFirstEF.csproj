@@ -58,6 +58,10 @@
     <Compile Include="Migrations\202412101301462_Initial Create.designer.cs">
       <DependentUpon>202412101301462_Initial Create.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202412110724363_Col added to Authors.cs" />
+    <Compile Include="Migrations\202412110724363_Col added to Authors.designer.cs">
+      <DependentUpon>202412110724363_Col added to Authors.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Author.cs" />
     <Compile Include="Models\Books.cs" />
@@ -72,6 +76,9 @@
   <ItemGroup>
     <EmbeddedResource Include="Migrations\202412101301462_Initial Create.resx">
       <DependentUpon>202412101301462_Initial Create.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202412110724363_Col added to Authors.resx">
+      <DependentUpon>202412110724363_Col added to Authors.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
