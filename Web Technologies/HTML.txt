@@ -1,0 +1,38 @@
+Web Technologies
+
+What is WWW? : World Wide Web
+ Network of Information
+  -A Uniform naming Scheme for locating resources on the Web (URI)
+  -Protocol, for access to the named resources over the Web (HTTP)
+  -Hyper Text, for easy navigation among resources (HTML)
+
+Every Resource (document, images, audio, video, programs, application etc.) on the web has an address that can be accessed using the URI.
+
+Eg : http://www.mysite.com/mypage
+  1. The protocol to access the resource
+  2. The name of the machine that is hosting the resource
+  3. The resource itself
+
+URI > (URN || URL)
+URN : Uniform Resource Name  ( defines an item's identity)
+URL : Uniform Resource Locator ( provides methods to find the item)
+
+Eg : ISBN 0486275574 (urn)
+
+Anatomy of a Web Page
+  
+ HTML + CSS + Javascript = Content + Style + Behaviour
+
+Seperation of Concerns : Easier to maintain, faster to code
+
+HTML : Is the Life blood of the WWW. It represents the content or data the user is looking for
+CSS :  Defines how web pages should appear. No plain HTML any more, do it in style
+Javascript : Gives Dynamism to the other wise static html. This can be activated based on user intercations or behind the scenes
+
+Web Site VS Web Application 
+
+WebSite : front-end interface thru which the public interact with the business online
+  - is like a foundation and can host severeal web applications
+  - We can have a host of message board, a blog, photo gallery and many other types of web application under the site
+
+Web Application : Services or applications specific to a business needs. This can integrate well with the Business, IT Infrastructure etx. 
