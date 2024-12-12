@@ -23,16 +23,36 @@ Anatomy of a Web Page
   
  HTML + CSS + Javascript = Content + Style + Behaviour
 
-Seperation of Concerns : Easier to maintain, faster to code
+Separation of Concerns : Easier to maintain, faster to code
 
 HTML : Is the Life blood of the WWW. It represents the content or data the user is looking for
 CSS :  Defines how web pages should appear. No plain HTML any more, do it in style
-Javascript : Gives Dynamism to the other wise static html. This can be activated based on user intercations or behind the scenes
+Javascript : Gives Dynamism to the other wise static html. This can be activated based on user interactions or behind the scenes
 
 Web Site VS Web Application 
 
 WebSite : front-end interface thru which the public interact with the business online
-  - is like a foundation and can host severeal web applications
+  - is like a foundation and can host several web applications
   - We can have a host of message board, a blog, photo gallery and many other types of web application under the site
 
-Web Application : Services or applications specific to a business needs. This can integrate well with the Business, IT Infrastructure etx. 
+Web Application : Services or applications specific to a business needs. This can integrate well with the Business, IT Infrastructure etc. 
+
+Web Server : This is the actual server that hosts all the above.
+
+W3C - World Wide Web Consortium formed by Tim Lee in the year 1994.
+ It aims at a way of standardising the protocols, technologies to build the content, security etc.. 
+
+
+Search Engines : A search engine operates like below
+  web crawling - indexing - Searching
+
+HTTP : Hypertext Transfer Protocol
+   -It is a network protocol used to deliver virtually all resources on the www
+   -It is an HTTP Client as it sends/receives requests to and from the server
+   -It Operates on a default Port 8080, where it listens to the request
+
+
+HTML : Hyper Text Markup Language. It is the publishing lang. of www
+-basically made up of Tags, Elements, Attributes and values
+
+   
