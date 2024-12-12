@@ -56,3 +56,29 @@ HTML : Hyper Text Markup Language. It is the publishing lang. of www
 -basically made up of Tags, Elements, Attributes and values
 
    
+CSS : Cascading Style Sheets
+  3 types
+  1. Inline
+  2. Internal
+  3. External 
+
+CSS can be applied as selectors, properties and values
+  -- Tag Selectors
+  -- ID selectors
+  -- Class Selectors
+
+Grouping and Nesting :
+Grouping : h2{color:red;} .mycolor{color:red;} #color{color:red;}   h2,.mycolor,#color{color:red;}
+
+Nesting:
+     #t{background-color:#ccc;padding:1em}
+     #t h1{color:blue;}
+     #t p{color:green; font-weight:large;}
+
+Shorthand Properties  10px 5px 10px 5px
+
+Length and Percentages
+  -- em  -- 2em 
+  -- px
+  -- pt 
+  -- %

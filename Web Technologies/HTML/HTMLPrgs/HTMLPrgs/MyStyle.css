@@ -1,0 +1,18 @@
+﻿body {
+     background-image:url("Img/NewFlower.png");
+     background-repeat:no-repeat;
+     background-position:center;
+}
+div{
+    background-color:burlywood;
+    height:300px;
+    width:200px;
+    color:blue;
+}
+#myid{
+    color:darkmagenta;
+}
+
+.cls{
+    color:firebrick;
+}

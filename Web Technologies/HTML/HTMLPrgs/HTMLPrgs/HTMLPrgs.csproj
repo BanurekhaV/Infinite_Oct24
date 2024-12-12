@@ -50,6 +50,11 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Animation.html" />
+    <Content Include="ExternalStyle.html" />
+    <Content Include="Img\NewFlower.png" />
+    <Content Include="MultiColumn.html" />
+    <Content Include="MyStyle.css" />
     <Content Include="Table.html" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
