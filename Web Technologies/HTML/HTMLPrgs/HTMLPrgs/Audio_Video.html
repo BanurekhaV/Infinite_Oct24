@@ -1,0 +1,44 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <style>
+        #Linear{
+            height:200px;
+            background-color:red;/*for browsers that do not support gradient*/
+            background-image:linear-gradient(black,yellow);
+        }
+        #Radial {
+            height: 200px;
+            background-image: radial-gradient(blue,green);
+        }
+        div{
+            border:1px solid green;
+            margin:15px;
+            padding:8px;
+            border-width:thick;
+        }
+    </style>
+</head>
+<body>
+    <div id="Linear"><h1>Linear Gradient</h1></div>
+    <br/></br>
+    <div id="Radial"><h2>Radial Gradient</h2></div>
+    <hr/>
+    <h1>Audio</h1>
+    <div id="audio">
+        <audio controls>
+        <source src="C:\Banu\Infinite_1\Web Technologies\HTML\Sampleaudio.mp3"/>
+        </audio>
+    </div>
+    <hr/>
+    <h1>Video</h1>
+    <div id="video">
+        <video width="500" height="400" controls autoplay loop>
+            <source src="C:\Banu\Infinite_1\Web Technologies\HTML\SampleVideo.mp4"/>
+        </video>
+    </div>
+</body>
+</html>

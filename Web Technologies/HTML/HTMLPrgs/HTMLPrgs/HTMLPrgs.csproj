@@ -51,7 +51,10 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Animation.html" />
+    <Content Include="Audio_Video.html" />
     <Content Include="ExternalStyle.html" />
+    <Content Include="Form.html" />
+    <Content Include="Img\Flower.jpg" />
     <Content Include="Img\NewFlower.png" />
     <Content Include="MultiColumn.html" />
     <Content Include="MyStyle.css" />

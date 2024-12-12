@@ -4,8 +4,43 @@
 <head>
     <meta charset="utf-8" />
     <title></title>
+    <style>
+        div{
+            width:100px;
+            height:100px;
+            background-color:red;
+            animation-name:test;
+            animation-duration:600ms;
+            position:relative;
+            /*Let us now have animation effect uisng keyframes*/
+        }
+        
+        @keyframes test{
+            0%{
+                background-color:red;
+            }
+            25%{
+                background-color:yellow;
+                left:200px;
+                top:0px;
+            }
+            50%{
+                background-color:blue;
+                left:200px;
+                top:200px;
+            }
+            75%{
+                background-color:green;
+                
+                top:200px;
+            }
+            100%{
+                background-color:chartreuse;                
+            }
+        }
+    </style>
 </head>
 <body>
-
+    <div>Hello</div>
 </body>
 </html>
