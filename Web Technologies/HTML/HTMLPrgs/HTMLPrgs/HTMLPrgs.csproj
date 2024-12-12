@@ -52,12 +52,14 @@
   <ItemGroup>
     <Content Include="Animation.html" />
     <Content Include="Audio_Video.html" />
+    <Content Include="Canvas.html" />
     <Content Include="ExternalStyle.html" />
     <Content Include="Form.html" />
     <Content Include="Img\Flower.jpg" />
     <Content Include="Img\NewFlower.png" />
     <Content Include="MultiColumn.html" />
     <Content Include="MyStyle.css" />
+    <Content Include="Registration.html" />
     <Content Include="Table.html" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
