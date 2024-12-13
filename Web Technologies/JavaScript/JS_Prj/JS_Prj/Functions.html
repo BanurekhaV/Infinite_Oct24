@@ -1,0 +1,78 @@
+﻿<!--<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <script>
+        function sayHello(name, age) {
+            document.write(name + "is" + age + "Years Old");
+        }
+    </script>
+</head>
+<body>
+    <p>Click the following button to invoke the function</p>
+    <form>
+        <input type="button" onclick="sayHello('Infinite ltd',25)" value="Say Hello" />
+    </form>
+</body>
+</html>-->
+
+<!--<html>
+<head>
+    <script>
+        function concat(f, l) {
+            var fullval;
+            fullval = f + l;
+            return fullval;
+        }
+        function secondFunction() {
+            var result;
+            result = concat('Aadi', 'Jain');
+            document.write(result);
+        }
+    </script>
+</head>
+<body>
+    <p>Click the following button to invoke the function</p>
+    <form>
+        <input type="button" onclick="secondFunction()" value="Concat" />
+    </form>
+</body>
+</html>-->
+
+<!--<html>
+<body>-->
+    <!--anonymous functions-->
+    <!--<p id="demo"> </p>
+    <br/>
+    <p id="demo1"></p>
+
+        <script>
+            //1. 
+            (function () {
+                document.getElementById('demo').innerHTML = "Hello I am Anonymous.."
+            })();
+
+            //2. arrow function
+            const x = (x, y) => x * y;
+            document.getElementById('demo1').innerHTML = x(5, 5);
+        </script>
+   
+</body>
+</html>-->
+
+<html>
+<body>
+    <p id="demo">Get Date</p>
+
+    <script>
+        var currentdate = new Date();
+
+        currentdate.setDate(currentdate.getDate() + 120);
+        console.log("Check the new Date.");
+    </script>
+
+    <input type="button" onclick="document.getElementById('demo').innerText = currentdate" value="GetNewDate" />
+</body>
+</html>

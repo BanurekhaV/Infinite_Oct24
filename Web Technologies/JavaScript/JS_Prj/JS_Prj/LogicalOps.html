@@ -1,0 +1,39 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+</head>
+<body>
+    <script>
+        var v1 = null;
+        var v2 = '';
+        var v3 = 'hi';
+
+        //var result = v1 && v2;
+        //document.write(result);
+
+        document.write("<hr/>")
+        result = v2 || v1 || v3;   // check all variables in the order given
+
+        document.write(result);
+
+        var res = v2 || v3 || v1; // short circuiting, stops at v3, where once it finds a valid data, it stops to check other variable values
+        document.write(res);
+        function returnfalsy() {
+            return "";
+        }
+
+        const e1 = [1, 2];
+        const e2 = returnfalsy();
+        const e3 = { name: "infinite" };
+
+       // const answer = e1 && e2 && e3;
+
+        const answer = e2 || e3 || e1 ;
+        console.log(answer);
+    </script>
+
+</body>
+</html>

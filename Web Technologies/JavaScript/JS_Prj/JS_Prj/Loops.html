@@ -1,0 +1,103 @@
+﻿<!--<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+</head>
+<body>
+ Welcome to Loops
+    <p>Repeat What ? </p> <input id="saythis" size="20" />
+    <br/>
+    <p>How Many Times ?</p> <select id="howmany">
+                          <option value="1">1 time</option>
+                          <option value="5">5 time</option>
+                          <option value="10">10 time</option>
+                          <option value="15">15 time</option>
+                            </select>
+    <br/>
+    <button onclick="doLoop()">Do It !</button>
+    <br/>
+    <div id="result"></div>
+
+    <script>
+        function doLoop() {
+            var repeat = document.getElementById('saythis').value;
+            var maxloop = document.getElementById('howmany').value;
+            var str = ' ';
+
+            for (var i = 1; (i <= maxloop); i++) {
+                str = str + i + ':' + repeat + '<br/>';
+            }
+            document.getElementById('result').innerHTML = str;
+        }
+    </script>
+</body>
+</html>-->
+
+<!--<html>
+<body>-->
+    <!--while loop-->
+
+    <!--<script>
+        var count = 0;
+        document.write("Starting The Loop...");
+
+        while (count < 10) {
+            document.write("Current Count : " + count + "<br/>");
+            count++;
+        }
+        document.write("Loop done");
+    </script>
+</body>
+</html>-->
+
+<!--<html>
+<body>-->
+    <!-- do while loop-->
+    <!--<script>
+        var count = 0;
+        document.write("Starting The Loop...");
+
+        do {
+            document.write("Current Count : " + count + "<br />");
+            count++;
+        }
+        while (count < 10);
+        document.write("Loop done");
+    </script>
+</body>
+</html>-->
+
+<!--<html>
+<body>
+    <script>
+        var aProperty;
+        document.write("Navigator object properties.." + "<br/>");
+        for (aProperty in navigator) {
+            document.write(aProperty);
+            document.write("<br/>");
+        }
+    </script>
+</body>
+</html>-->
+
+<html>
+<body>
+    <!--go to label -->
+
+    <script>
+        outerloop:
+        for (var i = 0; i < 5; i++) {
+            document.write("Outer Loop : " + i + "<br/>");
+            innerloop:
+            for (var j = 0; j < 5; j++) {
+                if (j > 3) break;  // quits the innermost loop
+                if (i == 2) break innerloop; // also quits the inner loop
+                if (i == 4) break outerloop; //quits the outerloop
+                document.write("Inner Loop " + j + " <br/>");
+            }
+        }
+    </script>
+</body>
+</html>
