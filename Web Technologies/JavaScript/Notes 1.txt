@@ -1,0 +1,50 @@
+Java Scripts : a programming language with lots of built -in apis used to make the html document interactive and dynamic
+
+Basic Uses of JavaScript :
+ Bowser Detection 
+ Cookies 
+ Control browser
+ validate Forms
+
+can manipulate HTML/Css
+can be called on events
+can send and load data from the server
+
+
+ Document Object Model  DOM
+
+The way a document content is accessed and modified is called as DOM, where a document is a HTML page
+
+The objects are arranged in a hierarchy
+
+Window Object : Top of the hierarchy
+Document Object : Each HTML document that gets loaded on the window becomes a document object
+Form Object : 
+Form Control elements : 
+
+<script>
+   alert("Hi and Welcome");
+<script>
+
+external javascript
+<script src="<path>"></script>
+
+<a href="aaa.html" onclick="">click here</a>
+
+Display Options :
+window.alert("");
+document.write();
+innerHtml
+console.log();
+
+A script consists of variables, values, operators, expressions, keywords, comments 
+etc.
+
+var a=25;
+var b='abc';
+
+a=true;
+
+result = prompt(text)
+result= confirm(msg)
+

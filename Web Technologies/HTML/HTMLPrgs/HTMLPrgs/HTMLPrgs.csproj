@@ -50,6 +50,7 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="2D-3D.html" />
     <Content Include="Animation.html" />
     <Content Include="Audio_Video.html" />
     <Content Include="Canvas.html" />
@@ -60,6 +61,8 @@
     <Content Include="MultiColumn.html" />
     <Content Include="MyStyle.css" />
     <Content Include="Registration.html" />
+    <Content Include="Svg1.html" />
+    <Content Include="svg2.html" />
     <Content Include="Table.html" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

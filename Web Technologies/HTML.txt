@@ -82,3 +82,33 @@ Length and Percentages
   -- px
   -- pt 
   -- %
+
+
+HTML Version : Html1, 2,3,4,5, Living Document (where enhancements happens to the same standard version)
+
+CSS Versions : Css1,css2,css3 (Responsive Design, Advance Layout-> Flex Box, Grid, Visual Enhancements -> Animation, Transitions, Transformation)
+
+Web-Kit is a html/css web browser rendering engine
+
+IE : Engine-Trident,  Css-prefix -ms
+Edge : Engine - EdgeHTML - Blink3,  css-prefix -ms
+Firefox : Engine -Gecko, css-prefic -moz
+Opera : Engine- Presto -> Blink1, css-prefix -o
+Safari : Engine -Webkit, css-prefix -webkit
+Chrome : Engine -webkit -> Blink2, css-prefix -webkit
+
+A @-webkit-keyframes are blocks that contain rule sets called keyframes. A keyframe defines the style to be applied at any given moment during animation. The animation engine will smoothly interpolate styles between the keyframes
+
+Scalable Vector graphics (SVG) : is defined using the XML format
+ - All elements must be properly closed
+ - Is case sensitive and hence any elements or attributes is preferred to be in lower-case
+ - Al attribute values to be inside the quotes of the svg element (even if they are numbers)
+
+Ways to Integrate SVG with Html
+  1. Inline SVG : using <svg> element
+  2. External SVG : use <object> or <img>
+  3. svg as background
+
+
+
+
