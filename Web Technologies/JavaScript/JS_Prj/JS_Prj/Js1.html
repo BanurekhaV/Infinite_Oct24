@@ -1,0 +1,69 @@
+﻿<!--<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+</head>
+<body>
+    <h2>Javascript Jobs</h2>
+
+    <p id="num">Javascript can Change HTML document</p>
+    <p id="str1">Persons Name :</p>
+    <p id="obj">Object Data :</p>
+
+    <script>
+        var length = 10;
+        var Cname = "Infinite Ltd.";
+        var ob = { firstname: "Banurekha", lastname: "Mahesh" };
+
+        //document.getElementById("num").innerHTML = length;
+        //document.getElementById("str").innerHTML = name;
+        //document.getElementById("obj").innerHTML = ob.firstname + " " + ob.lastname;
+    </script>
+
+    <button type="button" onclick="document.getElementById('num').innerHTML = length">Num Change</button>
+    <button type="button" onclick="document.getElementById('obj').innerHTML = ob.firstname + ob.lastname">Object Change</button>
+    <button type="button" onclick="document.getElementById('str1').innerHTML = Cname">Name Change</button>
+
+</body>
+</html>-->
+<!--<html>--> 
+<!-- user input data to be displayed-->
+<!--<body>
+    <input id="userinput" size="40" />
+    <button ondblclick="userSubmit()">Submit</button>
+    <br/>
+    <div id="result">
+
+        <script type="text/javascript">
+            function userSubmit() {
+                var ui = document.getElementById('userinput').value;
+                document.getElementById('result').innerHTML = "You Typed : " + ui;
+            }
+        </script>
+    </div>
+</body>
+
+</html>-->
+
+<html>
+<!--tagname example-->
+<body>
+    <script>
+        function change() {
+            var parameters = document.getElementsByTagName("p");
+            document.getElementById("secondp").innerHTML = parameters[1].innerHTML;
+            alert("Value Changed..");
+           // document.write("Original Value changed...");
+        }
+    </script>
+
+    <h1>Understanding Tagname and Arrays</h1>
+    <p id="secondp">This is Javascript Functionality</p>
+    <p>It is Para 2</p>
+    <p>Para 3</p>
+    <button onclick="change()">Click here to change values</button>
+    
+</body>
+</html>

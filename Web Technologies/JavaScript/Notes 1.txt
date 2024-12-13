@@ -48,3 +48,26 @@ a=true;
 result = prompt(text)
 result= confirm(msg)
 
+var person[]
+var person{fname="dftgy", lname="ghj" }
+
+var x;  // undefined (both the type as well as the value are undefined)
+
+var x=""; string (value is empty, type is string)
+
+var x=null; (value is null, but type is object)
+
+5+5 = 10
+"5"+5 = 55
+"hello"+5= hello5
+
+if x==5
+==(equal to a value)
+=== (equal values and equal types)
+!=(not equal to a value)
+!==(not equal values and not equal types)
+
+typeof "Infinite"  - returns string
+typeof [1,2,3]     - returns an object
+typeof {name:'banu', age:30} - returns object
+
