@@ -28,3 +28,10 @@ Events : Mouse, Keyboard, Form, Document/window
 methods : hide(), show(), toggle(),fadein(), fadeout(), fadetoggle(), slide(), animate(), callback(), chaining
 
     -options - speed parameter (slow, fast, milliseconds)
+
+AJAX with Jquery  : Asynchronous Java script and xml
+
+Parts of the web page can be updated with the data from the server without having to relaod the entire page
+
+Imp. methods of ajax:
+ 1. load(url,data,callback)

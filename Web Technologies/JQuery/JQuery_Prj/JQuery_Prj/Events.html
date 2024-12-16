@@ -1,0 +1,86 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    
+    <!-- handling events by binding-->
+    <script>
+        $(document).ready(function () {
+            //to bind
+            //$('div').bind('click', function (event) {
+            //    alert("Hello " + event.target.innerHTML);
+            //});
+
+            //to unbind
+            //$('div').bind('click', function (event) {
+            //    alert("Hello " + event.target.innerHTML);
+            //    alert("The Event Type is : " + event.type);
+            //});
+            //$('button').dblclick(function () {
+            //    $('div').unbind('click');
+            //})
+
+            //eg for on
+            //$('p').on({
+            //    mouseenter: function () {
+            //        $(this).css("background-color", "red");
+            //    },
+            //    mouseleave: function () {
+            //        $(this).css("background-color", "blue");
+            //    },
+            //  dblclick: function () {
+            //        $(this).css("color", "white");
+            //    },
+            //    hover: function () {
+            //        $(this).css("fontSize", "48px");
+            //    }
+            //})
+
+            //jquery for fade in/out
+            $('#b1').click(function () {
+                $('#d1').fadeIn();
+            })
+            $('#b2').click(function () {
+                $('#d1').fadeOut();
+            })
+
+        })
+
+    </script>
+
+    <style>
+        .div{
+            margin:10px;
+            padding:12px; border:2px solid blue; width:60px;
+        }
+    </style>
+
+</head>
+<body>
+    <!--<p>Click on any of the below Square and see the results</p>
+
+    <div class="div" style="background-color:coral">
+        Div No.1
+    </div>
+    <br />
+    <div class="div" style="background-color:deeppink">
+        Div No.2
+    </div>
+    <br />
+    <div class="div" style="background-color:lime">
+        Div No.3
+    </div>
+    <br/>
+    <button>Unbind</button>-->
+
+    <h2>Fade in and Out</h2>
+
+    <button id="b1">Fade In</button>
+    <button id="b2">Fade Out</button>
+
+    <div id="d1" style="background-color:aqua;display:none;">Hi</div> <br />
+
+</body>
+</html>

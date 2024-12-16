@@ -1,0 +1,45 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $('#b1').click(function () {
+                $('#board').slideDown(5000);
+            })
+            $('#b2').click(function () {
+                $('#board').stop();
+            })
+        })
+    </script>
+
+    <style>
+        #b1, #board{
+            padding:7px;
+            font-size:20px;
+            background-color:cadetblue;
+            border:1px solid red;
+            text-align:center;
+        }
+
+        #board{
+            padding:40px;
+            display:none;
+        }
+    </style>
+</head>
+<body>
+    <h2>Slide and Stop</h2>
+
+    <button id="b2">Stop Sliding</button>
+    <br />
+
+    <button id="b1">Start Sliding</button>
+
+    <div id="board">This is slide and stop</div>
+
+</body>
+</html>

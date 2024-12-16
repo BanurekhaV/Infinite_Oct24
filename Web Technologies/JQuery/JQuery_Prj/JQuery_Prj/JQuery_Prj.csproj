@@ -67,9 +67,12 @@
   <ItemGroup>
     <Content Include="Animate.html" />
     <Content Include="DOMChanges.html" />
+    <Content Include="Events.html" />
+    <Content Include="Get_Set.html" />
     <Content Include="Jq1.html" />
     <Content Include="Jq2.html" />
     <Content Include="Jq3.html" />
+    <Content Include="Others.html" />
   </ItemGroup>
   <ItemGroup>
     <BootstrapperPackage Include=".NETFramework,Version=v4.7.2">
