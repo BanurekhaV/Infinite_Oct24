@@ -1,0 +1,56 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+    <style>
+       /* p{
+            background-color:fuchsia;
+            font-size:24px;
+            padding:20px;
+        }*/
+        .tclass *{
+            margin:10px;
+            padding:5px;
+            color:fuchsia;
+            border:2px solid grey;
+            display:block;
+        }
+    </style>
+    <script>
+        //call back function eg 1.
+
+        //$(document).ready(function () {
+        //    $('button').click(function () {
+        //        $('p').slideToggle("slow", function () {
+        //            alert("This is the Slide Toggle effect");
+        //        });
+        //    });
+        //});
+
+        //jquery traversal
+        $(document).ready(function () {
+            $('span').parents('ul').css({ color: "red", border: "2px solid blue" });
+        })
+    </script>
+</head>
+<body class="tclass">Hierarchy(GG_GParents)
+    <!--<h2>Jquery Call back</h2>
+    <p> Hey There !! I am a Para</p>
+    <button>Click to toggle</button>-->
+
+    <h2>Jquery for Descendants/Traversal</h2>
+    <div>
+        (G_GParents)
+        <ul>UL(G Parents)
+        <li>LI(Parent)
+            <span> Span Element</span>
+            </li>        
+        </ul>
+    </div>   
+
+</body>
+</html>

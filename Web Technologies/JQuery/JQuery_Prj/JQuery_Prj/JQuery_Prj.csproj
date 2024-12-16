@@ -65,8 +65,11 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Animate.html" />
+    <Content Include="DOMChanges.html" />
     <Content Include="Jq1.html" />
     <Content Include="Jq2.html" />
+    <Content Include="Jq3.html" />
   </ItemGroup>
   <ItemGroup>
     <BootstrapperPackage Include=".NETFramework,Version=v4.7.2">

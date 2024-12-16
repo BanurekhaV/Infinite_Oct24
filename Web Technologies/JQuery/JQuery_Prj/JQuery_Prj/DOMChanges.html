@@ -1,0 +1,72 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <!--eg for append/prepend/remove-->
+
+    <script>
+        //element removal
+        //$(document).ready(function () {
+        //    $('button').click(function () {
+        //        $('div').remove();
+        //       // $('div').empty(); //remove all child elements of the selected element
+        //        //remove();  // removes the selected element and hence all its child elements
+        //    })
+        //})
+
+        //jquery for append prepend
+        //$(document).ready(function () {
+        //    $('#btn1').click(function () {
+        //        $('p').append("<b> Stay Indoors </b>");
+        //    })
+        //    $('#btn2').click(function () {
+        //        $('ol').prepend("<li> New Item </li>");
+        //    })
+        //})
+        // })
+
+        //Jquery for dynamic element/data insertion
+        function appendMany() {
+            var txt1 = "<p style='color:red'> New Text </p>";  //creating a text with html
+            var txt2 = $("<h2 style='color:blue'></h2>").text("Heading 2");  //creating text with Jquery
+            var txt3 = document.createElement('p');
+            txt3.innerHTML = "My New Paragraph";  // creating text with DOM
+            $('body').append(txt1, txt2, txt3);
+        }
+
+       
+    </script>
+</head>
+<body>
+   <!--h2>Removing Elements</h2>
+    <div style="height:150px; width:300px;border:1px solid red; background-color:aquamarine;">
+        Here we have Some elements 
+        <p>Paragraph</p>
+        <h4>Head 4</h4>
+        <p>Para 2</p>
+    </div>
+    <button>Remove</button>-->
+
+    <!--<h2>Append and Prepend</h2>
+    <p>Summers are really Hot</p>
+    <p>Have Plenty of Water to remain Hydrated</p><br/>
+    <br/>
+
+    <ol>
+        <li> Item 1</li>
+        <li> Item 2</li>
+    </ol>
+
+    <button id="btn1">Append</button>
+    <button id="btn2">Prepend</button>-->
+
+    <!--html for multiple appends-->
+    <h1>Multiple Elements Appending</h1>
+    <p>Trying to append elements at Runtime</p>
+
+    <button onclick="appendMany()"> Click here to Append </button>
+</body>
+</html>
