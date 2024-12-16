@@ -1,0 +1,95 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <!--Jquery script 1.-->
+    <!--<script>
+        $(document).ready(function () {
+            $('button').click(function () {
+                $('p').hide();
+            });
+        });
+    </script>
+
+</head>
+<body>
+    <h1>JQUERY 3.4.1</h1>
+    <p> I am a Paragraph 1</p>
+    <p> I am a Paragraph 2</p>
+    <p> I am a Paragraph 3</p>
+
+    <button>Hit me</button>
+
+</body>
+</html>-->
+    <!-- Jquery 2.-->
+    <!--<script>
+
+        //$(document).ready(function () {
+        //    $('button').click(function () {
+        //        $('#test').hide();
+        //    })
+        //})
+
+        //Jquery 3.
+        $(document).ready(function () {
+            $('p').click(function () {
+                $(this).hide();
+            })
+            
+        })
+    </script>-->
+
+    <script>
+        $(document).ready(function () {
+            $(".hide").click(function () {
+                $(this).parents(".ex").hide();
+            })
+        })
+    </script>
+
+    <style>
+        div.ex{
+            background-color:#e5eecc;
+            padding:7px;
+            border:solid 1px #c3c3c3;
+        }
+    </style>
+    </head>
+
+<body>
+    <!--<h2>Jquery 2</h2>
+    <p>Hello All ! How do you do ?</p>
+    <p id="test">here we see dom manipulation</p>-->
+
+    <!--<h2>JQuery 3</h2>
+
+    <p>If you click me, I will disappear</p>
+    <p>Click me away</p>
+    <p>Clicke me tooo...</p>
+
+    <button>Click here</button>-->
+    <h2>Jquery 4</h2>
+    <div class="ex">
+        <button class="hide">Hide me</button>
+        <p>
+            Contact : Seema K<br/>
+            Bangalore
+            Karnataka
+        </p>
+    </div>
+
+    <h3>Branch Office</h3>
+    <div class="ex">
+        <button class="hide">Hide me</button>
+        <p>
+            Contact : Jayakumar
+            Chennai MEPZ
+            Tamil Nadu
+        </p>
+    </div>
+</body>
+</html>
