@@ -13,6 +13,8 @@
                 //        $('#div1').html(result);
                 //    }
                 //});
+
+                //with jquery load
                 $('#div1').load("OurData.txt", function (responsetxt, statustxt, r) {
                     if (statustxt == 'success')
                         alert("External Content loaded successfully");
