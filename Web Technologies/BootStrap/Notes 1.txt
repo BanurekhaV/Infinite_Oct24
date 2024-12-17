@@ -1,0 +1,47 @@
+Bootstrap : open free frontend framework for easier and faster web development
+- It includes design templates for all html and css (tables,forms, nav bars, images carousels, java script plug-ins etc..)
+- It gives the ability to create responsive designs
+- was developed and released as an open source framework sometime in 2011, by Mark Otto, Jacob at Twitter
+
+
+Advantages of Bootstrap : Easy to use and learn
+            Responsive features to suit all devices.
+            It is compatible with almost all browsers
+            Core Framework was targeted as Mobile First Approach
+
+Grid System consists of 4 classes
+ 1. xs extra small(for phones with screen size < 760px wide)
+ 2. sm small device(for tablets, screen size =>760px wide)
+ 3. md medium device(for small laptops, screen size =>980px wide)
+ 4. lg large device(for laptops and desktops, screen size >=1200px wide)
+
+how to get bootstrap
+ - by download and install
+ - include cdn
+<link rel="stylesheet" href="https:"https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+
+Bootstrap container classes : (wraps the content of the website)
+that can span the viewport
+
+1. .container (fixed width)
+2. .container-fluid (full width)
+
+ViewPort : applies to responsive features of the bootstrap classes
+
+Components: A set of reusable , customizable aspect/objects for web development
+1. Jumbotron : making contents look larger and bigger to gain attention
+2. Alerts : predefined pop up messages
+3. Buttons : 
+4. Badges : labelling components
+5. Progress Bar :
+6. Navigation Bar :
+7. Forms :
+8. Card : extensible, flexible content component(layout)
+9. List Groups : display a series of content(theme based)
+10. Carousels : sliding images
+11. BreadCrumbs : provides location of the current page in the navigation hierarchy
+
+
+
+
+
