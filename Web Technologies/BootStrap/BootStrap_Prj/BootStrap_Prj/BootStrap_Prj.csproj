@@ -52,8 +52,11 @@
   <ItemGroup>
     <Content Include="BS1.html" />
     <Content Include="BS2.html" />
+    <Content Include="Card.html" />
     <Content Include="Carousels.html" />
     <Content Include="Form.html" />
+    <Content Include="Navbar.html" />
+    <Content Include="Others.html" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
