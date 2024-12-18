@@ -25,6 +25,16 @@ namespace Empty_Prj
             //txtcount.Text = ClicksCount.ToString();
 
             //step 2 using explicit viewstate
+            //if(ViewState["clicks"]!=null)
+            //{
+            //    ClicksCount = (int)ViewState["clicks"] + 1;
+            //}
+            //ViewState["clicks"] = ClicksCount;  //viewstate variable is getting created and initialized with data
+            //txtcount.Text = ClicksCount.ToString();
+
+            //step 3 using inbuilt viewstate variable of the server control
+            ClicksCount = Convert.ToInt32(txtcount.Text) + 1;
+            txtcount.Text = ClicksCount.ToString();
         }
     }
 }

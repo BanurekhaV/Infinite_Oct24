@@ -73,4 +73,18 @@ HttpApplication Creation : Application object is created for serving first and s
 Dispose : All resources are released upon calling this method
 Application End : Application is unloaded from the webservers memory.
 
-ViewState: -
+ViewState: - is a simple dictionary object that can store data as key and value pair
+  - does not need any typecasting
+  - can store any data including UDT
+
+All server controls have viewstate variable by default
+
+All web forms are basically instances of the ASP.Net web page class. The page class has the following extremely useful properties that corresponds to the intrinsic objects
+  - Session
+  - Application
+  - Cache
+  - Request
+  - Response
+  - Server
+  - User
+  - Trace
