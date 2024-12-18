@@ -22,6 +22,8 @@ Arrays :
 ]
 }
 
+empnames["Tarun","Swetha","Suchitha","Sai"]
+
 Similarities between JSON and XML
 
 : Both are hierarchical, human readable, self describing data, can be used by many programming languages, are used to fetch data from the server on request

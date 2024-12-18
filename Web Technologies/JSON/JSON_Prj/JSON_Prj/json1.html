@@ -19,9 +19,12 @@
         //1. parsing text to objects
         const mydata = '{"name":"Infinite Ltd.", "city":"Bangalore", "age":25}';
 
-        const myobj = JSON.parse(mydata);
-        document.getElementById('demo').innerHTML = "Object Details = " + myobj.name + " " + myobj.city;
+        const empnames = '["Tarun", "Swetha", "Suchitha", "Sai"]';
+       const enames = JSON.parse(empnames)
 
+        const myobj = JSON.parse(mydata);
+        // document.getElementById('demo').innerHTML = "Object Details = " + myobj.name + " " + myobj.city;
+        document.getElementById('demo').innerHTML = enames;
         //2. stringify objects to text
         data = JSON.stringify(myobj);
         document.write("Stingified data is : " + data);
