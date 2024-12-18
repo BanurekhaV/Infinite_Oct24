@@ -31,4 +31,46 @@ Web Form Model :
    - Session State
 
 --Inline Code : <% ...%> refers to any code written along with HTML inside the .aspx
---Code Nehind : refers to the code of an asp.net web page written in a separate class file with .cs extension
+--Code behind : refers to the code of an asp.net web page written in a separate class file with .cs extension
+
+WebPage : When a request is received, an instance of the requested page is created
+- Events are processed
+- Generates the HTML and Posts to the client
+- The page is destroyed immediately
+
+Life cycle of a page :
+S : starts the page 
+I : Initialization (all control classes)
+L : Load
+V : Validate
+E : Event handling
+R : Render (css,ui, html)
+
+Page request : if the page is rquested for the first time, then the server compiles the page and renders it . If the request is not the first time, then the server checks the cache to see if the page is existing. if so then that response is sent to the user
+
+Page Start : 2 objects known as request and response are created
+
+Page Initialization : All controls on the page are initialized
+
+Page Load : The page gets loaded with all default settings/values (on to the memory)
+
+Validation : if Any validations , are performed here
+
+PostbackEvent : this event gets triggered if the same page is loaded again
+
+Page Rendering : all information that are to be sent to the user are saved and then a complete web page is rendered.
+
+Unload : The page object is then disposed
+
+Page Events : Preinit,Init,Init_Complete, Preload, load, loadcomplete, Page_Prerender, Pageprerender_complete, Page_unload
+
+Application Life Cycle:
+------------------------
+
+Application Start : The web application is started by the webserver on the user request
+Object Creation : HttpContext, HttpRequest, HttpResponse objects are created. The context object contains the request and response objects.
+HttpApplication Creation : Application object is created for serving first and subsequent requests
+Dispose : All resources are released upon calling this method
+Application End : Application is unloaded from the webservers memory.
+
+ViewState: -

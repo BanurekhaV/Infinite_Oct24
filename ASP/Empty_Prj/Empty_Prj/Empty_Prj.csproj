@@ -68,6 +68,8 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="FirstForm.aspx" />
+    <Content Include="Page_LifeCycle.aspx" />
+    <Content Include="PostBack.aspx" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
@@ -77,6 +79,20 @@
     </Compile>
     <Compile Include="FirstForm.aspx.designer.cs">
       <DependentUpon>FirstForm.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Page_LifeCycle.aspx.cs">
+      <DependentUpon>Page_LifeCycle.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Page_LifeCycle.aspx.designer.cs">
+      <DependentUpon>Page_LifeCycle.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="PostBack.aspx.cs">
+      <DependentUpon>PostBack.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="PostBack.aspx.designer.cs">
+      <DependentUpon>PostBack.aspx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

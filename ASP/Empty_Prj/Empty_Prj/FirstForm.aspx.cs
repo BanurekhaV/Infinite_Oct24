@@ -11,7 +11,7 @@ namespace Empty_Prj
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-
+            Txtname.Text = "Welcome";
         }
 
         protected void btnclick_Click(object sender, EventArgs e)
