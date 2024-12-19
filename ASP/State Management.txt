@@ -14,11 +14,19 @@ StateManagement : Storing values across various pages using techniques as below:
    - Like ViewState, this also can only retain the state across multiple postbacks of the same page, and not other pages
    
  c) Cookies : Allows managing the state across pages
-     they are of 2 types 
+         - can travel to other pages with the previous state
+
+ they are of 2 types
+
          a) Persistent Cookies : (uses an object of the HttpCookies class to store the data)
          b) Non-Persistent Cookies: (Data is directly stored in the response object)
- d) Query Strings
 
-
+ d) Query Strings : allows to manage the state across pages using URL
+   - we can using Url encoding to format the data
+   - The data is sent to other pages via the address bar making it visible
+   - Sensitive data should not be sent via query string
 
 2. Server Side Technique :
+   a) Session State : are like viewstate that keeps track of state of a page across other pages
+
+  b) Application State : Manages the entire application instance for every session

@@ -67,19 +67,39 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="CookiesDestination.aspx" />
     <Content Include="CookiesSource.aspx" />
+    <Content Include="FirstSession.aspx" />
     <Content Include="HiddenFields.aspx" />
+    <Content Include="QueryStringDestination.aspx" />
+    <Content Include="QueryStringSource.aspx" />
+    <Content Include="SecondSession.aspx" />
     <Content Include="TestForm.aspx" />
+    <Content Include="ThirdSession.aspx" />
     <Content Include="ViewStateForm.aspx" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CookiesDestination.aspx.cs">
+      <DependentUpon>CookiesDestination.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CookiesDestination.aspx.designer.cs">
+      <DependentUpon>CookiesDestination.aspx</DependentUpon>
+    </Compile>
     <Compile Include="CookiesSource.aspx.cs">
       <DependentUpon>CookiesSource.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="CookiesSource.aspx.designer.cs">
       <DependentUpon>CookiesSource.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="FirstSession.aspx.cs">
+      <DependentUpon>FirstSession.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FirstSession.aspx.designer.cs">
+      <DependentUpon>FirstSession.aspx</DependentUpon>
     </Compile>
     <Compile Include="HiddenFields.aspx.cs">
       <DependentUpon>HiddenFields.aspx</DependentUpon>
@@ -89,12 +109,40 @@
       <DependentUpon>HiddenFields.aspx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="QueryStringDestination.aspx.cs">
+      <DependentUpon>QueryStringDestination.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="QueryStringDestination.aspx.designer.cs">
+      <DependentUpon>QueryStringDestination.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="QueryStringSource.aspx.cs">
+      <DependentUpon>QueryStringSource.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="QueryStringSource.aspx.designer.cs">
+      <DependentUpon>QueryStringSource.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="SecondSession.aspx.cs">
+      <DependentUpon>SecondSession.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SecondSession.aspx.designer.cs">
+      <DependentUpon>SecondSession.aspx</DependentUpon>
+    </Compile>
     <Compile Include="TestForm.aspx.cs">
       <DependentUpon>TestForm.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="TestForm.aspx.designer.cs">
       <DependentUpon>TestForm.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ThirdSession.aspx.cs">
+      <DependentUpon>ThirdSession.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ThirdSession.aspx.designer.cs">
+      <DependentUpon>ThirdSession.aspx</DependentUpon>
     </Compile>
     <Compile Include="ViewStateForm.aspx.cs">
       <DependentUpon>ViewStateForm.aspx</DependentUpon>

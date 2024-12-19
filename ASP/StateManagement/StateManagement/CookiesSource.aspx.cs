@@ -17,13 +17,18 @@ namespace StateManagement
         protected void btnRedirect_Click(object sender, EventArgs e)
         {
             //1. persistent cookie
-            HttpCookie hc = new HttpCookie("OurCookie");
-            hc["d1"] = txtuname.Text;
-            hc["d2"] = txtpassword.Text;
+            //HttpCookie hc = new HttpCookie("OurCookie"); //creating a cookie with a name
+            //hc["d1"] = txtuname.Text;
+            //hc["d2"] = txtpassword.Text;
 
-            //we can set the cookie expiry
-            hc.Expires = DateTime.Now.AddMinutes(5);
-            Response.Cookies.Add(hc);
+            ////we can set the cookie expiry
+            //hc.Expires = DateTime.Now.AddMinutes(5);
+            //Response.Cookies.Add(hc);
+            //Response.Redirect("CookiesDestination.aspx");
+
+            //2. Non persistent cookie
+            Response.Cookies["uname"].Value = txtuname.Text;
+            Response.Cookies["pass"].Value = txtpassword.Text;
             Response.Redirect("CookiesDestination.aspx");
         }
     }
