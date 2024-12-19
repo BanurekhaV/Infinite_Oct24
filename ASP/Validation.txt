@@ -1,0 +1,12 @@
+Validation Controls : are some inbuilt controls of Asp.net web forms
+
+
+
+
+
+In order to enable JavaScript Libraries to execute Validation Functions of the page, we should make an entry in the web.config file as below
+
+<configuration>
+  <appSettings>
+    <add key="ValidationSettings:UnobtrusiveValidationMode" value="none"/>
+  </appSettings>

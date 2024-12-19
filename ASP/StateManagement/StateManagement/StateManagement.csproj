@@ -67,9 +67,11 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="ApplicationState.aspx" />
     <Content Include="CookiesDestination.aspx" />
     <Content Include="CookiesSource.aspx" />
     <Content Include="FirstSession.aspx" />
+    <Content Include="Global.asax" />
     <Content Include="HiddenFields.aspx" />
     <Content Include="QueryStringDestination.aspx" />
     <Content Include="QueryStringSource.aspx" />
@@ -80,6 +82,13 @@
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ApplicationState.aspx.cs">
+      <DependentUpon>ApplicationState.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ApplicationState.aspx.designer.cs">
+      <DependentUpon>ApplicationState.aspx</DependentUpon>
+    </Compile>
     <Compile Include="CookiesDestination.aspx.cs">
       <DependentUpon>CookiesDestination.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -100,6 +109,9 @@
     </Compile>
     <Compile Include="FirstSession.aspx.designer.cs">
       <DependentUpon>FirstSession.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="HiddenFields.aspx.cs">
       <DependentUpon>HiddenFields.aspx</DependentUpon>

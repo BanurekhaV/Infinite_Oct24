@@ -62,7 +62,17 @@ Page Rendering : all information that are to be sent to the user are saved and t
 
 Unload : The page object is then disposed
 
-Page Events : Preinit,Init,Init_Complete, Preload, load, loadcomplete, Page_Prerender, Pageprerender_complete, Page_unload
+Page Events : Preinit : Is the event where the server checks if the request is postback or not. Also here it sets the themes and masterpages
+Init : the control tree is built
+Init_Complete :tracks all the viewstate
+LoadViewState : loads all viewstate info
+Preload : occurs before post data is loaded in the controls
+Load : The page and then recursively all child controls are loaded and the tree is created.
+loadcomplete: The page event handlers and validations are done Page_Prerender: occurs just before the output is rendered, where any updations to th econtrols are performed
+Pageprerender_complete : is an event that is ready to fire with the updated output
+Page_Render: handing over the output to the browser engine
+SaveState: 
+Page_unload : Page object ready for discard
 
 The last event that is triggered is Page_Unload when the page is fully rendered and the HTML is already sent to the client. This stage, the page object is ready for discard, and hence we cannot indulge in any page properties.
 
