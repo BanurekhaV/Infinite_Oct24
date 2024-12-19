@@ -1,0 +1,24 @@
+StateManagement : Storing values across various pages using techniques as below:
+
+1. Client Side Technique:
+ a) ViewState :  is a simple dictionary object that can store data as key and value pair
+  - does not need any typecasting
+  - can store any data including UDT
+  - It stores at the client side
+  - Can retain the state across multiple postbacks of the same page
+  - Cannot travel to other pages
+
+ b) Hidden Field : is a control of the tool box, that is not visible at the runtime
+   - It is a class that needs to be initialized, along with its members. This can be a load on the system
+   - Can be used if only few data needs to be stored, else Viewstate is the better option
+   - Like ViewState, this also can only retain the state across multiple postbacks of the same page, and not other pages
+   
+ c) Cookies : Allows managing the state across pages
+     they are of 2 types 
+         a) Persistent Cookies : (uses an object of the HttpCookies class to store the data)
+         b) Non-Persistent Cookies: (Data is directly stored in the response object)
+ d) Query Strings
+
+
+
+2. Server Side Technique :

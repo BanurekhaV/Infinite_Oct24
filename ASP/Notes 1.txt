@@ -46,7 +46,7 @@ V : Validate
 E : Event handling
 R : Render (css,ui, html)
 
-Page request : if the page is rquested for the first time, then the server compiles the page and renders it . If the request is not the first time, then the server checks the cache to see if the page is existing. if so then that response is sent to the user
+Page request : if the page is requested for the first time, then the server compiles the page and renders it . If the request is not the first time, then the server checks the cache to see if the page is existing. if so then that response is sent to the user
 
 Page Start : 2 objects known as request and response are created
 
@@ -64,6 +64,9 @@ Unload : The page object is then disposed
 
 Page Events : Preinit,Init,Init_Complete, Preload, load, loadcomplete, Page_Prerender, Pageprerender_complete, Page_unload
 
+The last event that is triggered is Page_Unload when the page is fully rendered and the HTML is already sent to the client. This stage, the page object is ready for discard, and hence we cannot indulge in any page properties.
+
+
 Application Life Cycle:
 ------------------------
 
@@ -72,6 +75,16 @@ Object Creation : HttpContext, HttpRequest, HttpResponse objects are created. Th
 HttpApplication Creation : Application object is created for serving first and subsequent requests
 Dispose : All resources are released upon calling this method
 Application End : Application is unloaded from the webservers memory.
+
+Trace :
+-----
+is like a debugger that traces all requests and response 
+activities of a page/s. In order to be able to trace, we have to enable the trace in the web.config file as below :
+
+<system.web>
+ <trace enabled="true"/>
+</system.web>
+
 
 ViewState: - is a simple dictionary object that can store data as key and value pair
   - does not need any typecasting
