@@ -1,8 +1,11 @@
 Validation Controls : are some inbuilt controls of Asp.net web forms
+The important properties of each control varies but there is a common property called 'Control To Validate' that has to be set
 
-
-
-
+Required Field : 
+Range Validator :
+Regular Expression :
+Compare :
+Custom : are controls that enables both the server side as well as the client side validation to take place
 
 In order to enable JavaScript Libraries to execute Validation Functions of the page, we should make an entry in the web.config file as below
 
@@ -10,3 +13,5 @@ In order to enable JavaScript Libraries to execute Validation Functions of the p
   <appSettings>
     <add key="ValidationSettings:UnobtrusiveValidationMode" value="none"/>
   </appSettings>
+
+Data Controls : are controls that can be bound to the any datasource and to perform CRUD operations.
