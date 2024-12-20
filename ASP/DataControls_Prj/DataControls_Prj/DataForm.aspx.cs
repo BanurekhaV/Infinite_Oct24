@@ -16,10 +16,18 @@ namespace DataControls_Prj
             SqlConnection con = new SqlConnection("Data Source=Laptop-tjj7d977; initial catalog=infinitedb;" +
                 "integrated security=true;");
             con.Open();
-            SqlDataAdapter da = new SqlDataAdapter("select * from tblemployee", con);
-            DataSet ds = new DataSet();
-            da.Fill(ds);
-            GridView1.DataSource = ds;
+
+            //using adapter
+            //SqlDataAdapter da = new SqlDataAdapter("select * from tblemployee", con);
+            //DataSet ds = new DataSet();
+            //da.Fill(ds);
+            //GridView1.DataSource = ds;
+            //GridView1.DataBind();
+
+            //using command 
+            SqlCommand cmd = new SqlCommand("Select * from tblemployee", con);
+          
+            GridView1.DataSource = cmd.ExecuteReader();
             GridView1.DataBind();
         }
     }
