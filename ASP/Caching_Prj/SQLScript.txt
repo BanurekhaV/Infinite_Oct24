@@ -1,0 +1,37 @@
+use HomeCare
+
+create table tblProducts
+(ID int identity primary key,
+Pname nvarchar(50),
+Description nvarchar(max))
+
+insert into tblProducts values('Laptops', 'Dell Laptops'),
+('Desktops','HP Computers'),('iPhones','Apple Phones'),('LED', 'Samsung')
+
+select * from tblProducts
+
+create or alter procedure spGetProducts
+as
+begin
+ waitfor delay '00:00:05'
+ select ID, pName,Description from tblproducts
+ end
+
+ spgetproducts
+
+ create or alter procedure spGetproductByName @ProductName nvarchar(50)
+ as
+ begin
+-- waitfor delay '00:00:05'
+  if(@ProductName = 'All')
+   begin
+    select ID, pname,Description from tblproducts
+	end
+	else
+	begin
+	 select ID, pname,Description from tblproducts where pName=@ProductName
+	 end
+	end
+	exec spGetproductByName 'all'
+		exec spGetproductByName 'iphones'
+  
