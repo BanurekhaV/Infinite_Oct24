@@ -1,0 +1,9 @@
+Exceptions : are unexpected events that stall the program flow. In order to handle them so that the user is being made aware of some issues, we can in asp.net webforms, use the below techniques
+
+1. Inline Code / per page using ErrorPage attribute
+2. Code Behind by handling Page_Error Event
+3. Handling Application_Error event in the Global.asax file
+4. Handling errors at the web.config file by enabling the <customErrors mode="on">. Here we can also handle HTTP status code relevant errors also
+
+5. Logging the Errors as file
+6. Logging errors onto the database
