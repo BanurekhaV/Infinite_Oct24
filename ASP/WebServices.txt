@@ -1,0 +1,38 @@
+Web Services : Is a software service that makes use of xml for data interchange and SOAP as a protocol for communication, with the servers that have some set of services written
+
+A web service is a set of open protocols and standards that allow data to be exchanged between different applications or systems. Web services can be used by software programs written in a variety of programming languages and running on a variety of platforms to exchange data via computer networks such as the Internet in a similar way to inter-process communication on a single computer.
+
+- are language, platform and protocol independent
+-it includes
+  a) XML
+  b) SOAP - Simple Object Access protocol
+  c) WSDL - Web services Description language
+  d) UDDI - Universal Description, Discovery, and Integration.( helps in searching for a particular service(registered) over the net
+
+Webservices application has an .asmx extension
+
+Functions of Web Services
+
+It’s possible to access it via the internet or intranet networks.
+XML messaging protocol that is standardized.
+Operating system or programming language independent.
+Using the XML standard, it is self-describing.
+A simple location approach can be used to locate it.
+
+Evolution of Distributed Application
+1. Peer - peer computing : computers over a network share resources without a primary/central server
+
+2. Grid computing : refers to a network of computers that can work together and solve/perform analysis (eg research projects)
+
+3. Cloud computing : Central server, from where the users can access storage, business operations and applications
+
+4. Internet of Things : refers to a network of interconnected devices, such as sensors, appliances
+
+5. Edge computing : involves processing of data closer to the source rather than a central location. Helps in improving performance
+
+Examples of distributed applications
+ 1. Google Search
+ 2. Bitcoins
+ 3. AWS
+ 4. Open Stack (IAAS)
+ 5. Smart Grids 

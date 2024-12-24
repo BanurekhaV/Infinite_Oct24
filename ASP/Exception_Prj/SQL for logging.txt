@@ -1,0 +1,24 @@
+use infinitedb
+
+--table for logging the asp.net errors
+create table TblExceptionLog
+(
+LogId int identity,
+ExceptionMsg varchar(100),
+ExceptionType varchar(100),
+ExceptionSource nvarchar(max),
+ExceptionURL varchar(100),
+LogDate datetime)
+
+--now let us create a procedure for logging errors
+create or alter procedure ExceptionLoggingToDatabase
+(@ExceptionMsg varchar(100),@ExceptionType varchar(100),@ExceptionSource nvarchar(max),
+@ExceptionURL varchar(100))
+as
+  begin
+    insert into TblExceptionLog(ExceptionMsg,ExceptionType,ExceptionSource,ExceptionURL,LogDate)
+	 select @ExceptionMsg,@ExceptionType,@ExceptionSource,@ExceptionURL,getdate()
+  end
+
+  select * from TblExceptionLog
+
