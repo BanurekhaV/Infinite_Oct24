@@ -13,8 +13,16 @@
             <asp:TextBox ID="txtname" runat="server"></asp:TextBox>
             <br />
             <br />
-            <asp:Button ID="btnsayhello" runat="server" Text="Sayhello" OnClick="btnsayhello_Click" />
+            Enter Fisrt Number&nbsp; :<asp:TextBox ID="txtnum1" runat="server" ></asp:TextBox>
             <br />
+            Enter Second Number : <asp:TextBox ID="txtnum2" runat="server"></asp:TextBox>
+            <br />
+            <br />
+            <asp:Button ID="btnsayhello" runat="server" Text="Sayhello" OnClick="btnsayhello_Click" />
+            &nbsp;&nbsp;&nbsp;
+            <asp:Button ID="btnhello" runat="server" Text="Hello" OnClick="btnhello_Click" />
+            &nbsp;&nbsp;&nbsp;
+            <asp:Button ID="btnSquare" runat="server" Text="Squareroot" OnClick="btnSquare_Click"/><br />
             <br />
             <asp:Label ID="Label1" runat="server" Text="Label"></asp:Label>
         </div>

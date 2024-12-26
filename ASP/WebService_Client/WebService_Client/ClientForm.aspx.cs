@@ -20,5 +20,15 @@ namespace WebService_Client
         {
             Label1.Text = client.SayHello(txtname.Text);
         }
+
+        protected void btnhello_Click(object sender, EventArgs e)
+        {
+            Label1.Text = client.HelloWorld();
+        }
+
+        protected void btnSquare_Click(object sender, EventArgs e)
+        {
+           Label1.Text = client.Squareroot(Convert.ToSingle(txtnum1.Text)).ToString();
+        }
     }
 }

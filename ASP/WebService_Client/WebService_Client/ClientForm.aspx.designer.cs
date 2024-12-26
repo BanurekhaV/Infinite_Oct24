@@ -33,6 +33,24 @@ namespace WebService_Client
         protected global::System.Web.UI.WebControls.TextBox txtname;
 
         /// <summary>
+        /// txtnum1 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox txtnum1;
+
+        /// <summary>
+        /// txtnum2 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox txtnum2;
+
+        /// <summary>
         /// btnsayhello control.
         /// </summary>
         /// <remarks>
@@ -40,6 +58,24 @@ namespace WebService_Client
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Button btnsayhello;
+
+        /// <summary>
+        /// btnhello control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button btnhello;
+
+        /// <summary>
+        /// btnSquare control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button btnSquare;
 
         /// <summary>
         /// Label1 control.

@@ -25,7 +25,7 @@ namespace WebServices_Prj
         [WebMethod]
         public string SayHello(string username)
         {
-            return "Hello + :" + username;
+            return "Hello :" + username;
         }
 
         [WebMethod]
