@@ -1,0 +1,45 @@
+ASP.Net MVC : is a popular framework for developing web based applications
+
+- is based on Model, View and Controller pattern, that makes it more robust, fast and secure
+- it is the next generation technology and it is the successor of ASP.Net webforms
+- it is a light weight component
+- Designs and codes are neatly separated
+- It uses pure HTML controls or HTMl Helpers to generate HTML(No server controls)
+-It uses Controller based URL routing
+- Implements no view state
+- Uses Razor Syntax for customization
+- It uses Layouts instead of master pages for consistent look and feel
+- It is an Open Source framework
+
+Model : is responsible for keeping database operational logic like connecting and retrieving info from datasources
+
+View : is responsible for serving web pages to the user (UI to client)
+
+Controller : all programming logics are kept here
+  - is the main controlling part of MVC
+  - It is a mediator between client request and server response
+  - Acts like a bridge between view page and models
+  - It works with Http request
+  - Each browser request is mapped with a particular controller and each controller has several action methods to handle the browser request
+  - All controller class must be suffixed with 'Controller' keyword
+
+What is Action methods
+
+-- all public methods written in side the controller are action methods
+a) All action methods must be only public
+b) Action methods cannot be overloaded
+c) Cannot be static 
+d) every controller has one default action method called index(), that returns the view page
+e) ActionResult is the base class for all the result type action method
+
+The various result types of action methods are:
+ 1. view result : html and razor
+ 2. Empty result : no result
+ 3. RedirectResult : a redirection to new url
+ 4. JsonResult : result of Jason type
+ 5. contentresult : a text result
+ 6. javascript result : 
+ 7. Filecontentresult: downloadable binary content
+ 9. filepathresult :downloadable with a path
+ 10. filestreamresult : downloadable with a file stream
+0
