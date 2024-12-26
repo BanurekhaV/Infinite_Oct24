@@ -42,4 +42,58 @@ The various result types of action methods are:
  7. Filecontentresult: downloadable binary content
  9. filepathresult :downloadable with a path
  10. filestreamresult : downloadable with a file stream
-0
+
+
+Views : is a folder in the MVC structure which contains .cshtml files, design layouts that are used while rendering web pages
+- view folder maintans a separate folder for each controller along with view pages
+- View folders name is the same as that of the controller name, and the .cshtml page name is same as the action method name
+
+- allows writing razor syntax, a powerful and easier way of witing the server(web application) code directly on the html based view page
+-Razor is a markup syntax
+-Uses '@{}' block to write program code
+-All inline expressions like variables, functions start with @
+-Variables can be declared using the var keyword, and all code terminates with a';'
+-string values are given with " "
+-Comments innrazor is as
+ @*....... *@   -- multiline comments
+/*... */
+// - single line comment
+
+- to bind the model with the view we use @model 
+-@Model helps in accessing the properties of the bound model object
+
+ViewBag, ViewData, TempData : are objects that are used for passing information from controllers to views
+
+ViewBag : Dynamic Data Type
+- used to pass data from controllers to views
+- has a short life, meaning once the data is passed from controller to the view, it becomes null
+- does not require any typecasting
+
+Eg : ViewBag.Mydata ="Data 1";
+
+and to access the data in viewbag in the view page
+ @ViewBag.Mydata
+
+
+ViewData : is a dictionary object that is derived from ViewDataDictionary
+- uses key/value pair for storing and retrieving data
+- used to pass data from controllers to views
+- has a short life, meaning once the data is passed from controller to the view, it becomes null
+- requires typecasting for complex data types
+
+Eg :
+
+ViewData["Mydata"]= "Data 2";
+and to access in the view page
+@ViewData["Mydata"]
+
+TempData : is a dictionary object that is derived from TempDataDictionary
+- uses key/value pair for storing and retrieving data
+- used to pass data from controllers to views
+- internally makes use of session to store values
+- We must check for null before using TempData to avoid runtime errors
+- TempData can be made alive in subsequent requests by calling TempData.Keep() method
+- Has a bigger life than ViewBag and ViewData
+- It is generally used to transfer values/data from one controller to another
+
+
