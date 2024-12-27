@@ -4,8 +4,16 @@
 }
 
 <h2>Index</h2>
+<h3>@ViewBag.Data1</h3><br/> <!--unable to access the viewbag or viewdata-->
+<h3>@ViewData["Data2"]</h3>
+@*<h3>List of Flowers</h3>
+@foreach(var item in Model)
+            {
+                <p>@item</p>
+            }*@
+
+<h3>List of Stationery from TempData</h3>
 @foreach(var item in Model)
             {
                 <p>@item</p>
             }
-

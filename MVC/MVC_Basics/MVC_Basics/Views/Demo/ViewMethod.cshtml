@@ -5,4 +5,8 @@
 
 <h2>ViewMethod of Demo Controller</h2>
 <p>This is a sample view result</p>
+@foreach(var s in TempData["stores"]as List<string>)
+            {
+                <h3>@s</h3>
+            }
 

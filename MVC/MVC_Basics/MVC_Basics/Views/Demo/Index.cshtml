@@ -5,3 +5,8 @@
 
 <h2>Index View of Demo Controller</h2>
 
+<h3>Trying to access TempData Values of the Data Controller</h3>
+@foreach(var item in TempData["stores"]as List<string>)
+            {
+                <p>@item</p>
+            }

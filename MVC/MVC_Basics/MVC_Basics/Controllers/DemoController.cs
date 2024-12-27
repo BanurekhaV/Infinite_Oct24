@@ -12,7 +12,11 @@ namespace MVC_Basics.Controllers
         // GET: Demo
         public ActionResult Index()
         {
-            return View();
+            // List<string> mystationery = TempData["stores"] as List<string>;
+            // return View(mystationery);
+            TempData.Keep();
+            // return View(TempData["stores"]);
+            return RedirectToAction("ViewMethod");
         }
 
         //1. Normal method
@@ -25,7 +29,8 @@ namespace MVC_Basics.Controllers
         //2. viewresult
         public ViewResult ViewMethod()
         {
-            return View();
+            TempData.Keep();
+            return View(TempData["stores"]);
         }
            
         //3. ContentResult
