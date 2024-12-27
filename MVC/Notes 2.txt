@@ -1,0 +1,13 @@
+HTTP Verbs:
+
+1. HttpGet : is a get request of a resource from the server
+2. HttpPost : is where data from view is sent to the server via the controller
+3. HttpPut : is a request for change in data (from view to the server)
+4. httpdelete : is a request for deletion of data from view and then the server
+5. HttpPatch : is a request for selective updation of data
+
+--passing of data from the view to controller :
+1. Object (model)
+2. Forms Collection
+3. Parameter Collection (Parameter name to match the Model/Schema Name)
+4. Request Object

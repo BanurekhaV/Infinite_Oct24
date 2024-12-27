@@ -1,0 +1,16 @@
+﻿@model IEnumerable<MVC_EF_DBFirst.Models.Category>
+@{
+    ViewBag.Title = "GetCategoryDetails";
+}
+
+<h2>GetCategory Details without Templated View</h2>
+
+@foreach(var item in Model)
+            {
+                <ul style="color:firebrick;">
+                    <li>@item.CategoryID</li>
+                    <li>@item.CategoryName</li>
+                    <li>@item.Description</li>
+                </ul>
+            }
+
