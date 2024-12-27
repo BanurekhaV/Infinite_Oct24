@@ -80,3 +80,4 @@ C:\Banu\Infinite_1\MVC\MVC_EF_DBFirst\MVC_EF_DBFirst\obj\Debug\MVC_EF_DBFirst.cs
 C:\Banu\Infinite_1\MVC\MVC_EF_DBFirst\MVC_EF_DBFirst\obj\Debug\MVC_EF_DBFirst.csproj.CopyComplete
 C:\Banu\Infinite_1\MVC\MVC_EF_DBFirst\MVC_EF_DBFirst\obj\Debug\MVC_EF_DBFirst.dll
 C:\Banu\Infinite_1\MVC\MVC_EF_DBFirst\MVC_EF_DBFirst\obj\Debug\MVC_EF_DBFirst.pdb
+C:\Banu\Infinite_1\MVC\MVC_EF_DBFirst\MVC_EF_DBFirst\obj\Debug\MVC_EF_DBFirst.csproj.AssemblyReference.cache
