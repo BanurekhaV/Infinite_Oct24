@@ -1,0 +1,1 @@
+﻿document.writeln("Welcome and this is our Third Java script file")

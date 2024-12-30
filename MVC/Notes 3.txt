@@ -1,0 +1,10 @@
+ModelStates and the Built -in Attributes for Validation
+
+Binding -Custom Model Binding
+Is the process of intercepting the standard model binding process to provide custom logic. Very useful when we have unique data formats
+
+
+
+
+
+
