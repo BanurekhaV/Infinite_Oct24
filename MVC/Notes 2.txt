@@ -11,3 +11,10 @@ HTTP Verbs:
 2. Forms Collection
 3. Parameter Collection (Parameter name to match the Model/Schema Name)
 4. Request Object
+
+
+MVC Code First using Repository Pattern
+
+Repository Pattern : is a structural pattern that abstracts data access, providing a centralized way to manage data operations. 
+
+It is an intermediary layer between an applications business logic and data storage (thereby enhancing cone maintainability, testability, flexibility, making it easier to work with different data sources)
