@@ -1,0 +1,26 @@
+Use Asynchronous Controller and Repository pattern to solve the below :
+
+
+Public class Contact
+{
+
+public long Id{get;set;}
+public string FirstName{get;set;}
+public string LastName {get;set;}
+public string Email{get;set;}
+}
+
+public ContactContext : DbContext{
+
+ }
+
+
+public interface IContactRepository
+{
+ Task<List<Contact>>GetAllAsync();
+ Task CreateAsync(Contact contact);
+ Task DeleteAsync(long Id);
+
+}
+
+Write the Repository Implementing Class, Controller and Views
