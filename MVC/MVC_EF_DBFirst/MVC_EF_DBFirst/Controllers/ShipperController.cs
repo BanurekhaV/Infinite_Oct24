@@ -36,16 +36,28 @@ namespace MVC_EF_DBFirst.Controllers
         //}
 
         //2. using parameter collections
-        public ActionResult Create(string CompanyName, string Phone)
+        //public ActionResult Create(string CompanyName, string Phone)
+        //{
+        //    Shipper s = new Shipper();
+        //    s.CompanyName = CompanyName;
+        //    s.Phone = Phone;
+        //    db.Shippers.Add(s);
+        //    db.SaveChanges();
+        //    return RedirectToAction("Index");
+        //}
+
+        //3. using Request Object to transfer data from view to controller
+        [ActionName("Create")]
+        public ActionResult CreatePost()
         {
             Shipper s = new Shipper();
-            s.CompanyName = CompanyName;
-            s.Phone = Phone;
+            s.ShipperID = Convert.ToInt32(Request["ShipperID"]);
+            s.CompanyName = Request["CompanyName"].ToString();
+            s.Phone = Request["Phone"].ToString();
             db.Shippers.Add(s);
             db.SaveChanges();
-            return RedirectToAction("Index");
+            return RedirectToAction("index");
         }
-
         public ActionResult Edit(int Id)
         {
             Shipper s = db.Shippers.Find(Id);

@@ -1,0 +1,69 @@
+﻿@model IEnumerable<AsynchronousController.Models.EMP>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.ename)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.job)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.mgr_id)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.hiredate)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.sal)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.comm)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.DEPT.dname)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.ename)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.job)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.mgr_id)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.hiredate)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.sal)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.comm)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.DEPT.dname)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.empno }) |
+            @Html.ActionLink("Details", "Details", new { id=item.empno }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.empno })
+        </td>
+    </tr>
+}
+
+</table>

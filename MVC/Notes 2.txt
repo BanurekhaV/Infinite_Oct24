@@ -18,3 +18,10 @@ MVC Code First using Repository Pattern
 Repository Pattern : is a structural pattern that abstracts data access, providing a centralized way to manage data operations. 
 
 It is an intermediary layer between an applications business logic and data storage (thereby enhancing cone maintainability, testability, flexibility, making it easier to work with different data sources)
+
+--Asynchronous Controller : It is like a normal controller with Views, differing only as below :
+
+ 1. Return type is prefixed with sync modifier - notifying that the method returns data asynchronously
+ 2. Return type is a Task<ActionResult> that represents the Task can return a value
+ 3. To notice that wherever there is a database related activity, there we have await keyword that waits for the data from database
+ 4. Also instead of ToList(), we use ToListAsync()

@@ -1,0 +1,540 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="InfiniteDBModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <!--Errors Found During Generation:
+warning 6013: The table/view 'InfiniteDB.dbo.Bonusdata' does not have a primary key defined and no valid primary key could be inferred. This table/view has been excluded. To use the entity, you will need to review your schema, add the correct keys, and uncomment it.
+        <EntityType Name="Bonusdata">
+          <Property Name="BId" Type="int" />
+          <Property Name="Eid" Type="int" />
+          <Property Name="BonusAmt" Type="int" />
+        </EntityType>-->
+        <!--Errors Found During Generation:
+warning 6013: The table/view 'InfiniteDB.dbo.casetable' does not have a primary key defined and no valid primary key could be inferred. This table/view has been excluded. To use the entity, you will need to review your schema, add the correct keys, and uncomment it.
+        <EntityType Name="casetable">
+          <Property Name="cid" Type="int" />
+          <Property Name="cname" Type="varchar" MaxLength="20" />
+        </EntityType>-->
+        <EntityType Name="DEPT">
+          <Key>
+            <PropertyRef Name="deptno" />
+          </Key>
+          <Property Name="deptno" Type="int" Nullable="false" />
+          <Property Name="dname" Type="varchar" MaxLength="50" />
+          <Property Name="loc" Type="varchar" MaxLength="50" />
+        </EntityType>
+        <!--Errors Found During Generation:
+warning 6002: The table/view 'InfiniteDB.dbo.dummy2' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+        <EntityType Name="dummy2">
+          <Key>
+            <PropertyRef Name="did" />
+          </Key>
+          <Property Name="did" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="ddata" Type="varchar" MaxLength="20" />
+        </EntityType>
+        <EntityType Name="EMP">
+          <Key>
+            <PropertyRef Name="empno" />
+          </Key>
+          <Property Name="empno" Type="int" Nullable="false" />
+          <Property Name="ename" Type="varchar" MaxLength="50" />
+          <Property Name="job" Type="varchar" MaxLength="50" />
+          <Property Name="mgr_id" Type="int" />
+          <Property Name="hiredate" Type="date" />
+          <Property Name="sal" Type="decimal" Precision="10" Scale="2" />
+          <Property Name="comm" Type="decimal" Precision="10" Scale="2" />
+          <Property Name="deptno" Type="int" />
+        </EntityType>
+        <!--Errors Found During Generation:
+warning 6002: The table/view 'InfiniteDB.dbo.empdata' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+        <EntityType Name="empdata">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Ename" Type="varchar" MaxLength="20" />
+          <Property Name="Age" Type="int" />
+          <Property Name="City" Type="varchar" MaxLength="20" />
+        </EntityType>
+        <!--Errors Found During Generation:
+warning 6013: The table/view 'InfiniteDB.dbo.Marks' does not have a primary key defined and no valid primary key could be inferred. This table/view has been excluded. To use the entity, you will need to review your schema, add the correct keys, and uncomment it.
+        <EntityType Name="Marks">
+          <Property Name="stdname" Type="varchar" MaxLength="20" />
+          <Property Name="subject" Type="varchar" MaxLength="20" />
+          <Property Name="marks_scored" Type="int" />
+        </EntityType>-->
+        <EntityType Name="Products">
+          <Key>
+            <PropertyRef Name="ProductId" />
+          </Key>
+          <Property Name="ProductId" Type="int" Nullable="false" />
+          <Property Name="ProductName" Type="varchar" MaxLength="40" />
+          <Property Name="Price" Type="int" />
+          <Property Name="QuantityAvailable" Type="int" />
+        </EntityType>
+        <EntityType Name="ProductSales">
+          <Key>
+            <PropertyRef Name="ProductSalesId" />
+          </Key>
+          <Property Name="ProductSalesId" Type="int" Nullable="false" />
+          <Property Name="PrdId" Type="int" />
+          <Property Name="QuantitySold" Type="int" />
+        </EntityType>
+        <!--Errors Found During Generation:
+warning 6013: The table/view 'InfiniteDB.dbo.Sample1' does not have a primary key defined and no valid primary key could be inferred. This table/view has been excluded. To use the entity, you will need to review your schema, add the correct keys, and uncomment it.
+        <EntityType Name="Sample1">
+          <Property Name="SampleId" Type="int" />
+          <Property Name="Samplename" Type="varchar" MaxLength="10" />
+        </EntityType>-->
+        <EntityType Name="tblDepartment">
+          <Key>
+            <PropertyRef Name="DeptNum" />
+          </Key>
+          <Property Name="DeptNum" Type="int" Nullable="false" />
+          <Property Name="Deptname" Type="varchar" MaxLength="20" Nullable="false" />
+          <Property Name="DeptLocation" Type="varchar" MaxLength="20" />
+        </EntityType>
+        <!--Errors Found During Generation:
+warning 6013: The table/view 'InfiniteDB.dbo.tbldummy' does not have a primary key defined and no valid primary key could be inferred. This table/view has been excluded. To use the entity, you will need to review your schema, add the correct keys, and uncomment it.
+        <EntityType Name="tbldummy">
+          <Property Name="did" Type="int" />
+          <Property Name="dname" Type="varchar" MaxLength="20" />
+          <Property Name="city" Type="varchar" MaxLength="20" />
+        </EntityType>-->
+        <EntityType Name="tblEmployee">
+          <Key>
+            <PropertyRef Name="EmpId" />
+          </Key>
+          <Property Name="EmpId" Type="int" Nullable="false" />
+          <Property Name="EmpName" Type="varchar" MaxLength="40" Nullable="false" />
+          <Property Name="Gender" Type="char" MaxLength="7" />
+          <Property Name="Salary" Type="float" />
+          <Property Name="DeptId" Type="int" />
+          <Property Name="Phoneno" Type="varchar" MaxLength="12" />
+          <Property Name="AnnualSalary" Type="float" StoreGeneratedPattern="Computed" />
+        </EntityType>
+        <!--Errors Found During Generation:
+warning 6002: The table/view 'InfiniteDB.dbo.TblExceptionLog' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+        <EntityType Name="TblExceptionLog">
+          <Key>
+            <PropertyRef Name="LogId" />
+          </Key>
+          <Property Name="LogId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="ExceptionMsg" Type="varchar" MaxLength="100" />
+          <Property Name="ExceptionType" Type="varchar" MaxLength="100" />
+          <Property Name="ExceptionSource" Type="nvarchar(max)" />
+          <Property Name="ExceptionURL" Type="varchar" MaxLength="100" />
+          <Property Name="LogDate" Type="datetime" />
+        </EntityType>
+        <!--Errors Found During Generation:
+warning 6013: The table/view 'InfiniteDB.dbo.test' does not have a primary key defined and no valid primary key could be inferred. This table/view has been excluded. To use the entity, you will need to review your schema, add the correct keys, and uncomment it.
+        <EntityType Name="test">
+          <Property Name="id" Type="int" />
+          <Property Name="title" Type="varchar" MaxLength="10" />
+        </EntityType>-->
+        <!--Errors Found During Generation:
+warning 6002: The table/view 'InfiniteDB.dbo.utable1' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+        <EntityType Name="utable1">
+          <Key>
+            <PropertyRef Name="uid" />
+          </Key>
+          <Property Name="uid" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="uname" Type="varchar" MaxLength="20" />
+          <Property Name="ugrade" Type="char" MaxLength="1" />
+          <Property Name="upercentage" Type="int" />
+        </EntityType>
+        <!--Errors Found During Generation:
+warning 6002: The table/view 'InfiniteDB.dbo.utable2' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+        <EntityType Name="utable2">
+          <Key>
+            <PropertyRef Name="uid" />
+          </Key>
+          <Property Name="uid" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="uname" Type="varchar" MaxLength="20" />
+          <Property Name="ugrade" Type="char" MaxLength="1" />
+          <Property Name="upercentage" Type="int" />
+        </EntityType>
+        <Association Name="FK__EMP__deptno__3C69FB99">
+          <End Role="DEPT" Type="Self.DEPT" Multiplicity="0..1" />
+          <End Role="EMP" Type="Self.EMP" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="DEPT">
+              <PropertyRef Name="deptno" />
+            </Principal>
+            <Dependent Role="EMP">
+              <PropertyRef Name="deptno" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__tblEmploy__DeptI__267ABA7A">
+          <End Role="tblDepartment" Type="Self.tblDepartment" Multiplicity="0..1" />
+          <End Role="tblEmployee" Type="Self.tblEmployee" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tblDepartment">
+              <PropertyRef Name="DeptNum" />
+            </Principal>
+            <Dependent Role="tblEmployee">
+              <PropertyRef Name="DeptId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="InfiniteDBModelStoreContainer">
+          <EntitySet Name="DEPT" EntityType="Self.DEPT" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="EMP" EntityType="Self.EMP" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Products" EntityType="Self.Products" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="ProductSales" EntityType="Self.ProductSales" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="tblDepartment" EntityType="Self.tblDepartment" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="tblEmployee" EntityType="Self.tblEmployee" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="dummy2" EntityType="Self.dummy2" store:Type="Tables" store:Schema="dbo">
+            <DefiningQuery>SELECT 
+    [dummy2].[did] AS [did], 
+    [dummy2].[ddata] AS [ddata]
+    FROM [dbo].[dummy2] AS [dummy2]</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="empdata" EntityType="Self.empdata" store:Type="Tables" store:Schema="dbo">
+            <DefiningQuery>SELECT 
+    [empdata].[ID] AS [ID], 
+    [empdata].[Ename] AS [Ename], 
+    [empdata].[Age] AS [Age], 
+    [empdata].[City] AS [City]
+    FROM [dbo].[empdata] AS [empdata]</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="TblExceptionLog" EntityType="Self.TblExceptionLog" store:Type="Tables" store:Schema="dbo">
+            <DefiningQuery>SELECT 
+    [TblExceptionLog].[LogId] AS [LogId], 
+    [TblExceptionLog].[ExceptionMsg] AS [ExceptionMsg], 
+    [TblExceptionLog].[ExceptionType] AS [ExceptionType], 
+    [TblExceptionLog].[ExceptionSource] AS [ExceptionSource], 
+    [TblExceptionLog].[ExceptionURL] AS [ExceptionURL], 
+    [TblExceptionLog].[LogDate] AS [LogDate]
+    FROM [dbo].[TblExceptionLog] AS [TblExceptionLog]</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="utable1" EntityType="Self.utable1" store:Type="Tables" store:Schema="dbo">
+            <DefiningQuery>SELECT 
+    [utable1].[uid] AS [uid], 
+    [utable1].[uname] AS [uname], 
+    [utable1].[ugrade] AS [ugrade], 
+    [utable1].[upercentage] AS [upercentage]
+    FROM [dbo].[utable1] AS [utable1]</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="utable2" EntityType="Self.utable2" store:Type="Tables" store:Schema="dbo">
+            <DefiningQuery>SELECT 
+    [utable2].[uid] AS [uid], 
+    [utable2].[uname] AS [uname], 
+    [utable2].[ugrade] AS [ugrade], 
+    [utable2].[upercentage] AS [upercentage]
+    FROM [dbo].[utable2] AS [utable2]</DefiningQuery>
+          </EntitySet>
+          <AssociationSet Name="FK__EMP__deptno__3C69FB99" Association="Self.FK__EMP__deptno__3C69FB99">
+            <End Role="DEPT" EntitySet="DEPT" />
+            <End Role="EMP" EntitySet="EMP" />
+          </AssociationSet>
+          <AssociationSet Name="FK__tblEmploy__DeptI__267ABA7A" Association="Self.FK__tblEmploy__DeptI__267ABA7A">
+            <End Role="tblDepartment" EntitySet="tblDepartment" />
+            <End Role="tblEmployee" EntitySet="tblEmployee" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="InfiniteDBModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="DEPT">
+          <Key>
+            <PropertyRef Name="deptno" />
+          </Key>
+          <Property Name="deptno" Type="Int32" Nullable="false" />
+          <Property Name="dname" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="loc" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="EMPs" Relationship="Self.FK__EMP__deptno__3C69FB99" FromRole="DEPT" ToRole="EMP" />
+        </EntityType>
+        <EntityType Name="EMP">
+          <Key>
+            <PropertyRef Name="empno" />
+          </Key>
+          <Property Name="empno" Type="Int32" Nullable="false" />
+          <Property Name="ename" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="job" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="mgr_id" Type="Int32" />
+          <Property Name="hiredate" Type="DateTime" Precision="0" />
+          <Property Name="sal" Type="Decimal" Precision="10" Scale="2" />
+          <Property Name="comm" Type="Decimal" Precision="10" Scale="2" />
+          <Property Name="deptno" Type="Int32" />
+          <NavigationProperty Name="DEPT" Relationship="Self.FK__EMP__deptno__3C69FB99" FromRole="EMP" ToRole="DEPT" />
+        </EntityType>
+        <EntityType Name="Product">
+          <Key>
+            <PropertyRef Name="ProductId" />
+          </Key>
+          <Property Name="ProductId" Type="Int32" Nullable="false" />
+          <Property Name="ProductName" Type="String" MaxLength="40" FixedLength="false" Unicode="false" />
+          <Property Name="Price" Type="Int32" />
+          <Property Name="QuantityAvailable" Type="Int32" />
+        </EntityType>
+        <EntityType Name="ProductSale">
+          <Key>
+            <PropertyRef Name="ProductSalesId" />
+          </Key>
+          <Property Name="ProductSalesId" Type="Int32" Nullable="false" />
+          <Property Name="PrdId" Type="Int32" />
+          <Property Name="QuantitySold" Type="Int32" />
+        </EntityType>
+        <EntityType Name="tblDepartment">
+          <Key>
+            <PropertyRef Name="DeptNum" />
+          </Key>
+          <Property Name="DeptNum" Type="Int32" Nullable="false" />
+          <Property Name="Deptname" Type="String" MaxLength="20" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="DeptLocation" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="tblEmployees" Relationship="Self.FK__tblEmploy__DeptI__267ABA7A" FromRole="tblDepartment" ToRole="tblEmployee" />
+        </EntityType>
+        <EntityType Name="tblEmployee">
+          <Key>
+            <PropertyRef Name="EmpId" />
+          </Key>
+          <Property Name="EmpId" Type="Int32" Nullable="false" />
+          <Property Name="EmpName" Type="String" MaxLength="40" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Gender" Type="String" MaxLength="7" FixedLength="true" Unicode="false" />
+          <Property Name="Salary" Type="Double" />
+          <Property Name="DeptId" Type="Int32" />
+          <Property Name="Phoneno" Type="String" MaxLength="12" FixedLength="false" Unicode="false" />
+          <Property Name="AnnualSalary" Type="Double" annotation:StoreGeneratedPattern="Computed" />
+          <NavigationProperty Name="tblDepartment" Relationship="Self.FK__tblEmploy__DeptI__267ABA7A" FromRole="tblEmployee" ToRole="tblDepartment" />
+        </EntityType>
+        <EntityType Name="dummy2">
+          <Key>
+            <PropertyRef Name="did" />
+          </Key>
+          <Property Name="did" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="ddata" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="empdata">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Ename" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="Age" Type="Int32" />
+          <Property Name="City" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="TblExceptionLog">
+          <Key>
+            <PropertyRef Name="LogId" />
+          </Key>
+          <Property Name="LogId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="ExceptionMsg" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="ExceptionType" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="ExceptionSource" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="ExceptionURL" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="LogDate" Type="DateTime" Precision="3" />
+        </EntityType>
+        <EntityType Name="utable1">
+          <Key>
+            <PropertyRef Name="uid" />
+          </Key>
+          <Property Name="uid" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="uname" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="ugrade" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+          <Property Name="upercentage" Type="Int32" />
+        </EntityType>
+        <EntityType Name="utable2">
+          <Key>
+            <PropertyRef Name="uid" />
+          </Key>
+          <Property Name="uid" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="uname" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="ugrade" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+          <Property Name="upercentage" Type="Int32" />
+        </EntityType>
+        <Association Name="FK__EMP__deptno__3C69FB99">
+          <End Role="DEPT" Type="Self.DEPT" Multiplicity="0..1" />
+          <End Role="EMP" Type="Self.EMP" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="DEPT">
+              <PropertyRef Name="deptno" />
+            </Principal>
+            <Dependent Role="EMP">
+              <PropertyRef Name="deptno" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__tblEmploy__DeptI__267ABA7A">
+          <End Role="tblDepartment" Type="Self.tblDepartment" Multiplicity="0..1" />
+          <End Role="tblEmployee" Type="Self.tblEmployee" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tblDepartment">
+              <PropertyRef Name="DeptNum" />
+            </Principal>
+            <Dependent Role="tblEmployee">
+              <PropertyRef Name="DeptId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="InfiniteDBEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="DEPTs" EntityType="Self.DEPT" />
+          <EntitySet Name="EMPs" EntityType="Self.EMP" />
+          <EntitySet Name="Products" EntityType="Self.Product" />
+          <EntitySet Name="ProductSales" EntityType="Self.ProductSale" />
+          <EntitySet Name="tblDepartments" EntityType="Self.tblDepartment" />
+          <EntitySet Name="tblEmployees" EntityType="Self.tblEmployee" />
+          <EntitySet Name="dummy2" EntityType="Self.dummy2" />
+          <EntitySet Name="empdatas" EntityType="Self.empdata" />
+          <EntitySet Name="TblExceptionLogs" EntityType="Self.TblExceptionLog" />
+          <EntitySet Name="utable1" EntityType="Self.utable1" />
+          <EntitySet Name="utable2" EntityType="Self.utable2" />
+          <AssociationSet Name="FK__EMP__deptno__3C69FB99" Association="Self.FK__EMP__deptno__3C69FB99">
+            <End Role="DEPT" EntitySet="DEPTs" />
+            <End Role="EMP" EntitySet="EMPs" />
+          </AssociationSet>
+          <AssociationSet Name="FK__tblEmploy__DeptI__267ABA7A" Association="Self.FK__tblEmploy__DeptI__267ABA7A">
+            <End Role="tblDepartment" EntitySet="tblDepartments" />
+            <End Role="tblEmployee" EntitySet="tblEmployees" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="InfiniteDBModelStoreContainer" CdmEntityContainer="InfiniteDBEntities">
+          <EntitySetMapping Name="DEPTs">
+            <EntityTypeMapping TypeName="InfiniteDBModel.DEPT">
+              <MappingFragment StoreEntitySet="DEPT">
+                <ScalarProperty Name="deptno" ColumnName="deptno" />
+                <ScalarProperty Name="dname" ColumnName="dname" />
+                <ScalarProperty Name="loc" ColumnName="loc" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="EMPs">
+            <EntityTypeMapping TypeName="InfiniteDBModel.EMP">
+              <MappingFragment StoreEntitySet="EMP">
+                <ScalarProperty Name="empno" ColumnName="empno" />
+                <ScalarProperty Name="ename" ColumnName="ename" />
+                <ScalarProperty Name="job" ColumnName="job" />
+                <ScalarProperty Name="mgr_id" ColumnName="mgr_id" />
+                <ScalarProperty Name="hiredate" ColumnName="hiredate" />
+                <ScalarProperty Name="sal" ColumnName="sal" />
+                <ScalarProperty Name="comm" ColumnName="comm" />
+                <ScalarProperty Name="deptno" ColumnName="deptno" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Products">
+            <EntityTypeMapping TypeName="InfiniteDBModel.Product">
+              <MappingFragment StoreEntitySet="Products">
+                <ScalarProperty Name="ProductId" ColumnName="ProductId" />
+                <ScalarProperty Name="ProductName" ColumnName="ProductName" />
+                <ScalarProperty Name="Price" ColumnName="Price" />
+                <ScalarProperty Name="QuantityAvailable" ColumnName="QuantityAvailable" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="ProductSales">
+            <EntityTypeMapping TypeName="InfiniteDBModel.ProductSale">
+              <MappingFragment StoreEntitySet="ProductSales">
+                <ScalarProperty Name="ProductSalesId" ColumnName="ProductSalesId" />
+                <ScalarProperty Name="PrdId" ColumnName="PrdId" />
+                <ScalarProperty Name="QuantitySold" ColumnName="QuantitySold" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tblDepartments">
+            <EntityTypeMapping TypeName="InfiniteDBModel.tblDepartment">
+              <MappingFragment StoreEntitySet="tblDepartment">
+                <ScalarProperty Name="DeptNum" ColumnName="DeptNum" />
+                <ScalarProperty Name="Deptname" ColumnName="Deptname" />
+                <ScalarProperty Name="DeptLocation" ColumnName="DeptLocation" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tblEmployees">
+            <EntityTypeMapping TypeName="InfiniteDBModel.tblEmployee">
+              <MappingFragment StoreEntitySet="tblEmployee">
+                <ScalarProperty Name="EmpId" ColumnName="EmpId" />
+                <ScalarProperty Name="EmpName" ColumnName="EmpName" />
+                <ScalarProperty Name="Gender" ColumnName="Gender" />
+                <ScalarProperty Name="Salary" ColumnName="Salary" />
+                <ScalarProperty Name="DeptId" ColumnName="DeptId" />
+                <ScalarProperty Name="Phoneno" ColumnName="Phoneno" />
+                <ScalarProperty Name="AnnualSalary" ColumnName="AnnualSalary" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="dummy2">
+            <EntityTypeMapping TypeName="InfiniteDBModel.dummy2">
+              <MappingFragment StoreEntitySet="dummy2">
+                <ScalarProperty Name="did" ColumnName="did" />
+                <ScalarProperty Name="ddata" ColumnName="ddata" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="empdatas">
+            <EntityTypeMapping TypeName="InfiniteDBModel.empdata">
+              <MappingFragment StoreEntitySet="empdata">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="Ename" ColumnName="Ename" />
+                <ScalarProperty Name="Age" ColumnName="Age" />
+                <ScalarProperty Name="City" ColumnName="City" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="TblExceptionLogs">
+            <EntityTypeMapping TypeName="InfiniteDBModel.TblExceptionLog">
+              <MappingFragment StoreEntitySet="TblExceptionLog">
+                <ScalarProperty Name="LogId" ColumnName="LogId" />
+                <ScalarProperty Name="ExceptionMsg" ColumnName="ExceptionMsg" />
+                <ScalarProperty Name="ExceptionType" ColumnName="ExceptionType" />
+                <ScalarProperty Name="ExceptionSource" ColumnName="ExceptionSource" />
+                <ScalarProperty Name="ExceptionURL" ColumnName="ExceptionURL" />
+                <ScalarProperty Name="LogDate" ColumnName="LogDate" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="utable1">
+            <EntityTypeMapping TypeName="InfiniteDBModel.utable1">
+              <MappingFragment StoreEntitySet="utable1">
+                <ScalarProperty Name="uid" ColumnName="uid" />
+                <ScalarProperty Name="uname" ColumnName="uname" />
+                <ScalarProperty Name="ugrade" ColumnName="ugrade" />
+                <ScalarProperty Name="upercentage" ColumnName="upercentage" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="utable2">
+            <EntityTypeMapping TypeName="InfiniteDBModel.utable2">
+              <MappingFragment StoreEntitySet="utable2">
+                <ScalarProperty Name="uid" ColumnName="uid" />
+                <ScalarProperty Name="uname" ColumnName="uname" />
+                <ScalarProperty Name="ugrade" ColumnName="ugrade" />
+                <ScalarProperty Name="upercentage" ColumnName="upercentage" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="true" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>
