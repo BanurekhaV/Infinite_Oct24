@@ -178,5 +178,15 @@
         <ScalarProperty Name="TerritoryID" ColumnName="TerritoryID" />
       </EndProperty>
     </AssociationSetMapping>
+    <FunctionImportMapping FunctionImportName="CustOrdersOrders" FunctionName="NorthwindModel.Store.CustOrdersOrders">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="NorthwindModel.CustOrdersOrders_Result">
+          <ScalarProperty Name="OrderID" ColumnName="OrderID" />
+          <ScalarProperty Name="OrderDate" ColumnName="OrderDate" />
+          <ScalarProperty Name="RequiredDate" ColumnName="RequiredDate" />
+          <ScalarProperty Name="ShippedDate" ColumnName="ShippedDate" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
   </EntityContainerMapping>
 </Mapping>

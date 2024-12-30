@@ -12,6 +12,8 @@ namespace MVC_EF_DBFirst.Models
     using System;
     using System.Data.Entity;
     using System.Data.Entity.Infrastructure;
+    using System.Data.Entity.Core.Objects;
+    using System.Linq;
     
     public partial class NorthwindEntities : DbContext
     {
@@ -37,5 +39,14 @@ namespace MVC_EF_DBFirst.Models
         public virtual DbSet<Supplier> Suppliers { get; set; }
         public virtual DbSet<sysdiagram> sysdiagrams { get; set; }
         public virtual DbSet<Territory> Territories { get; set; }
+    
+        public virtual ObjectResult<CustOrdersOrders_Result> CustOrdersOrders(string customerID)
+        {
+            var customerIDParameter = customerID != null ?
+                new ObjectParameter("CustomerID", customerID) :
+                new ObjectParameter("CustomerID", typeof(string));
+    
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<CustOrdersOrders_Result>("CustOrdersOrders", customerIDParameter);
+        }
     }
 }

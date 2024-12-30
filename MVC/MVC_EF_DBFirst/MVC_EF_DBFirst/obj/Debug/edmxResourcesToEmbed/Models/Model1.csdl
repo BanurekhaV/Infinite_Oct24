@@ -345,5 +345,14 @@
       <End Role="Employees" EntitySet="Employees" />
       <End Role="Territories" EntitySet="Territories" />
     </AssociationSet>
+    <FunctionImport Name="CustOrdersOrders" ReturnType="Collection(NorthwindModel.CustOrdersOrders_Result)">
+      <Parameter Name="CustomerID" Mode="In" Type="String" />
+    </FunctionImport>
   </EntityContainer>
+  <ComplexType Name="CustOrdersOrders_Result">
+    <Property Type="Int32" Name="OrderID" Nullable="false" />
+    <Property Type="DateTime" Name="OrderDate" Nullable="true" Precision="23" />
+    <Property Type="DateTime" Name="RequiredDate" Nullable="true" Precision="23" />
+    <Property Type="DateTime" Name="ShippedDate" Nullable="true" Precision="23" />
+  </ComplexType>
 </Schema>

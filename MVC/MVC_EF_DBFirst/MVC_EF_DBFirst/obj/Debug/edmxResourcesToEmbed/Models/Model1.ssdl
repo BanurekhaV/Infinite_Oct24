@@ -131,21 +131,6 @@
     <Property Name="CompanyName" Type="nvarchar" MaxLength="40" Nullable="false" />
     <Property Name="Phone" Type="nvarchar" MaxLength="24" />
   </EntityType>
-  <!--Errors Found During Generation:
-warning 6013: The table/view 'Northwind.dbo.SSISDB_Customers' does not have a primary key defined and no valid primary key could be inferred. This table/view has been excluded. To use the entity, you will need to review your schema, add the correct keys, and uncomment it.
-        <EntityType Name="SSISDB_Customers">
-          <Property Name="CustomerID" Type="nvarchar" MaxLength="5" />
-          <Property Name="CompanyName" Type="nvarchar" MaxLength="40" />
-          <Property Name="ContactName" Type="nvarchar" MaxLength="30" />
-          <Property Name="ContactTitle" Type="nvarchar" MaxLength="30" />
-          <Property Name="Address" Type="nvarchar" MaxLength="60" />
-          <Property Name="City" Type="nvarchar" MaxLength="15" />
-          <Property Name="Region" Type="nvarchar" MaxLength="15" />
-          <Property Name="PostalCode" Type="nvarchar" MaxLength="10" />
-          <Property Name="Country" Type="nvarchar" MaxLength="5" />
-          <Property Name="Phone" Type="nvarchar" MaxLength="24" />
-          <Property Name="Fax" Type="nvarchar" MaxLength="24" />
-        </EntityType>-->
   <EntityType Name="Suppliers">
     <Key>
       <PropertyRef Name="SupplierID" />
@@ -337,6 +322,9 @@ warning 6013: The table/view 'Northwind.dbo.SSISDB_Customers' does not have a pr
       </Dependent>
     </ReferentialConstraint>
   </Association>
+  <Function Name="CustOrdersOrders" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="CustomerID" Type="nchar" Mode="In" />
+  </Function>
   <EntityContainer Name="NorthwindModelStoreContainer">
     <EntitySet Name="Categories" EntityType="Self.Categories" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="CustomerCustomerDemo" EntityType="Self.CustomerCustomerDemo" Schema="dbo" store:Type="Tables" />
