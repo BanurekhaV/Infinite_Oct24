@@ -1,0 +1,30 @@
+﻿@model IEnumerable<PartialViews_Prj.Models.Product>
+@{
+    ViewBag.Title = "Index";
+}
+
+@*@foreach (var p in Model)
+{
+    <ul>
+        <li>@p.ProductId</li>
+    </ul>
+}*@
+<div id="partialviews">
+
+</div>
+<script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+
+<script type="text/javascript">
+    $(document).ready(function () {
+        $("#partialviews").load('/Product/GetAllproducts');
+    });
+    </script>
+<!--Calling Partial Views with all types of functions-->
+@*@Html.Partial("ProductDetails", Model)*@
+
+@*@{Html.RenderPartial("ProductDetails", Model);
+}*@
+
+@*@{Html.RenderAction("GetAllproducts", "Product");}*@
+
+@*@Html.Action("GetAllProducts", "Product")*@

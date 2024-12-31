@@ -1,0 +1,30 @@
+Layout : We can our own custom layouts (one or more) created and saved inside the Views/Shared Folder
+-We can apply any layout to any View by just giving the Layout property a values that points to the path of the layout
+@{
+ Layout ="<path of the layout file(.cshtml)>"
+}
+-We can also skip layouts by setting the Layout property to null
+
+
+
+Partial Views : are also like regular views, which can be reused multiple times in other views, rather than creating multiple times
+
+Eg : Shipping/Billing address on an ecommerce site
+   Comments on Blogging Sites etc..
+
+Calling Partial Views :
+
+1. Html.RenderPartial : It is a void Method that writes the output to the response stream as a part of the same http response
+   - It is faster way to render partial views
+   - Since it is a void Method, we should enclose the call within '{}'
+
+2. Html.Partial : this method returns a MVC IHtmlString
+
+
+3. Html.RenderAction : is the best choice when we want to cache the partial view. Can call child action methods and render PartialViews
+  - Since it is a void Method, we should enclose the call within '{}'
+
+
+4. Html.Action : Same as above, but returns a partial view result as IHtmlString.
+
+5. jQuery Load Function : Can display Partial Views on Load method of the Jquery
