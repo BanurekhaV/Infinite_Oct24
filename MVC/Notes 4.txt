@@ -1,0 +1,29 @@
+Filters : Are framework attributes that allows some logical code to be made use of on a particular action/result/exception/authorization
+
+Why the need for filters :
+  - Caching
+  - Logging
+  - Error Handling
+  - Authenticate and Authorize
+
+
+Available filters as part of the framework
+
+1. Authentication Filter
+2. Authorization Filter
+3. Action Filter
+4. Result Filter
+5. Exception Filter
+
+ [Authorize]
+[ValidateInput]
+[HandleError]
+[outputCache]
+[RequireHttps]
+
+We can also have custom filters
+
+Where to Configure Filters :
+ 1. Global Level (applicable to all controllers and action methods)
+ 2. Controller Level (applicable to all action methods of the controller)
+ 3. Action level (applicable to the specific action method)

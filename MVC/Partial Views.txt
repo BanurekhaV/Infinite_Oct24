@@ -28,3 +28,6 @@ Calling Partial Views :
 4. Html.Action : Same as above, but returns a partial view result as IHtmlString.
 
 5. jQuery Load Function : Can display Partial Views on Load method of the Jquery
+
+
+You may practice for sometime

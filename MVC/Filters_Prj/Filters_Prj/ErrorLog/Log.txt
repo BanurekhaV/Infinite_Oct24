@@ -1,0 +1,1 @@
+﻿Date : 31-12-2024 18:34:19, Controller is :  Home , Action Method is :Index , Error Message :Something went wrong. , Exception Type : System.ExceptionDate : 31-12-2024 18:34:41, Controller is :  home , Action Method is :testmethod1 , Error Message :Object reference not set to an instance of an object. , Exception Type : System.NullReferenceException
