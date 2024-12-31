@@ -50,7 +50,12 @@ Types of HTML Helpers :
    1. Static Helpers
    2. Extension Helpers
 
+
+
 ModelStates and the Built -in Attributes for Validation
+
+Custom Model Validations : are classes that inherit from ValidationAttribute class and can perform validations needed as per Business logic
+
 
 
 
