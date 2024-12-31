@@ -1,0 +1,11 @@
+﻿@model Html_Helpers_Prj.Models.Student
+@{
+    ViewBag.Title = "TemplateForModel";
+}
+
+<h2>Template ForModel</h2>
+@using(Html.BeginForm())
+            {
+                @Html.EditorForModel();
+            }
+

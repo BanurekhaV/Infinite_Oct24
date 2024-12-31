@@ -1,10 +1,56 @@
-ModelStates and the Built -in Attributes for Validation
+Model Binding : is a mechanism which converts the URL segment into method parameters
+- is like a bridge between the http request and the controllers action method
 
 Binding -Custom Model Binding
 Is the process of intercepting the standard model binding process to provide custom logic. Very useful when we have unique data formats
 
+Model Binder uses a default modelbinder for mapping and it follows any of the below rules for mapping
+
+1. Request Form[] - if the request is a post request
+2. RouteData.Values[] - if the value is in the route
+3. Request.QueryString[] - if the values are concatenated in the url (?uname=&password=)
+4. Request.File[] - if a file is being upload 
 
 
+HTML helpers : are C# methods that are used to return HTML. Using Html helpers we can render all html controls (image, textbox, button anchor etc..)
+
+
+
+Types of HTML Helpers :
+1. Inline Html Helper : are used on a single view of the same page. They are created using @helper tag
+
+ Eg :
+      @helper MyInlinehelper(string[] words)
+{
+   <ol>
+     @foreach(string s in words)
+  {
+      <li>@s</li>
+ }
+</ol>
+}
+2. Built-in Html Helper
+  3. Standard Html Helper : are used to render typical html elements
+     Eg :  @Html.Action()  -- to create link tags
+           @Html.TextBox() 
+           @Html.BeginForm()  - to start the form action
+
+  4. Strongly Typed Html Helper : These take lambda expressions with parameters and tells the helper which element of the model has to be used in the view
+    Eg : @Html.LabelFor(model=>model.ID)
+         @Html.TextBoxFor()
+          
+  5. Templated Html Helper : is used for data display and input. It generates Html automatically as per the model property and also for the complete model with just a single tag. It has 2 types
+    1. Display Template : Eg : @html.Display(), @html.DisplayFor()
+        @html.DisplayForModel()  // single tag for the entire models view
+   
+    2. Editor Template : Eg : @html.Editor(), @html.EditorFor()
+       @html.EditorForModel(); 
+
+6. Custom Html Helper : Users preferences in the views. Are of 2 types
+   1. Static Helpers
+   2. Extension Helpers
+
+ModelStates and the Built -in Attributes for Validation
 
 
 
