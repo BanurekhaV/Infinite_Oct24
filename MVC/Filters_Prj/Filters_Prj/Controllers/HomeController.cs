@@ -4,6 +4,7 @@ using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 using Filters_Prj.Models;
+using Filters_Prj.CustomFilter;
 
 namespace Filters_Prj.Controllers
 {   
@@ -45,6 +46,27 @@ namespace Filters_Prj.Controllers
             ViewBag.Message = "Your contact page.";
 
             return View();
+        }
+
+        [HttpGet]
+      
+        public ActionResult Login()
+        {
+            //ViewBag.ReturnUrl = ReturnUrl;
+            return View();
+        }
+
+        [HttpPost]
+        [AdminFilter]
+        public ActionResult Login(string UserName, string Password, bool Rememberme, string ReturnUrl)
+        {
+            Session["IsAdmin"] = false;
+            if(UserName == "Banurekha" && Password == "banu@123")
+            {
+                Session["IsAdmin"] = true;
+                return Redirect(ReturnUrl);
+            }
+            return View("Login");
         }
     }
 }

@@ -1,0 +1,19 @@
+﻿
+@{
+    ViewBag.Title = "Login";
+}
+
+<h2>Login</h2>
+@*<form action="/Home/About" method="post">*@
+@using(Html.BeginForm())
+{ 
+    @Html.TextBox("UserName")
+    @Html.Password("Password")
+    @Html.CheckBox("Rememberme")
+    @Html.Hidden("ReturnUrl", new {@value=ViewBag.ReturnUrl})
+
+    <button type="submit">Login</button>
+}
+
+@*</form>*@
+       

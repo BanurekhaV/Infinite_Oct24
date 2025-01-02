@@ -18,7 +18,7 @@ namespace CustomModel_Validations.Controllers
         public ActionResult Index(Models.JobApplication JA)
         {
             if(ModelState.IsValid)
-            {
+            {                
                 ViewBag.Result = "Form Submitted Successfully";
             }
             else

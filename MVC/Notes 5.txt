@@ -1,0 +1,36 @@
+Routing : Defines the URL pattern and the handler information
+
+ -- it is a conventional routing
+
+https://localhost:44379/ => search the route config and find out the route pattern  (Controller=home, action=index, id =optional)
+
+https://localhost:44379/home => (action = index, id=optional)
+
+https://localhost:44379/home/index => (id =optional)
+
+https://localhost:44379/home/index/5 => retrieve Home/index/record 5
+
+
+Attribute Routing : Defining routes using [Route]
+
+/student/1/courses  -- This kind of child relations are acgieved using attribute routing
+
+- Enable AttributRouting in RouteConfig.cs
+
+-- Decorate with the [Route]
+
+--Advantages of attribute based routing
+1. It gives us more control than the conventional routing. We can create hierarchical URI Patterns viz. students have courses, Departments have Employees, Orders have products)
+2. Reduces the chance for error
+3. May decouple the controller and action names
+4. Easy to map 2 routes pointing to the same action
+
+
+Securing a Web Application using Forms Authentication :
+
+Forms Authentication is available in System.Web.Security namespace
+
+it includes 3 steps
+ 1. Set the Authentication Mode as Forms in web.config
+ 2. We need to use the FormsAuthentication.SetAuthCookie for Login
+ 3. We need to use Formauthentication.SignOut for logout

@@ -20,7 +20,7 @@ namespace Filters_Prj.Models
                 var actionname = filterContext.RouteData.Values["action"].ToString();
                 var etype = filterContext.Exception.GetType();
 
-                string msg = "Date : " + DateTime.Now.ToString() + ", Controller is : " +
+                string msg = "    Date : " + DateTime.Now.ToString() + ", Controller is : " +
                     " " + controllername + " " + ", Action Method is :" + actionname +
                     " " + ", Error Message :" + exceptionmessage + " "  + ", Exception Type :" +
                     " "+ etype;

@@ -9,11 +9,12 @@
 <h3>@ViewBag.Result</h3>
 <br/>
 <div>
+    
     @using(Html.BeginForm())
             {
     <table>
         <tr>
-            <td>
+            <td>               
                 @Html.LabelFor(model => model.name)
                 @Html.EditorFor(model => model.name)
                 @Html.ValidationMessageFor(model => model.name)
