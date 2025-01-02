@@ -34,3 +34,23 @@ it includes 3 steps
  1. Set the Authentication Mode as Forms in web.config
  2. We need to use the FormsAuthentication.SetAuthCookie for Login
  3. We need to use Formauthentication.SignOut for logout
+
+
+Role Based Authentication :
+
+
+after forms authentication along with role based authentication the web.config file looks as below: 
+-------------------------------------------------------
+
+
+<system.web>
+    <authentication mode="Forms">
+      <forms loginUrl="Account/Login"></forms>
+    </authentication>
+    <roleManager defaultProvider="UserRoleProvider" enabled="true">
+      <providers>
+        <clear/>
+        <add name="UserRoleProvider" type="Security_Prj.Models.UserRoleProvider"/>
+      </providers>
+    </roleManager>
+    <compilation debug="true" targetFramework="4.7.2" />

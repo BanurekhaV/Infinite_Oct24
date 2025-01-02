@@ -10,18 +10,20 @@ using Security_Prj.Models;
 
 namespace Security_Prj.Controllers
 {
-    [Authorize]
+   // [Authorize]
     public class EmployeesController : Controller
     {
         private SecurityMVCEntities db = new SecurityMVCEntities();
 
         // GET: Employees
+        [Authorize(Roles = "Admin,User,Guest,Customer,Banurekha")]
         public ActionResult Index()
         {
             return View(db.Employees.ToList());
         }
 
         // GET: Employees/Details/5
+        [Authorize(Roles = "Guest,Customer")]
         public ActionResult Details(int? id)
         {
             if (id == null)
@@ -37,6 +39,7 @@ namespace Security_Prj.Controllers
         }
 
         // GET: Employees/Create
+        [Authorize(Roles = "User")]
         public ActionResult Create()
         {
             return View();
@@ -47,6 +50,7 @@ namespace Security_Prj.Controllers
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
+        [Authorize(Roles = "User")]
         public ActionResult Create([Bind(Include = "ID,Name,Designation,Salary")] Employee employee)
         {
             if (ModelState.IsValid)
@@ -60,6 +64,7 @@ namespace Security_Prj.Controllers
         }
 
         // GET: Employees/Edit/5
+        [Authorize(Roles = "Customer")]
         public ActionResult Edit(int? id)
         {
             if (id == null)
@@ -79,6 +84,7 @@ namespace Security_Prj.Controllers
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
+        [Authorize(Roles = "Customer")]
         public ActionResult Edit([Bind(Include = "ID,Name,Designation,Salary")] Employee employee)
         {
             if (ModelState.IsValid)
@@ -91,6 +97,7 @@ namespace Security_Prj.Controllers
         }
 
         // GET: Employees/Delete/5
+        [Authorize(Roles = "User")]
         public ActionResult Delete(int? id)
         {
             if (id == null)
@@ -108,6 +115,7 @@ namespace Security_Prj.Controllers
         // POST: Employees/Delete/5
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
+        [Authorize(Roles = "User")]
         public ActionResult DeleteConfirmed(int id)
         {
             Employee employee = db.Employees.Find(id);

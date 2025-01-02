@@ -1,0 +1,51 @@
+create database SecurityMVC
+
+use securitymvc
+
+create table Employee
+(ID int primary key identity(1,1),
+ Name Varchar(50),
+ Designation Varchar(50),
+ Salary int)
+
+ --user table
+ create table Users
+ ( UId int primary key identity(1,1),
+  UserName varchar(50),
+  UserPassword varchar(50))
+
+  --rolemaster table
+  create table RoleMaster
+  (RId int primary key identity(1,1),
+  RoleName varchar(50))
+
+  --create user to toles mapping table
+  create table UserRoleMapping
+  (
+  URID int primary key,
+  UserId int not null,
+  RoleId int not null)
+
+  --fkey references
+  alter table userrolemapping
+  add foreign key (UserId)references Users(UID)
+
+  alter table userrolemapping
+  add foreign key (RoleId)references RoleMaster(RID)
+
+  select * from Users
+ select * from Employee
+
+ select * from RoleMaster
+
+ select * from UserRoleMapping
+
+ insert into employee values('Bhagya','Programmer',58000),
+ ('DurgaSai','Tester',50000),('Swetha','Software Engg',60000)
+
+ insert into users values('Customer','customer'),('User','user'),('Guest','guest')
+
+ insert into Rolemaster values('Admin'),('User'),('Guest')
+
+ insert into UserRoleMapping values(100,2,1),(101,2,2),(102,2,3)
+ insert into UserRoleMapping values(104,4,3),(105,4,1),(106,5,3)
