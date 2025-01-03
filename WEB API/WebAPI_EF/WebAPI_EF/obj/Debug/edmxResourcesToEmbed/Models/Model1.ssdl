@@ -1,0 +1,101 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="InfiniteDBModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="DEPT">
+    <Key>
+      <PropertyRef Name="deptno" />
+    </Key>
+    <Property Name="deptno" Type="int" Nullable="false" />
+    <Property Name="dname" Type="varchar" MaxLength="50" />
+    <Property Name="loc" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="EMP">
+    <Key>
+      <PropertyRef Name="empno" />
+    </Key>
+    <Property Name="empno" Type="int" Nullable="false" />
+    <Property Name="ename" Type="varchar" MaxLength="50" />
+    <Property Name="job" Type="varchar" MaxLength="50" />
+    <Property Name="mgr_id" Type="int" />
+    <Property Name="hiredate" Type="date" />
+    <Property Name="sal" Type="decimal" Precision="10" Scale="2" />
+    <Property Name="comm" Type="decimal" Precision="10" Scale="2" />
+    <Property Name="deptno" Type="int" />
+  </EntityType>
+  <EntityType Name="Products">
+    <Key>
+      <PropertyRef Name="ProductId" />
+    </Key>
+    <Property Name="ProductId" Type="int" Nullable="false" />
+    <Property Name="ProductName" Type="varchar" MaxLength="40" />
+    <Property Name="Price" Type="int" />
+    <Property Name="QuantityAvailable" Type="int" />
+  </EntityType>
+  <EntityType Name="ProductSales">
+    <Key>
+      <PropertyRef Name="ProductSalesId" />
+    </Key>
+    <Property Name="ProductSalesId" Type="int" Nullable="false" />
+    <Property Name="PrdId" Type="int" />
+    <Property Name="QuantitySold" Type="int" />
+  </EntityType>
+  <EntityType Name="tblDepartment">
+    <Key>
+      <PropertyRef Name="DeptNum" />
+    </Key>
+    <Property Name="DeptNum" Type="int" Nullable="false" />
+    <Property Name="Deptname" Type="varchar" MaxLength="20" Nullable="false" />
+    <Property Name="DeptLocation" Type="varchar" MaxLength="20" />
+  </EntityType>
+  <EntityType Name="tblEmployee">
+    <Key>
+      <PropertyRef Name="EmpId" />
+    </Key>
+    <Property Name="EmpId" Type="int" Nullable="false" />
+    <Property Name="EmpName" Type="varchar" MaxLength="40" Nullable="false" />
+    <Property Name="Gender" Type="char" MaxLength="7" />
+    <Property Name="Salary" Type="float" />
+    <Property Name="DeptId" Type="int" />
+    <Property Name="Phoneno" Type="varchar" MaxLength="12" />
+    <Property Name="AnnualSalary" Type="float" StoreGeneratedPattern="Computed" />
+  </EntityType>
+  <Association Name="FK__EMP__deptno__3C69FB99">
+    <End Role="DEPT" Type="Self.DEPT" Multiplicity="0..1" />
+    <End Role="EMP" Type="Self.EMP" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="DEPT">
+        <PropertyRef Name="deptno" />
+      </Principal>
+      <Dependent Role="EMP">
+        <PropertyRef Name="deptno" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__tblEmploy__DeptI__267ABA7A">
+    <End Role="tblDepartment" Type="Self.tblDepartment" Multiplicity="0..1" />
+    <End Role="tblEmployee" Type="Self.tblEmployee" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tblDepartment">
+        <PropertyRef Name="DeptNum" />
+      </Principal>
+      <Dependent Role="tblEmployee">
+        <PropertyRef Name="DeptId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="InfiniteDBModelStoreContainer">
+    <EntitySet Name="DEPT" EntityType="Self.DEPT" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="EMP" EntityType="Self.EMP" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Products" EntityType="Self.Products" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="ProductSales" EntityType="Self.ProductSales" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tblDepartment" EntityType="Self.tblDepartment" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tblEmployee" EntityType="Self.tblEmployee" Schema="dbo" store:Type="Tables" />
+    <AssociationSet Name="FK__EMP__deptno__3C69FB99" Association="Self.FK__EMP__deptno__3C69FB99">
+      <End Role="DEPT" EntitySet="DEPT" />
+      <End Role="EMP" EntitySet="EMP" />
+    </AssociationSet>
+    <AssociationSet Name="FK__tblEmploy__DeptI__267ABA7A" Association="Self.FK__tblEmploy__DeptI__267ABA7A">
+      <End Role="tblDepartment" EntitySet="tblDepartment" />
+      <End Role="tblEmployee" EntitySet="tblEmployee" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

@@ -51,7 +51,60 @@ namespace WebApi_1.Controllers
                 return NotFound();
             }
             return Ok(pname);
+        }
 
+        //Post 1
+        [HttpPost]
+        [Route("AllPost")]
+        public List<Person>PostAll([FromBody]Person person)
+        {
+            personlist.Add(person);
+            return personlist;
+        }
+
+        //Post 2
+        [HttpPost]
+        [Route("personpost")]
+        public IEnumerable<Person> PersonPost([FromUri]int Id, string name,string job)
+        {
+            Person person = new Person();
+            person.Id = Id;
+            person.Personname = name;
+            person.PersonJob = job;
+            personlist.Add(person);
+            return personlist;
+        }
+
+        //Put 1 for postman
+        [HttpPut]
+        [Route("updperson")]
+        public Person Put(int pid, [FromUri] string name, string job, string gender)
+        {
+            var plist = personlist[pid - 1];
+            plist.Id = pid;
+            plist.Personname = name;
+            plist.PersonJob = job;
+            plist.Gender = gender;
+            return plist;
+        }
+
+        //Put 2
+        [HttpPut]
+        [Route("forswagger")]
+        public IEnumerable<Person>Put(int Pid, [FromUri] Person p)
+        {
+            personlist[Pid - 1] = p;
+            return personlist;
+        }
+
+
+        //delete
+        [HttpDelete]
+        [Route("delperson")]
+        public IEnumerable<Person>Delete(int pid)
+        {
+            personlist.RemoveAt(pid - 1);
+            return personlist;
         }
     }
 }

@@ -1,0 +1,69 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="InfiniteDBModelStoreContainer" CdmEntityContainer="InfiniteDBEntities">
+    <EntitySetMapping Name="DEPTs">
+      <EntityTypeMapping TypeName="InfiniteDBModel.DEPT">
+        <MappingFragment StoreEntitySet="DEPT">
+          <ScalarProperty Name="deptno" ColumnName="deptno" />
+          <ScalarProperty Name="dname" ColumnName="dname" />
+          <ScalarProperty Name="loc" ColumnName="loc" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="EMPs">
+      <EntityTypeMapping TypeName="InfiniteDBModel.EMP">
+        <MappingFragment StoreEntitySet="EMP">
+          <ScalarProperty Name="empno" ColumnName="empno" />
+          <ScalarProperty Name="ename" ColumnName="ename" />
+          <ScalarProperty Name="job" ColumnName="job" />
+          <ScalarProperty Name="mgr_id" ColumnName="mgr_id" />
+          <ScalarProperty Name="hiredate" ColumnName="hiredate" />
+          <ScalarProperty Name="sal" ColumnName="sal" />
+          <ScalarProperty Name="comm" ColumnName="comm" />
+          <ScalarProperty Name="deptno" ColumnName="deptno" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Products">
+      <EntityTypeMapping TypeName="InfiniteDBModel.Product">
+        <MappingFragment StoreEntitySet="Products">
+          <ScalarProperty Name="ProductId" ColumnName="ProductId" />
+          <ScalarProperty Name="ProductName" ColumnName="ProductName" />
+          <ScalarProperty Name="Price" ColumnName="Price" />
+          <ScalarProperty Name="QuantityAvailable" ColumnName="QuantityAvailable" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ProductSales">
+      <EntityTypeMapping TypeName="InfiniteDBModel.ProductSale">
+        <MappingFragment StoreEntitySet="ProductSales">
+          <ScalarProperty Name="ProductSalesId" ColumnName="ProductSalesId" />
+          <ScalarProperty Name="PrdId" ColumnName="PrdId" />
+          <ScalarProperty Name="QuantitySold" ColumnName="QuantitySold" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tblDepartments">
+      <EntityTypeMapping TypeName="InfiniteDBModel.tblDepartment">
+        <MappingFragment StoreEntitySet="tblDepartment">
+          <ScalarProperty Name="DeptNum" ColumnName="DeptNum" />
+          <ScalarProperty Name="Deptname" ColumnName="Deptname" />
+          <ScalarProperty Name="DeptLocation" ColumnName="DeptLocation" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tblEmployees">
+      <EntityTypeMapping TypeName="InfiniteDBModel.tblEmployee">
+        <MappingFragment StoreEntitySet="tblEmployee">
+          <ScalarProperty Name="EmpId" ColumnName="EmpId" />
+          <ScalarProperty Name="EmpName" ColumnName="EmpName" />
+          <ScalarProperty Name="Gender" ColumnName="Gender" />
+          <ScalarProperty Name="Salary" ColumnName="Salary" />
+          <ScalarProperty Name="DeptId" ColumnName="DeptId" />
+          <ScalarProperty Name="Phoneno" ColumnName="Phoneno" />
+          <ScalarProperty Name="AnnualSalary" ColumnName="AnnualSalary" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>
