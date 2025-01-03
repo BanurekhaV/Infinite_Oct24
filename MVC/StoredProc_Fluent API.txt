@@ -1,0 +1,44 @@
+Fluent API : based on Interface Design Pattern
+ A software design pattern that allows method chaining to create more readable, concise, and expressive codes. 
+
+Its focus is on improving the readability of code by designing methods in such a way that they can be chained together in a flow-like manner
+
+Eg : code first EF using MapToStoredProcedure() (fluent API)
+
+Eg 1:  Creates Default Names along with the EntityName
+
+     protected override void OnModelCreating(DbModelBuilder modelBuilder)
+        {
+            modelBuilder.Entity<Employee>().MapToStoredProcedures();
+        }
+
+
+Eg 2: User Names to Stored Procedures
+
+protected override void OnModelCreating(DbModelBuilder modelBuilder)
+        {
+            modelBuilder.Entity<Employee>().MapToStoredProcedures(sp => sp.Insert(s => s.HasName
+              ("InsertEmployee", "dbo"))
+            .Update(s => s.HasName("UpdateEmployee", "dbo"))
+            .Delete(s => s.HasName("DeleteEmployee", "dbo")));
+        }
+
+Eg 3.
+How to map Custom Stored Procedures to an Entity in EF code First:
+
+protected override void OnModelCreating(DbModelBuilder modelBuilder)
+        {
+            modelBuilder.Entity<Employee>().MapToStoredProcedures(sp => sp.Insert(s => s.HasName
+              ("InsertEmployee").Parameter(pm=>pm.Ename,"Ename").Parameter(pm=>pm.Salary,"Salary"))
+            .Update(s => s.HasName("UpdateEmployee").ParameterName(pm=>pm.Ename,"Ename").ParameterName(pm=>pm.Salary,"Salary"))
+            .Delete(s => s.HasName("DeleteEmployee").ParameterName(pm=>pm.Id,"Id")));
+        }
+
+
+Eg 4.
+Stored Procedure for all Entities :
+
+protected override void OnModelCreating(DbModelBuilder modelBuilder)
+        {
+     modelBuilder.Types().Configure(t => t.MapToStoredProcedures());
+}

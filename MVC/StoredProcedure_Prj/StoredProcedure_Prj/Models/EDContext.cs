@@ -18,6 +18,7 @@ namespace StoredProcedure_Prj.Models
               ("InsertEmployee", "dbo"))
             .Update(s => s.HasName("UpdateEmployee", "dbo"))
             .Delete(s => s.HasName("DeleteEmployee", "dbo")));
+           
         }
     }
 }

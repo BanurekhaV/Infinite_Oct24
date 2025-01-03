@@ -1,0 +1,43 @@
+WEB API : Application Programming Interface. Is a a Microsoft Framework for building Services on the internet based on HTTP
+
+- Helps in creating RESTful services to be consumed by a variety of clients viz.
+  - Browsers
+  - Desktops/Laptops (applns.)
+  - Mobiles
+  - Iot's
+
+Rest : Representational State Transfer, a architectural pattern for exchange of data over distributed environment. 
+-Works on a client server arch., where client and server can be from different platforms
+-Works with the help of Http Verbs
+   
+1. HttpGet - Request for a resource
+2. httpPost - Adding a new Resource
+3. HttpPut - Updating all props./data of the current resource
+4. Httppatch - Updating select few prop./data " "
+5. HttpDelete - Either a soft delete that involves a patch verb for updating the status of a column
+                Hard delete will remove the current resource permanently
+
+REST has constraints as below :
+1. Client Server : Separation of Concern. Client interacts with the server using URI
+
+2. Stateless Constraint : 
+
+3. Cachable Constraint:
+
+4. Uniform Interface Constraint : 
+
+5. Content Negotiation : 
+
+6. Layered System : 
+
+
+Testing the Restful API's include a test environment/client viz.
+
+Postman, Fiddler,Swagger etc..
+
+
+Resulttypes in api :
+
+IHttpActionResult :
+
+HttpResponseMessage :
