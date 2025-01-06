@@ -1,0 +1,4 @@
+custid,Name,petname
+1,ronaldo,remo
+2,Satheeshkumar,satto
+3,meghadooth,indrajith

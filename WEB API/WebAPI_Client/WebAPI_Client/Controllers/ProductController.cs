@@ -119,7 +119,7 @@ namespace WebAPI_Client.Controllers
 
                     if (response.IsSuccessStatusCode)
                     {
-                        return Redirect("DisplayProducts");
+                        return RedirectToAction("DisplayProducts");
                     }
                     else
                     {
