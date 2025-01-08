@@ -1,0 +1,35 @@
+create table folderpath
+	(id smallint primary key not null,
+	path nvarchar(200) null)
+
+	insert into folderpath values(1,N'C:\marketing'),
+	(2,N'C:\sales'),(3,N'C:\hr'),(4,N'C:\accounts'),(5,N'C:\design')
+
+
+The above sql code is for working with script task with foreach container, where we are creating directories in a given path using variables
+
+SSIS expressions : We can use expressions to set values in tasks using variables
+
+Scripts in SSIS : are used to enhance the SSIS Functionalities. It can work with Variables
+
+Loop Containers : They work like a typical iteration of any programming language. We can associate tasks, scripts etc inside the containers
+
+Project Parameters : act like global Parameters, accessible in all packages
+
+
+Package Parameters :are like local parameters specific only to the package
+
+
+Event Handlers : are used for various tasks viz
+  - Truncation or cleaning tables before loading data
+  - Removing unwanted files after export of data
+  - On error, sending emails
+  - Getting any systemdata etc
+
+we have 2 sections in SSIS Event Handlers
+1. Executable : Are tasks that will be applied on events
+2. Event Handler : are events which we want to handle 
+
+You can use the dropdown and select appropriate events and handlers for the same
+
+
