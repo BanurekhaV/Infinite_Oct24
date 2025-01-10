@@ -1,0 +1,60 @@
+Data Science : is the science of analyzing raw data using statistics, and techniques to conclude/infer the information
+
+Data Visualization : is a graphical representation of information and data, using elements like graphs, charts, maps, dashboards etc. provides a way to see and understand trends, patterns etc.
+
+Types of Visualization :
+ 1. Numerical Data
+ 2. Categorical Data
+
+Importance of Visualization :
+ - Discover Trends in data
+ - Provides a Perspective on the data
+ - Put the data into the correct context
+ - Saves Time
+ - Tells us a Data Story
+
+Tools for visualization :
+ - Tableau
+ - Power BI
+ - Looker
+ - Zoho Analytics
+ - IBM Cognos
+ - Sisense
+
+SSRS : Sql Sever Reporting Services
+
+Why SSRS ? : is an enhanced tool compared to crystal reports
+- Faster Processing
+- provides multidimensional data
+- helps in DSS 
+- Allows export of reports in multi format
+- Can be accessed over the net
+- provides a host of security features
+
+
+Report Builder :  is an adphoc report publishing tool that can be executed on a clients machine. Has an easy drag and drop interface
+
+Report Designer : A tool that helps in designing all types of reports (Hosted in Visual Studio)
+
+Report manager : checks the report, matching it with the given requirements. Helps in making decisions based on the report
+
+Report Sever : is a server that uses MS SQL database engine to store metadata
+
+Report Server Database : Stores metadata, report definitions, resources, security settings, delivery of data etc.
+
+Reporting Life Cycle 
+- Authoring : Defines Layout and syntax of the data (SSRS tool)
+- Management : Publishing the report on to the websites, access control are defined
+- Delivery : Schedule of the reports to the customers
+
+RDL extension : all ssrs repirts have an .rdl extension
+ Report Definition Lang. (all description of the elements of the report are stored using XML grammar, and validated by XML Schema)
+
+Types of Reports :
+1. Parametrized Reports
+2. Linked Reports 
+3. Snapshot Reports : Data at a given point in time
+4. Cached Reports 
+5. Drill Down Reports : Toggler report hiding complexity
+6. Drill Thru Reports : 
+Data Sources : data from various sources
